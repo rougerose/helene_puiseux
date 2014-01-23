@@ -1,0 +1,7 @@
+# fichiers systemes
+.DS_Store
+
+# autres
+csswizardry-grids
+*.sublime-project
+*.sublime-workspace
