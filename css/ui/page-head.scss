@@ -3,15 +3,17 @@
 =================================*/
 
 .page-head {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
     overflow: auto;
     background-color: rgba(#fff,0.95);
     font-family: "Bodoni";
     text-align: center;
+    @include media-query(lap-and-up) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+    }
 }
 
 

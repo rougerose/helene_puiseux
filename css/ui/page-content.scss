@@ -4,8 +4,10 @@
 
 .page-content {
     width: 100%;
-    padding-top: 11em; 
     text-align: left;
+    @include media-query(lap-and-up) {
+        padding-top: 11em;
+    }
 }
 
 /*-----  End of page-content  ------*/

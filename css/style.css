@@ -1071,7 +1071,8 @@ html, body { min-height: 100%; width: 100%; font-weight: normal; font-style: nor
 /*=================================
 =            page-head            =
 =================================*/
-.page-head { position: fixed; top: 0; left: 0; right: 0; z-index: 20; overflow: auto; background-color: rgba(255, 255, 255, 0.95); font-family: "Bodoni"; text-align: center; }
+.page-head { overflow: auto; background-color: rgba(255, 255, 255, 0.95); font-family: "Bodoni"; text-align: center; }
+@media only screen and (min-width: 481px) { .page-head { position: fixed; top: 0; left: 0; right: 0; z-index: 20; } }
 
 .logo { display: block; margin: .5em 0; font-size: 40px; font-size: 2.5rem; line-height: 1.2; color: #000; }
 
@@ -1079,7 +1080,8 @@ html, body { min-height: 100%; width: 100%; font-weight: normal; font-style: nor
 /*====================================
 =            page-content            =
 ====================================*/
-.page-content { width: 100%; padding-top: 11em; text-align: left; }
+.page-content { width: 100%; text-align: left; }
+@media only screen and (min-width: 481px) { .page-content { padding-top: 11em; } }
 
 /*-----  End of page-content  ------*/
 /*=================================
