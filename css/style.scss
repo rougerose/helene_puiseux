@@ -14,14 +14,21 @@
 /**
  * Setup
  */
-@import "vars";
-@import "inuit.css/inuit";
-
-
-
+@import "vars", "inuit.css/inuit";
 
 
 /**
- * She’s all yours, cap’n... Begin importing your stuff here.
+ * ui
  */
-//@import "ui/example";
+@import "ui/mixins",
+        "ui/font",
+        "ui/typo",
+        "ui/grids",
+        "ui/page",
+        "ui/page-head",
+        "ui/page-content",
+        "ui/page-foot",
+        "ui/nav",
+        "ui/resume",
+        "ui/self",
+        "ui/media";

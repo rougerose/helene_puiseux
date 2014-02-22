@@ -1,0 +1,33 @@
+/*============================
+=            self            =
+============================*/
+
+.self__body {
+    margin-bottom: 4em;
+    p {
+        text-indent: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .hN + p {
+        text-indent: 0;
+    }
+}
+
+/*==========  .self-article  ==========*/
+.self-article {
+    padding-top: 8em;
+    .titre {
+        font-family:"Bodoni";
+        @include font-size(50px);
+        margin-bottom: 2em;
+    }
+    .self__body {
+        text-align: left;
+        @include font-size(18px,$line-height: false);
+        line-height: 1.5;
+    }
+}
+
+/*-----  End of self  ------*/
+

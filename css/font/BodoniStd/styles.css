@@ -1,0 +1,9 @@
+
+@font-face {
+	font-family: 'BodoniStd';
+	src: url('BodoniStd.eot?') format('eot'), 
+	     url('BodoniStd.otf')  format('opentype'),
+	     url('BodoniStd.woff') format('woff'), 
+	     url('BodoniStd.ttf')  format('truetype'),
+	     url('BodoniStd.svg#BodoniStd') format('svg');
+}

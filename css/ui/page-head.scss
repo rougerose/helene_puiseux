@@ -1,0 +1,27 @@
+/*=================================
+=            page-head            =
+=================================*/
+
+.page-head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    overflow: auto;
+    background-color: rgba(#fff,0.95);
+    font-family: "Bodoni";
+    text-align: center;
+}
+
+
+.logo {
+    display: block;
+    margin: .5em 0;
+    @include font-size(40px);
+    color: #000;
+}
+
+
+/*-----  End of page-head  ------*/
+

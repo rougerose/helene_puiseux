@@ -1,0 +1,17 @@
+/*==============================
+=            mixins            =
+==============================*/
+
+/**
+*
+* transition
+*
+**/
+@mixin transition($property) {
+    -webkit-transition: $property 0.5s ease-out;
+    transition: $property 0.5s ease-out;
+}
+
+
+/*-----  End of mixins  ------*/
+

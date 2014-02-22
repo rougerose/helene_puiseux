@@ -1,0 +1,31 @@
+/*=============================
+=            fonts            =
+=============================*/
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('font/BodoniStd/BodoniStd.eot?') format('eot'), 
+         url('font/BodoniStd/BodoniStd.otf')  format('opentype'),
+         url('font/BodoniStd/BodoniStd.woff') format('woff'), 
+         url('font/BodoniStd/BodoniStd.ttf')  format('truetype'),
+         url('font/BodoniStd/BodoniStd.svg#BodoniStd') format('svg');
+}
+@font-face {
+    font-family: 'BodoniBk';
+    src: url('font/BodoniStd-Book/BodoniStd-Book.eot?') format('eot'), 
+         url('font/BodoniStd-Book/BodoniStd-Book.otf')  format('opentype'),
+         url('font/BodoniStd-Book/BodoniStd-Book.woff') format('woff'), 
+         url('font/BodoniStd-Book/BodoniStd-Book.ttf')  format('truetype'),
+         url('font/BodoniStd-Book/BodoniStd-Book.svg#BodoniStd-Book') format('svg');
+}
+@font-face {
+    font-family: 'BodoniBC';
+    src: url('font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.eot?') format('eot'), 
+         url('font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.otf')  format('opentype'),
+         url('font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.woff') format('woff'), 
+         url('font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.ttf')  format('truetype'),
+         url('font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.svg#BodoniStd-BoldCondensed') format('svg');
+}
+
+/*-----  End of fonts  ------*/
+
