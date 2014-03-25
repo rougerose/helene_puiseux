@@ -510,33 +510,6 @@ label, .label { display: block; }
 /** Grid */
 .grid__item { display: inline-block; width: 100%; padding-left: 24px; vertical-align: top; }
 
-/*------------------------------------*\ $NAV
-\*------------------------------------*/
-/** Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction When used on an `ol` or `ul`, this class throws the list into horizontal mode e.g.:  <ul class=nav> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  Demo: jsfiddle.net/inuitcss/Vnph4  */
-.nav { list-style: none; margin-left: 0; }
-.nav > li, .nav > li > a { display: inline-block; *display: inline; zoom: 1; }
-
-/** `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:  <ul class="nav  nav--stacked"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
-.nav--stacked > li { display: list-item; }
-.nav--stacked > li > a { display: block; }
-
-/** `.nav--banner` extends `.nav` and centres the list, e.g.:  <ul class="nav  nav--banner"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
-.nav--banner { text-align: center; }
-
-/** Give nav links a big, blocky hit area. Extends `.nav`, e.g.:  <ul class="nav  nav--block"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
-.nav--block { line-height: 1; /** Remove whitespace caused by `inline-block`. */ letter-spacing: -0.31em; word-spacing: -0.43em; white-space: nowrap; }
-.nav--block > li { letter-spacing: normal; word-spacing: normal; }
-.nav--block > li > a { padding: 12px; }
-
-/** Force a nav to occupy 100% of the available width of its parent. Extends `.nav`, e.g.:  <ul class="nav  nav--fit"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  Thanks to @pimpl for this idea! */
-.nav--fit { display: table; width: 100%; }
-.nav--fit > li { display: table-cell; }
-.nav--fit > li > a { display: block; }
-
-/** Make a list of keywords. Extends `.nav`, e.g.:  `<ul class="nav  nav--keywords>`  */
-.nav--keywords > li:after { content: "\002C" "\00A0"; }
-.nav--keywords > li:last-child:after { display: none; }
-
 /*------------------------------------*\ $BEAUTONS.CSS
 \*------------------------------------*/
 /** beautons is a beautifully simple button toolkit.  LICENSE  Copyright 2013 Harry Roberts  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.  */
@@ -676,7 +649,7 @@ label, .label { display: block; }
 .eleven-twelfths { width: 91.666%; }
 
 /** If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have access to these classes. You can define at which breakpoint you’d like an element to be a certain size, e.g.:  `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`  This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the horizontal space, a half of that space at ‘tablet’ sizes, and goes full width at ‘mobile’ sizes.  Demo: jsfiddle.net/inuitcss/WS4Ge  */
-@media only screen and (max-width: 480px) { /** Whole */
+@media only screen and (max-width: 599px) { /** Whole */
   .palm-one-whole { width: 100%; }
   /** Halves */
   .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths { width: 50%; }
@@ -709,7 +682,7 @@ label, .label { display: block; }
   .palm-five-twelfths { width: 41.666%; }
   .palm-seven-twelfths { width: 58.333%; }
   .palm-eleven-twelfths { width: 91.666%; } }
-@media only screen and (min-width: 481px) and (max-width: 1023px) { /** Whole */
+@media only screen and (min-width: 600px) and (max-width: 899px) { /** Whole */
   .lap-one-whole { width: 100%; }
   /** Halves */
   .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths { width: 50%; }
@@ -742,7 +715,7 @@ label, .label { display: block; }
   .lap-five-twelfths { width: 41.666%; }
   .lap-seven-twelfths { width: 58.333%; }
   .lap-eleven-twelfths { width: 91.666%; } }
-@media only screen and (min-width: 481px) { /** Whole */
+@media only screen and (min-width: 600px) { /** Whole */
   .lap-and-up-one-whole { width: 100%; }
   /** Halves */
   .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths { width: 50%; }
@@ -775,7 +748,7 @@ label, .label { display: block; }
   .lap-and-up-five-twelfths { width: 41.666%; }
   .lap-and-up-seven-twelfths { width: 58.333%; }
   .lap-and-up-eleven-twelfths { width: 91.666%; } }
-@media only screen and (max-width: 1023px) { /** Whole */
+@media only screen and (max-width: 899px) { /** Whole */
   .portable-one-whole { width: 100%; }
   /** Halves */
   .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths { width: 50%; }
@@ -808,7 +781,7 @@ label, .label { display: block; }
   .portable-five-twelfths { width: 41.666%; }
   .portable-seven-twelfths { width: 58.333%; }
   .portable-eleven-twelfths { width: 91.666%; } }
-@media only screen and (min-width: 1024px) { /** Whole */
+@media only screen and (min-width: 900px) { /** Whole */
   .desk-one-whole { width: 100%; }
   /** Halves */
   .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths { width: 50%; }
@@ -990,11 +963,11 @@ label, .label { display: block; }
 /** Hide content off-screen without resorting to `display:none;`, also provide breakpoint specific hidden elements. */
 .accessibility, .visuallyhidden { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; }
 
-@media only screen and (max-width: 480px) { .accessibility--palm, .visuallyhidden--palm { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
-@media only screen and (min-width: 481px) and (max-width: 1023px) { .accessibility--lap, .visuallyhidden--lap { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
-@media only screen and (min-width: 481px) { .accessibility--lap-and-up, .visuallyhidden--lap-and-up { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
-@media only screen and (max-width: 1023px) { .accessibility--portable, .visuallyhidden--portable { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
-@media only screen and (min-width: 1024px) { .accessibility--desk, .visuallyhidden--desk { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
+@media only screen and (max-width: 599px) { .accessibility--palm, .visuallyhidden--palm { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
+@media only screen and (min-width: 600px) and (max-width: 899px) { .accessibility--lap, .visuallyhidden--lap { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
+@media only screen and (min-width: 600px) { .accessibility--lap-and-up, .visuallyhidden--lap-and-up { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
+@media only screen and (max-width: 899px) { .accessibility--portable, .visuallyhidden--portable { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
+@media only screen and (min-width: 900px) { .accessibility--desk, .visuallyhidden--desk { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
 @media only screen and (min-width: 1200px) { .accessibility--desk-wide, .visuallyhidden--desk-wide { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; } }
 /* endif */
 /** ui */
@@ -1007,35 +980,25 @@ label, .label { display: block; }
 *
 **/
 /*-----  End of mixins  ------*/
-/*=============================
-=            fonts            =
-=============================*/
-@font-face { font-family: 'Bodoni'; src: url("font/BodoniStd/BodoniStd.eot?") format("eot"), url("font/BodoniStd/BodoniStd.otf") format("opentype"), url("font/BodoniStd/BodoniStd.woff") format("woff"), url("font/BodoniStd/BodoniStd.ttf") format("truetype"), url("font/BodoniStd/BodoniStd.svg#BodoniStd") format("svg"); }
-
-@font-face { font-family: 'BodoniBk'; src: url("font/BodoniStd-Book/BodoniStd-Book.eot?") format("eot"), url("font/BodoniStd-Book/BodoniStd-Book.otf") format("opentype"), url("font/BodoniStd-Book/BodoniStd-Book.woff") format("woff"), url("font/BodoniStd-Book/BodoniStd-Book.ttf") format("truetype"), url("font/BodoniStd-Book/BodoniStd-Book.svg#BodoniStd-Book") format("svg"); }
-
-@font-face { font-family: 'BodoniBC'; src: url("font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.eot?") format("eot"), url("font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.otf") format("opentype"), url("font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.woff") format("woff"), url("font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.ttf") format("truetype"), url("font/BodoniStd-BoldCondensed/BodoniStd-BoldCondensed.svg#BodoniStd-BoldCondensed") format("svg"); }
-
-/*-----  End of fonts  ------*/
 /*============================
 =            typo            =
 ============================*/
 /* links */
-a { text-decoration: none; color: #b22020; -webkit-transition: all 0.5s ease-out; transition: all 0.5s ease-out; }
+a { text-decoration: none; color: #b22020; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; transition: all 0.25s ease; }
 
 p a { color: #000; border-bottom: 1px dotted #b22020; }
 p a:hover { color: #b22020; border-bottom-color: #b22020; }
 
 .suite, .more { color: #9b9793; font-style: italic; }
 
-.suite em { padding-left: 0.1em; -webkit-transition: padding 0.5s ease-out; transition: padding 0.5s ease-out; }
+.suite em { padding-left: 0.1em; }
 .suite:hover em { padding-left: 0.7em; }
 
-.more { border: 1px dotted #cccac8; border-radius: 2px; -webkit-transition: all 0.5s ease-out; transition: all 0.5s ease-out; }
+.more { border: 1px dotted #cccac8; border-radius: 2px; }
 .more:hover { color: #b22020; border-style: solid; }
 
 /* headings */
-.hN { font-weight: normal; color: #000; }
+.hN { font-weight: 300; color: #000; font-family: 'Lato', sans-serif; }
 
 /* headings type */
 .hN--section { margin-bottom: 2em; font-family: "BodoniBC"; letter-spacing: 1px; text-transform: uppercase; position: relative; }
@@ -1045,9 +1008,9 @@ p a:hover { color: #b22020; border-bottom-color: #b22020; }
 .intertitre { text-align: center; }
 
 /* headings size */
-@media only screen and (max-width: 480px) { .hN--m { font-size: 20px; font-size: 1.25rem; line-height: 1.2; }
+@media only screen and (max-width: 599px) { .hN--m { font-size: 20px; font-size: 1.25rem; line-height: 1.2; }
   .hN--s { font-size: 16px; font-size: 1rem; line-height: 1.5; } }
-@media only screen and (min-width: 481px) { .hN--m { font-size: 22px; font-size: 1.375rem; line-height: 1.09091; }
+@media only screen and (min-width: 600px) { .hN--m { font-size: 22px; font-size: 1.375rem; line-height: 1.09091; }
   .hN--s { font-size: 18px; font-size: 1.125rem; line-height: 1.33333; } }
 .soustitre { display: block; color: #9b9793; }
 
@@ -1065,23 +1028,28 @@ p a:hover { color: #b22020; border-bottom-color: #b22020; }
 =============================*/
 html, body { min-height: 100%; width: 100%; font-weight: normal; font-style: normal; color: #444444; }
 
-.inner { max-width: 1000px; margin: 0 auto; width: 88%; }
+body { margin: 0 auto; }
 
 /*-----  End of =page  ------*/
 /*=================================
 =            page-head            =
 =================================*/
-.page-head { overflow: auto; background-color: rgba(255, 255, 255, 0.95); font-family: "Bodoni"; text-align: center; }
-@media only screen and (min-width: 481px) { .page-head { position: fixed; top: 0; left: 0; right: 0; z-index: 20; } }
+.page-head { position: relative; background-color: #FF8C00; font-family: 'Lato', sans-serif; font-weight: 300; }
+.page-head .active { color: #fff; }
 
-.logo { display: block; margin: .5em 0; font-size: 40px; font-size: 2.5rem; line-height: 1.2; color: #000; }
+.logo { display: block; margin-bottom: 1em; font-size: 22px; font-size: 1.375rem; line-height: 1.09091; }
+
+.nav { list-style: none; margin-left: 0; }
+.nav > li { font-size: 16px; font-size: 1rem; line-height: 1.5; }
+.nav > li, .nav > li > a { display: inline-block; color: #000; }
+.nav > li:hover, .nav > li > a:hover { color: #fff; }
+.nav-principale .nav { margin-bottom: 0; }
 
 /*-----  End of page-head  ------*/
 /*====================================
 =            page-content            =
 ====================================*/
-.page-content { width: 100%; text-align: left; }
-@media only screen and (min-width: 481px) { .page-content { padding-top: 11em; } }
+.page-content { padding: 8%; }
 
 /*-----  End of page-content  ------*/
 /*=================================
@@ -1090,113 +1058,51 @@ html, body { min-height: 100%; width: 100%; font-weight: normal; font-style: nor
 .page-foot { text-align: center; border-bottom: 10px solid #2e2c29; }
 
 /*-----  End of page-foot  ------*/
-/*===========================
-=            nav            =
-===========================*/
-.navigation .nav { margin-bottom: 0; }
-
-.nav__item { letter-spacing: 1px; padding-right: 1em; }
-.nav__item a { color: #9b9793; }
-.nav__item a:hover { color: #000; }
-
-/* nav-principale */
-.nav-principale { font-family: "BodoniBC"; text-transform: uppercase; }
-.nav-principale .nav { padding-bottom: 1em; }
-.nav-principale .nav__item { letter-spacing: 1px; padding-right: 1em; padding-bottom: .5em; }
-@media only screen and (min-width: 1024px) { .nav-principale .nav__item { font-size: 18px; font-size: 1.125rem; line-height: 1.33333; } }
-@media only screen and (max-width: 1023px) { .nav-principale .nav__item { font-size: 16px; font-size: 1rem; line-height: 1.5; } }
-.nav-principale .nav__item a { border-bottom: 2px solid transparent; -webkit-transition: border-color 0.5s ease-out; transition: border-color 0.5s ease-out; }
-.nav-principale .nav__item a:hover, .nav-principale .nav__item a.active { color: #000; border-bottom-color: #000; }
-
-/* nav-foot */
-.nav-foot { font-family: "BodoniBk"; margin-top: 2em; margin-bottom: 2em; }
-.nav-foot .nav { padding-bottom: .3em; }
-.nav-foot .nav__item { font-size: 14px; font-size: 0.875rem; line-height: 1.71429; text-transform: uppercase; }
-
-/*-----  End of nav  ------*/
-/*==============================
-=            resume            =
-==============================*/
-.resume__body, .resume-article > .resume__hN { text-align: left; }
-
-.resume__hN a { color: #000; }
-.resume__hN a:hover { color: #b22020; }
-
-.resume__body p { font-size: 18px; font-size: 1.125rem; line-height: 1.5; }
-
-/**
-*
-* resume-rubrique
-*
-**/
-.resume-rubrique { margin-bottom: 4em; }
-.resume-rubrique .resume__hN { font-size: 26px; font-size: 1.625rem; line-height: 1.84615; }
-
-/**
-*
-* resume-article
-*
-**/
-.resume-article:after { content: '✻'; display: block; padding: 1em 0 2em; color: #cccac8; }
-.resume-article .resume__hN { font-size: 36px; font-size: 2.25rem; line-height: 1.33333; font-family: "Bodoni"; }
-
-/**
-*
-* resume-intro
-*
-**/
-.resume-intro { margin-bottom: 4em; }
-.resume-intro p { font-size: 18px; font-size: 1.125rem; line-height: 1.5; font-style: italic; }
-
-/**
-*
-* resume-grid
-*
-**/
-.resume--grid p { padding-right: 24px; }
-
-/*-----  End of resume  ------*/
-/*============================
-=            self            =
-============================*/
-.self__body { margin-bottom: 4em; }
-.self__body p { text-indent: 2em; margin-left: 2em; margin-right: 2em; }
-.self__body .hN + p { text-indent: 0; }
-
-/*==========  .self-article  ==========*/
-.self-article { padding-top: 8em; }
-.self-article .titre { font-family: "Bodoni"; font-size: 50px; font-size: 3.125rem; line-height: 1.44; margin-bottom: 2em; }
-.self-article .self__body { text-align: left; font-size: 18px; font-size: 1.125rem; line-height: 1.5; }
-
-/*-----  End of self  ------*/
 /*==============================
 =            medias            =
 ==============================*/
-/**
-*
-* cover
-*
-**/
-.cover { margin-bottom: 4em; position: relative; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
-.cover:before, .cover:after { z-index: -3; position: absolute; width: 50%; content: ""; background-color: #777; }
-.cover:before { top: 2%; left: 1.5%; bottom: 50%; box-shadow: -9px 0 10px rgba(85, 85, 85, 0.5); -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -ms-transform: rotate(-3deg); -o-transform: rotate(-3deg); transform: rotate(-3deg); }
-.cover:after { bottom: 2%; right: 2.5%; top: 50%; box-shadow: 0 15px 10px rgba(85, 85, 85, 0.5); -webkit-transform: rotate(5deg); -moz-transform: rotate(5deg); -ms-transform: rotate(5deg); -o-transform: rotate(5deg); transform: rotate(5deg); }
+.vignettes { margin: 4em 0; }
 
-.cover__img { vertical-align: bottom; padding: 20px; background-color: #f4f4f7; }
+.vignette { overflow: hidden; }
+.vignette:hover .vignette__img { width: 100%; height: 100%; }
 
-/**
-*
-* feature--grid
-*
-**/
-.feature--grid { overflow: hidden; width: 100%; height: 150px; }
+.vignette__cadre { overflow: hidden; height: 250px; position: relative; }
 
-/**
-*
-* illustration
-*
-**/
-.illustration { margin-top: 4em; margin-bottom: 4em; }
-.illustration img { padding: 20px; background-color: #f4f4f7; }
+.vignette__img-link { display: block; width: 100%; height: 100%; }
+
+.vignette__cover { position: absolute; width: 100%; height: 100%; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; transition: all 0.5s ease; }
+
+.vignette__img-container { display: block; overflow: hidden; height: 250px; }
+
+.vignette__img { overflow: hidden; width: 105%; height: 105%; max-width: 105%; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+
+.vignette__titre { border-bottom: 4px solid #fff; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+.vignette__titre > a { color: #000; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 
 /*-----  End of medias  ------*/
+#rub1:hover a { color: yellowgreen; }
+#rub1:hover .vignette__titre { border-color: yellowgreen; }
+
+#rub2:hover a { color: deeppink; }
+#rub2:hover .vignette__titre { border-color: deeppink; }
+
+#rub3:hover a { color: orangered; }
+#rub3:hover .vignette__titre { border-color: orangered; }
+
+#rub4:hover a { color: #540045; }
+#rub4:hover .vignette__titre { border-color: #540045; }
+
+@media screen and (max-width: 599px) { .page-head { text-align: center; padding: 5%; }
+  .nav > li { margin-right: 1em; } }
+@media screen and (min-width: 600px) { .page-head { float: left; width: 35%; position: fixed; }
+  .page-head > .inner { padding: 3em 2em; }
+  .page-head:before { content: ''; display: block; position: fixed; top: 0; bottom: 0; left: 0; z-index: -1; width: 35%; background-color: #FF8C00; }
+  .nav > li { font-size: 26px; font-size: 1.625rem; line-height: 1.84615; }
+  .nav > li, .nav > li > a { display: block; }
+  .page-content { float: left; padding: 3em 2em; margin-left: 35%; width: 65%; } }
+@media screen and (min-width: 900px) { .page-head { width: 30%; }
+  .page-head:before { width: 30%; }
+  .logo { margin-bottom: 2em; }
+  .nav > li { font-size: 32px; font-size: 2rem; line-height: 1.5; }
+  .page-content { width: 70%; margin-left: 30%; padding: 3em; }
+  .page-content > .inner { max-width: 43.750em; margin: 0 auto; } }

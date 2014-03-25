@@ -3,11 +3,7 @@
 ====================================*/
 
 .page-content {
-    width: 100%;
-    text-align: left;
-    @include media-query(lap-and-up) {
-        padding-top: 11em;
-    }
+    padding: 8%;
 }
 
 /*-----  End of page-content  ------*/

@@ -3,25 +3,39 @@
 =================================*/
 
 .page-head {
-    overflow: auto;
-    background-color: rgba(#fff,0.95);
-    font-family: "Bodoni";
-    text-align: center;
-    @include media-query(lap-and-up) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 20;
+    position: relative;
+    background-color: #FF8C00;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    .active {
+        color: #fff;
     }
 }
 
-
 .logo {
     display: block;
-    margin: .5em 0;
-    @include font-size(40px);
-    color: #000;
+    margin-bottom: 1em;
+    @include font-size(22px);
+}
+
+.nav{
+    list-style:none;
+    margin-left:0;
+    @extend .cf;
+    > li{
+        @include font-size(16px);
+        &,
+        > a {
+            display:inline-block;
+            color: #000;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .nav-principale & {
+        margin-bottom: 0;
+    }
 }
 
 

@@ -9,12 +9,17 @@ html, body {
     font-style: normal;
     color: $text-color;
 
+    // padding: 0 16%;
 }
-.inner {
-    max-width: 1000px;
+
+
+
+body {
+    // max-width: 62.5em;
     margin: 0 auto;
-    width: 88%;
 }
+
+.wrap {}
 
 
 /*-----  End of =page  ------*/

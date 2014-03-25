@@ -1,0 +1,19 @@
+$couleur1: #540045;
+$couleur2: #FF4500;
+$couleur3: #9ACD32;
+$couleur4: #FF1493;
+@mixin couleurs($couleur) {
+    // .vignette__cover {background-color: rgba($couleur,0.3);}
+    &:hover {
+        a {
+            color: $couleur;
+        }
+        .vignette__titre {border-color: $couleur;}
+        // .vignette__cover {background-color: rgba($couleur,0);}
+    }
+}
+
+#rub1 {@include couleurs(#9ACD32);}
+#rub2 {@include couleurs(#FF1493);}
+#rub3 {@include couleurs(#FF4500);}
+#rub4 {@include couleurs(#540045);}

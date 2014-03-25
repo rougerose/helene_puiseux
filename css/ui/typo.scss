@@ -2,11 +2,16 @@
 =            typo            =
 ============================*/
 
+//font-family: 'Lato', sans-serif;
+//font-family: 'Muli', sans-serif;
+//font-family: 'Raleway', sans-serif;
+//font-family: 'Quattrocento Sans', sans-serif;
+
 /* links */
 a {
     text-decoration: none;
     color: $link-color;
-    @include transition(all);
+    @include transition(all .25s ease);
 }
 
 p a {
@@ -26,7 +31,7 @@ p a {
 .suite {
     em {
         padding-left: 0.1em;
-        @include transition(padding);
+        // @include transition(padding);
     }
     &:hover em {
         padding-left: 0.7em;
@@ -36,7 +41,7 @@ p a {
 .more {
     border: 1px dotted $gray;
     border-radius: 2px;
-    @include transition(all);
+    // @include transition(all);
     &:hover {
         color: $link-color;
         border-style: solid;
@@ -46,8 +51,9 @@ p a {
 
 /* headings */
 .hN {
-    font-weight: normal;
+    font-weight: 300;
     color: #000;
+    font-family: 'Lato', sans-serif;
 }
     /* headings type */
     .hN--section {

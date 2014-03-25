@@ -10,6 +10,7 @@
  * project-specific components afterwards.
  */
 
+@import "bourbon";
 
 /**
  * Setup
@@ -21,14 +22,16 @@
  * ui
  */
 @import "ui/mixins",
-        "ui/font",
+//      "ui/font",
         "ui/typo",
         "ui/grids",
         "ui/page",
         "ui/page-head",
         "ui/page-content",
         "ui/page-foot",
-        "ui/nav",
-        "ui/resume",
-        "ui/self",
-        "ui/media";
+//      "ui/nav",
+//      "ui/resume",
+//      "ui/self",
+        "ui/media",
+        "ui/couleurs",
+        "ui/media-query";
