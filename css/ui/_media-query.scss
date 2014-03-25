@@ -27,8 +27,6 @@
             left: 0;
             z-index: -1;
             width: 35%;
-            // background-color: #b209d0;
-            // @include background-image(linear-gradient(#FFCC00 0, #FF9933 100%)); #FF5C00
             @include background-image(linear-gradient(#FFCC00 0, #FF5200 100%));
         }
     }
