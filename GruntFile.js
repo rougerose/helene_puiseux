@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           style: 'compressed',
         },
         files: {
-          'css/styles.css':'css/styles.scss'
+          'css/styles.css':'css/scss/styles.scss'
         }
       }
     },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     watch: {
       grunt: { files: ['GruntFile.js'] },
       sass: {
-        files: 'css/**/*.scss',
+        files: 'css/scss/*.scss',
         tasks: ['sass:compile']
       }
     }
