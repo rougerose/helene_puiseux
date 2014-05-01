@@ -1,0 +1,56 @@
+/* ==========================================================================
+   $page
+   ========================================================================== */
+
+html {}
+body {
+    color: $base-color;
+    background-color: #fff;
+}
+
+.inner {
+    max-width: 43.750em; // 800px
+    margin: 0 auto;
+}
+
+/* 
+   .page-header
+   ========================================================================== */
+
+.page-header {
+    text-align: center;
+    background-color: #ccc;
+    position: relative;
+    z-index: 100;
+    @include background-image(linear-gradient(#ffcc00 0, #ff5200 100%));
+    @include media-query(lap-and-up) {
+        height: 100%;
+        width: 30%;
+        position: fixed;
+   }
+}
+
+/* .site-logo */
+.site-logo {
+    margin: 0;
+    padding: 1.2em 0 0;
+    display:block;
+    @include font-size(32px,$line-height: false);
+    line-height: 1;
+    color: #fff;
+    @include media-query(palm){
+        padding: .5em 1.75em;
+        @include font-size(26px,$line-height: false);
+    }
+}
+
+/* 
+   .page-content
+   ========================================================================== */
+
+.page-content {
+    padding: 3em $base-spacing-unit;
+    @include media-query(lap-and-up) {
+        margin-left: 30%;
+    }
+}

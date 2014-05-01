@@ -5,6 +5,8 @@
 [(#REM) Preciser le charset ]
 <meta http-equiv="Content-Type" content="text/html; charset=#CHARSET" />
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 [(#REM) Fierement fabrique avec SPIP ]
 <meta name="generator" content="SPIP[ (#SPIP_VERSION)]" />
 
@@ -18,7 +20,8 @@
 #INCLURE{fond=inc-theme-head,env}
 ]
 
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic,400italic" rel="stylesheet" type="text/css" />
+[<link href="(#CSS{css/styles.css})" rel="stylesheet" type="text/css" />]
 
 [(#REM) Balise permettant aux plugins d'inserer des appels javascript ou css ;
     C'est ici que SPIP va inserer l'appel de la librairie jQuery
@@ -26,3 +29,5 @@
     si l'option est cochee dans Configuration
 ]
 #INSERT_HEAD
+
+[<script src="(#CHEMIN{js/modernizr-2.8.0-min.js})"></script>]

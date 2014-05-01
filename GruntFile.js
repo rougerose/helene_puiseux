@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
     sass: {
       compile: {
         options: {
@@ -29,7 +28,7 @@ module.exports = function(grunt) {
     watch: {
       grunt: { files: ['GruntFile.js'] },
       sass: {
-        files: 'css/scss/*.scss',
+        files: 'css/scss/**/*.scss',
         tasks: ['sass:compile']
       }
     }

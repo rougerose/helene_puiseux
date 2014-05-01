@@ -1,8 +1,17 @@
 @charset "UTF-8";
 
-//@import "vars";
-
-// Bibliothèques
+// Bibliothèques et variables
 // ====================================
 @import "bourbon";
+@import "vars";
 @import "inuit";
+
+//base
+@import "base/typo",
+    "base/page",
+
+// modules
+     "modules/nav",
+     
+// divers
+    "spip/admin";

@@ -1,0 +1,5 @@
+[(#ENV{type-page}|=={sommaire}|?{
+    <h1 class="site-logo">#NOM_SITE_SPIP</h1>,
+    <a href="#URL_SITE_SPIP" class="site-logo" rel="home">#NOM_SITE_SPIP</a>
+})]
+<INCLURE{fond=inclure/site-navigation,env} />
