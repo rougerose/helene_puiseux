@@ -1,0 +1,22 @@
+/* ==========================================================================
+   list
+   ========================================================================== */
+
+/* 
+   list--resume-rubrique
+   ========================================================================== */
+
+.list--resume-rubrique {
+    .list__item {
+        display: block;
+        margin-bottom: 1em;
+        overflow: hidden;
+        .hN {
+            border-bottom: 2px solid transparent;
+            @include font-size(32px);
+            @include transition(color .2s ease,border .3s ease);
+        }
+    }
+}
+
+

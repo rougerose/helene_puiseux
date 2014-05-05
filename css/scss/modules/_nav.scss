@@ -29,6 +29,7 @@
     > a {
         display: block;
         line-height: 2em;
+        &:hover {color: #fff;}
     }
 }
 

@@ -9,6 +9,15 @@
 a {
     color: #000;
     text-decoration: none;
+    @include transition(color .3s ease-out,border .3s ease-out);
+}
+
+p {
+  a {
+    color: inherit;
+    border-bottom: 2px solid #fc0;
+    &:hover {color: #fc0;}
+  }
 }
 
 
