@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             'bower_components/bourbon/dist',
             'bower_components/inuit.css'
           ],
-          style: 'compact',
+          style: 'compressed',
         },
         files: {
           'css/styles.css':'css/scss/styles.scss'
