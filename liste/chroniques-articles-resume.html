@@ -1,0 +1,21 @@
+<B_chroniques_articles_resume>
+<section class="resumes-articles resumes-list--time">
+    #ANCRE_PAGINATION
+    <BOUCLE_chroniques_articles_resume(ARTICLES){id_rubrique}{!par date}{pagination #ENV{nb,30}}>
+    <BOUCLE_premier_annee(ARTICLES){id_article}{doublons}>
+    <h2 class="hN">[(#DATE|annee|unique)]</h2>
+    <ul class="list resumes-article-list">
+        <li class="resumes-article-list__item">
+            #INCLURE{fond=resume/article,id_article}
+        </li>
+        </BOUCLE_premier_annee>
+        <BOUCLE_suite_annee(ARTICLES){id_rubrique}{mois_relatif=0}{!par date}{doublons}>
+        <li class="resumes-article-list__item">
+            #INCLURE{fond=resume/article,id_article}
+        </li>
+        </BOUCLE_suite_annee>
+    </ul>
+    </BOUCLE_chroniques_articles_resume>
+    [<nav class="pagination">(#PAGINATION)</nav>]
+</section>
+</B_chroniques_articles_resume>

@@ -1,0 +1,22 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+#SET{media,''}
+<div class="grid">
+    <div class="grid__item">
+        <article class="self self-rubrique">
+            <header class="self__header">
+                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span>[ <small class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]</h1>
+            </header>
+            [(#LOGO_RUBRIQUE|oui) [(#LOGO_RUBRIQUE|largeur|>{[(#LOGO_RUBRIQUE|hauteur)]}|oui) #SET{media,media--block} ] ]
+            [<div class="self__body media[ (#GET{media})]">
+                [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" class="body__img media__img" alt="#TITRE">]
+                <div class="#EDIT{texte} body__texte surlignable media__body">
+                    (#TEXTE|image_reduire{500,0})
+                </div>
+            </div>]
+            <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
+                <INCLURE{fond=liste/chroniques-articles-resume,env,ajax} />
+            </BOUCLE_articles>
+        </article>
+    </div><!-- /.grid__item -->
+</div><!-- /.grid -->
+</BOUCLE_rubrique>

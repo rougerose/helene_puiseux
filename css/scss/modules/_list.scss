@@ -1,22 +1,54 @@
-/* ==========================================================================
-   list
-   ========================================================================== */
+/*  ==========================================================================
+    list
+    ========================================================================== */
+
+/*
+    bare-list
+    ========================================================================== */
+    .bare-list,
+    %bare-list {
+        list-style: none;
+        margin: 0;
+    }
 
 /* 
-   list--resume-rubrique
-   ========================================================================== */
+    resumes-rubrique-list
+    ========================================================================== */
 
-.list--resume-rubrique {
-    .list__item {
-        display: block;
-        margin-bottom: 1em;
-        overflow: hidden;
-        .hN {
-            border-bottom: 2px solid transparent;
-            @include font-size(32px);
-            @include transition(color .2s ease,border .3s ease);
+    // liste en page d'accueil. 
+
+    // .resumes-rubrique-list {}
+       .resumes-rubrique-list__item {
+            display: block;
+            margin-bottom: 1em;
+            overflow: hidden;
+            .hN {
+                border-bottom: 2px solid transparent;
+                @include font-size(32px);
+                @include transition(color .2s ease,border .3s ease);
+            }
+        }
+
+/* 
+    resumes-list
+    ========================================================================== */
+
+    .resumes-list--time {
+        > .hN {
+            margin-bottom: 0;
+            @include font-size(26px);
+            // font-weight: 400;
+            font-style: italic;
         }
     }
-}
+
+
+/* 
+    resumes-article-list
+    ========================================================================== */
+
+    .resumes-article-list {
+        @extend %bare-list;
+    }
 
 

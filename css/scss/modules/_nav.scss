@@ -32,6 +32,9 @@
         &:hover {color: #fff;}
     }
 }
+.site-nav__item--is-active {
+    > a {color: #fff;}
+}
 
 /* 
    .site-nav-btn

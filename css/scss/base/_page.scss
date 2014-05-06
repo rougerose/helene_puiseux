@@ -24,6 +24,7 @@ body {
     z-index: 100;
     @include background-image(linear-gradient(#ffcc00 0, #ff5200 100%));
     @include media-query(lap-and-up) {
+        padding-top: 3em;
         height: 100%;
         width: 30%;
         position: fixed;
@@ -33,7 +34,7 @@ body {
 /* .site-logo */
 .site-logo {
     margin: 0;
-    padding: 1.2em 0 0;
+    padding: 0 0;
     display:block;
     @include font-size(32px,$line-height: false);
     line-height: 1;
@@ -49,8 +50,10 @@ body {
    ========================================================================== */
 
 .page-content {
-    padding: 3em $base-spacing-unit;
+    padding: 2.5em $base-spacing-unit;
+    .page_sommaire & {padding-top: 3.8em;}
     @include media-query(lap-and-up) {
         margin-left: 30%;
     }
 }
+

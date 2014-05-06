@@ -1,1 +1,20 @@
-<h1>rubrique</h1>
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<div class="grid">
+    <div class="grid__item">
+        <article class="self self-rubrique">
+            <header class="self__header">
+                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span>[ <small class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]</h1>
+            </header>
+            [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" alt="">]
+            [<div class="self__body">
+                <div class="#EDIT{texte} texte surlignable">
+                    (#TEXTE|image_reduire{500,0})
+                </div>
+            </div>]
+            <section>
+                
+            </section>
+        </article>
+    </div><!-- /.grid__item -->
+</div><!-- /.grid -->
+</BOUCLE_rubrique>

@@ -3,7 +3,7 @@
 <nav id="nav" class="site-navigation">
     <ul class="site-nav">
         <BOUCLE_site_navigation(RUBRIQUES){racine}{par num titre, titre}>
-        <li class="site-nav__item[ (#EXPOSE)]"><a href="#URL_RUBRIQUE">#TITRE</a></li>
+        <li class="site-nav__item [(#EXPOSE|oui)site-nav__item--is-active]"><a href="#URL_RUBRIQUE">#TITRE</a></li>
         </BOUCLE_site_navigation>
     </ul>
     <a id="nav-close" href="#top" class="site-nav-btn site-nav-close">Fermer</a>

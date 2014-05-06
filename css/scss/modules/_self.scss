@@ -1,0 +1,23 @@
+/*  ==========================================================================
+    .self
+    ========================================================================== */
+
+// .self {}
+
+.self__header {
+    .hN {margin-bottom: 0;}
+    .titre {
+        @include font-size(32px);
+        font-weight: 400;
+        color: #fc0;
+    }
+    margin-bottom: 1.5em;
+}
+
+.self-rubrique {
+    .body__texte,
+    .body__img {
+        margin-bottom: 2em;
+        p {@include font-size(18px);}
+    }
+}

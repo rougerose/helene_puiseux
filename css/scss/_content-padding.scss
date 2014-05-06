@@ -1,0 +1,37 @@
+/* ==========================================================================
+   content-padding
+   ========================================================================== */
+
+// marge gauche des contenus 
+
+@mixin pg-desk {
+    padding-left: 20%;
+}
+
+@mixin pg-lap {
+    padding-left: 8%;
+}
+
+
+.self__header .hN,
+.resumes-article-list {
+    @include media-query(desk) {
+        @include pg-desk;
+    }
+    @include media-query(lap) {
+        @include pg-lap;
+    }
+}
+
+.self__body {
+    p,
+    ul,
+    h2, h3, h4, h5, h6 {
+        @include media-query(desk) {
+            @include pg-desk;
+        }
+        @include media-query(lap) {
+            @include pg-lap;
+        }
+    }
+}
