@@ -6,6 +6,7 @@
 .resume__titre {
     margin-bottom: 1em;
     @include font-size(20px);
+    a {color: #333;}
 }
 
 .resume__desc {

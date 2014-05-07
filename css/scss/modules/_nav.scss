@@ -30,13 +30,13 @@
         display: block;
         line-height: 2em;
         &:hover {
-            color: $link-color;
+            color: #fff;
         }
     }
 }
 .site-nav__item--is-active {
     > a {
-        color: $link-color;
+        color: #fff;
     }
 }
 

@@ -36,6 +36,7 @@ body {
     margin: 0;
     padding: 0 0;
     display:block;
+    font-family: $base-font;
     @include font-size(32px,$line-height: false);
     line-height: 1;
     color: #fff;

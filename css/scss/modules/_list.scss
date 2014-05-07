@@ -36,9 +36,9 @@
     .resumes-list--time {
         > .hN {
             margin-bottom: 0;
-            @include font-size(26px);
-            // font-weight: 400;
-            font-style: italic;
+            @include font-size(30px);
+            font-weight: 100;
+            color: #000;
         }
     }
 

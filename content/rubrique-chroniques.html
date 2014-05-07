@@ -4,7 +4,7 @@
     <div class="grid__item">
         <article class="self self-rubrique">
             <header class="self__header">
-                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span>[ <small class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]</h1>
+                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span></h1>
             </header>
             [(#LOGO_RUBRIQUE|oui) [(#LOGO_RUBRIQUE|largeur|>{[(#LOGO_RUBRIQUE|hauteur)]}|oui) #SET{media,media--block} ] ]
             [<div class="self__body media[ (#GET{media})]">

@@ -61,11 +61,11 @@ $base-color: #5c5c5c;
 // inuit
 $base-ui-color: #ccc;
 $brand-color: $base-color;
-$base-font-family: $georgia;
+$base-font-family: 'PT Serif',$georgia;
 
 // font
-$font-lato: 'Lato',$helvetica;
-
+$lato-font: 'Lato',$helvetica;
+$base-font: $base-font-family;
 
 
 // à supprimer ?
