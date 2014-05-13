@@ -51,3 +51,61 @@ h6,
     font-family: $lato-font;
     font-weight: 300;
 }
+
+h2.spip {
+    @include font-size(26px);
+    color: $couleur-degrade-sombre;
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+}
+h3.spip {
+    @include font-size(23px);
+    color: darken($couleur-degrade-sombre,8%);
+    p + &,
+    dl + &,
+    blockquote + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h2.spip & {padding-top: 0;}
+}
+h4.spip {
+    @include font-size(20px);
+    color: darken($couleur-degrade-sombre,20%);
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h3.spip & {padding-top: 0;}
+}
+h5.spip {
+    @include font-size(18px);
+    color: darken($couleur-degrade-sombre,30%);
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h4.spip & {padding-top: 0;}
+}
+h6.spip {
+    @include font-size(16px);
+    color: #000;
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h5.spip & {padding-top: 0;}
+}
+
+
+

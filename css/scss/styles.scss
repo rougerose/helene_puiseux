@@ -7,8 +7,9 @@
 @import "inuit";
 
 //base
-@import "base/typo",
-    "base/page",
+@import 
+    "base/typo",
+    "base/base",
 
 // modules
      "modules/nav",
@@ -19,7 +20,9 @@
      "modules/media",
      "modules/self",
      "modules/resume",
+     "modules/meta",
      
 // divers
     "content-padding",
+    "spip/spip",
     "spip/admin";

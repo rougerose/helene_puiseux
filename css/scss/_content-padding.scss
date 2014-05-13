@@ -23,10 +23,24 @@
         @include pg-lap;
     }
 }
-
+.self__header {
+    .hN,
+    .surtitre,
+    .meta {
+        @include media-query(desk) {
+            @include pg-desk;
+        }
+        @include media-query(lap) {
+            @include pg-lap;
+        }
+    }
+}
 .self__body {
     p,
-    ul,
+    ul, 
+    ol,
+    dl,
+    blockquote,
     h2, h3, h4, h5, h6 {
         @include media-query(desk) {
             @include pg-desk;
@@ -34,5 +48,33 @@
         @include media-query(lap) {
             @include pg-lap;
         }
+    }
+    table {
+        @include media-query(desk) {
+            margin-left: 20%;
+            width: 80%;
+        }
+        @include media-query(lap) {
+            margin-left: 8%;
+            width: 92%;
+        }
+    }
+    hr.spip {
+        @include media-query(desk) {
+            margin-left: 20%;
+        }
+        @include media-query(lap) {
+            margin-left: 8%;
+        }
+    }
+    blockquote {
+        p,
+        ul,
+        ol,
+        dl,
+        h2,h3,h4,h5,h6 {
+            padding-left: 0;
+        }
+        
     }
 }

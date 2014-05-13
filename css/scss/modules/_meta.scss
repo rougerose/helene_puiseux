@@ -1,0 +1,30 @@
+/*  ==========================================================================
+    meta
+    ========================================================================== */
+
+.meta {
+    color: rgba(#000,0.2);
+    @include font-size(14px);
+}
+
+// résumés
+.meta-resume {
+    margin-top: 1em;
+}
+
+// articles
+.meta-article {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+// auteur
+.meta-auteur {
+    .meta-article & {
+        margin-left: .5em;
+        &:before {
+            content:'\2022 ';
+            margin-right: .5em;
+        }
+    }
+}

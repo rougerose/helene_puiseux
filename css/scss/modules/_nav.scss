@@ -74,14 +74,14 @@
     }
     .site-nav__item {
         > a {
-            border-bottom: 1px solid $link-color-nav;
+            border-bottom: 1px solid $couleur-degrade-sombre;
             &:hover {
-                color: $link-color-nav;
+                color: $couleur-degrade-sombre;
             }
         }
     }
     .site-nav__item--is-active {
-        > a {color: $link-color-nav;}
+        > a {color: $couleur-degrade-sombre;}
     }
     .site-nav-open {
         background: url(../img/css/icons/menu.svg) center center no-repeat;
@@ -145,4 +145,3 @@
         }
     }
 }
-

@@ -1,0 +1,46 @@
+<BOUCLE_article(ARTICLES){id_article}>
+
+<div class="grid">
+    <div class="grid__item">
+        <article class="self self-article">
+            <header class="self__header">
+                [<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
+                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span>[ <small class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]</h1>
+                <ul class="meta meta-list meta-article">
+                    <li class="meta-list__item"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
+                    [<li class="meta-list__item meta-auteur"><:local:par:> (#LESAUTEURS)</li>]
+                </ul>
+            </header>
+
+            <div class="self__body">
+                [<section class="#EDIT{chapo} chapo surlignable body__chapo surlignable">
+                    (#CHAPO|image_reduire{500,0})
+                </section>]
+                [<section class="#EDIT{texte} texte surlignable body__texte surlignable">
+                    (#TEXTE|image_reduire{500,0})
+                </section>]
+                [<section class="#EDIT{ps} ps body__ps surlignable">
+                    <h2 class="hN"><:info_ps:></h2>
+                    (#PS|image_reduire{500,0})
+                </section>]
+                [<section class="notes body__notes">
+                    <h2 class="hN"><:info_notes:></h2>
+                    (#NOTES)
+                </section>]
+
+                [(#REM) Gestion du portfolio et des documents ]
+                [(#INCLURE{fond=inclure/documents,id_article})]
+
+                [(#PAGE|=={contact}|oui)
+                [<section class="texte surlignable self-article__texte">
+                    (#FORMULAIRE_ECRIRE_AUTEUR)
+                </section>]
+                ]
+            </div>
+        </article>
+    </div><!-- /.grid__item -->
+</div><!-- /.grid -->
+
+
+
+</BOUCLE_article>

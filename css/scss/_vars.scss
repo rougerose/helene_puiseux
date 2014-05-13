@@ -55,8 +55,10 @@ $use-greybox:       false;
 //$lap-start: 600px;
 //$desk-start: 900px;
 
+$english-quotes: false;
+
 // couleurs
-$base-color: #5c5c5c;
+$base-color: #555;
 
 // inuit
 $base-ui-color: #ccc;
@@ -74,5 +76,8 @@ $gray: #cccac8;
 $gray-dark: darken($gray,20%);
 $link-color: #fc0;
 $link-color-nav: #ff5200;
+
+$couleur-degrade-sombre: #ff5200;
+$couleur-degrade-clair: #ffcc00;
 
 

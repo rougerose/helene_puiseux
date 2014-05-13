@@ -22,7 +22,7 @@ body {
     background-color: #ccc;
     position: relative;
     z-index: 100;
-    @include background-image(linear-gradient($couleur-degrade-sombre 0, $couleur-degrade-clair 100%));
+    @include background-image(linear-gradient($couleur-degrade-clair 0, $couleur-degrade-sombre 100%));
     @include media-query(lap-and-up) {
         padding-top: 3em;
         height: 100%;
@@ -51,7 +51,7 @@ body {
    ========================================================================== */
 
 .page-content {
-    padding: 2.5em $base-spacing-unit;
+    padding: 3em $base-spacing-unit;
     .page_sommaire & {padding-top: 3.8em;}
     @include media-query(lap-and-up) {
         margin-left: 30%;
