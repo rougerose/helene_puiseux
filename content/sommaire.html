@@ -5,10 +5,10 @@
         </div>
     </div><!-- /.grid__item -->]
     <B_rubriques>
-    <div class="list resumes-rubrique-list">
+    <div class="resumes-rubrique-grid">
         <BOUCLE_rubriques(RUBRIQUES){racine}{par num titre, titre}{0,4}>
         <div class="grid__item desk-one-half">
-            <a id="rubrique-#ID_RUBRIQUE" href="#URL_RUBRIQUE" class="resumes-rubrique-list__item">
+            <a id="rubrique-#ID_RUBRIQUE" href="#URL_RUBRIQUE" class="resumes-rubrique-grid__item">
                 <div class="thumbnail">
                     <div class="img-container">
                         [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" alt="#TITRE">]

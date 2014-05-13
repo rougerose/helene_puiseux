@@ -13,21 +13,14 @@
 
 /* 
     resumes-rubrique-list
-    ========================================================================== */
+    ========================================================================== */ 
 
-    // liste en page d'accueil. 
-
-    // .resumes-rubrique-list {}
-       .resumes-rubrique-list__item {
-            display: block;
-            margin-bottom: 1em;
-            overflow: hidden;
-            .hN {
-                border-bottom: 2px solid transparent;
-                @include font-size(32px);
-                @include transition(color .2s ease,border .3s ease);
-            }
-        }
+    .resumes-rubrique-list {
+        @extend %bare-list;
+    }
+    .resumes-rubrique-list__item {
+        margin-bottom: 2.5em;
+    }
 
 /* 
     resumes-list
@@ -38,7 +31,7 @@
             margin-bottom: 0;
             @include font-size(30px);
             font-weight: 100;
-            color: #000;
+            color: #ff5200;
         }
     }
 

@@ -5,16 +5,40 @@
 // .resume {}
 .resume__titre {
     margin-bottom: 1em;
-    @include font-size(20px);
     a {color: #333;}
 }
 
-.resume__desc {
-    p {
-        margin-bottom: .5em;
-    }
-}
+// .resume__desc {}
+
 .resume__meta {
     color: #999;
     color: rgba(#000,0.2);
 }
+
+/* 
+    .resume-article
+    ========================================================================== */
+
+.resume-article {
+    .resume__titre {
+        @include font-size(20px);
+    }
+    .resume__desc {
+        p {
+            margin-bottom: .5em;
+        }
+    }
+}
+
+
+/* 
+   .resume-rubrique
+   ========================================================================== */
+
+.resume-rubrique {
+    .resume__titre {
+        @include font-size(20px);
+        text-transform: uppercase;
+    }
+}
+

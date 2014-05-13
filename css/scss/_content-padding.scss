@@ -14,7 +14,8 @@
 
 
 .self__header .hN,
-.resumes-article-list {
+.resumes-article-list .resume-article,
+.resumes-rubrique-list .resume-rubrique {
     @include media-query(desk) {
         @include pg-desk;
     }

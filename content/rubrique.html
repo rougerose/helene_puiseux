@@ -1,19 +1,61 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+#SET{media-type,''}
+[(#LOGO_RUBRIQUE|oui)
+    [(#LOGO_RUBRIQUE|largeur|>{[(#LOGO_RUBRIQUE|hauteur)]}|oui) #SET{media-type,media--block} ]
+]
 <div class="grid">
     <div class="grid__item">
         <article class="self self-rubrique">
             <header class="self__header">
-                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span>[ <small class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]</h1>
+                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span></h1>
             </header>
-            [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" alt="">]
-            [<div class="self__body">
-                <div class="#EDIT{texte} texte surlignable">
+            [<div class="self__body media[ (#GET{media-type})]">
+                [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" class="body__img media__img" alt="#TITRE">]
+                <div class="#EDIT{texte} body__texte surlignable media__body">
                     (#TEXTE|image_reduire{500,0})
                 </div>
             </div>]
-            <section>
-                
-            </section>
+            [(#REM) Les articles de la rubrique ]
+            <div class="tri cf">
+                <p class=""><a id="tri-toggle" href="#tri">Trier</a></p>
+                <BOUCLE_articles_rubrique(ARTICLES){id_rubrique}>#SET_PUSH{articles,#ID_ARTICLE}</BOUCLE_articles_rubrique>
+
+                <B_groupes>
+                <nav>
+                    <BOUCLE_groupes(GROUPES_MOTS){par num titre, titre}>
+                    <h2>#TITRE</h2>
+                    <B_mots>
+                    <ul>
+                        <BOUCLE_mots(MOTS spip_mots_liens){id_groupe}{objet=article}{id_objet IN #GET{articles}}{par titre}>
+                        <li>#TITRE</li>
+                        </BOUCLE_mots>
+                    </ul>
+                    </B_mots>
+                    </BOUCLE_groupes>
+                </nav>
+                </B_groupes>
+            </div>
+            <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
+                <INCLURE{fond=liste/chroniques-articles-resume,env,ajax} />
+            </BOUCLE_articles>
+
+            [(#REM) les sous-rubriques ]
+            <B_sousrubriques>
+            <ul class="list resumes-rubrique-list">
+                <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}>
+                <li class="resumes-rubrique-list__item">
+                    <article class="resume resume-rubrique">
+                        <h2 class="hN resume__titre"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+                        [<div class="#EDIT{intro} resume__desc introduction entry-content">
+                            (#INTRODUCTION|couper{300}|propre)
+                        </div>]
+                    </article>
+                </li>
+                </BOUCLE_sousrubriques>
+            </ul><!-- /.resumes-rubrique-list -->
+            </B_sousrubriques>
+            <//B_articles>
+
         </article>
     </div><!-- /.grid__item -->
 </div><!-- /.grid -->
