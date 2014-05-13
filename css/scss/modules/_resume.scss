@@ -11,8 +11,10 @@
 // .resume__desc {}
 
 .resume__meta {
+    margin-top: 1em;
     color: #999;
     color: rgba(#000,0.2);
+    @include font-size(14px);
 }
 
 /* 

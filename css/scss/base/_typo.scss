@@ -3,8 +3,8 @@
    ========================================================================== */
 
 /* 
-   liens
-   ========================================================================== */
+    liens
+    ========================================================================== */
 
 a {
     color: #000;
@@ -13,18 +13,31 @@ a {
 }
 
 p, .resume__titre {
-  a {
-    color: inherit;
-    border-bottom: 2px solid #fc0;
-    &:hover {color: #fc0;}
-  }
+    a {
+        color: inherit;
+        border-bottom: 2px solid #fc0;
+        &:hover {color: #fc0;}
+    }
+}
+
+.suite {
+    font-style: italic;
+    em {
+        font-weight: bold;
+        @include transition(padding .3s ease-out);
+    }
+    &:hover {
+        em {
+            padding-left: 1em;
+        }
+    }
 }
 
 
 
 /* 
-   intertitres
-   ========================================================================== */
+    intertitres
+    ========================================================================== */
 
 h1,
 h2,
