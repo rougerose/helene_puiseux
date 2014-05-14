@@ -1,5 +1,6 @@
 <composition>
     <nom>Bibliographie</nom>
     <description>Composition pour la rubrique Bibliographie</description>
+    <branche type="article" composition="bibliographie" />
     <icon>images/objet-liste-contenus-dates.png</icon>
 </composition>

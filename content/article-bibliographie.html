@@ -10,13 +10,20 @@
                     [<li class="meta-list__item meta-auteur"><:local:par:> (#LESAUTEURS)</li>]
                 </ul>
             </header>
-
             <div class="self__body">
                 [<section class="#EDIT{chapo} chapo surlignable body__chapo surlignable">
                     (#CHAPO|image_reduire{560,0})
                 </section>]
                 [<section class="#EDIT{texte} texte surlignable body__texte surlignable">
                     (#TEXTE|image_reduire{560,0})
+                </section>]
+                [(#TEXTE|non)
+                [<section class="#EDIT{texte} texte surlignable body__texte surlignable">
+                    (#DESCRIPTIF|image_reduire{560,0})
+                </section>]
+                ]
+                [<section class="#EDIT{hyperlien} hyperlien body__texte">
+                    <p><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE)]})]</a></p>
                 </section>]
                 [<section class="#EDIT{ps} ps body__ps surlignable">
                     <h2 class="hN"><:info_ps:></h2>
@@ -36,6 +43,20 @@
                 </section>]
                 ]
             </div>
+            <nav>
+                <ul class="pager">
+                   <BOUCLE_article_precedent(ARTICLES){id_rubrique}{par date}{precedent}>
+                   <li class="previous"><a href="#URL_ARTICLE" title="<:local:pager_precedent_info:> : [(#TITRE|attribut_html|couper{50})]"><:local:pager_precedent_info:></a></li>
+                   </BOUCLE_article_precedent>
+                   <li class="previous disabled"><span><:local:pager_precedent_info:></span></li>
+                   <//B_article_precedent>
+                   <BOUCLE_article_suivant(ARTICLES){id_rubrique}{par date}{suivant}>
+                   <li class="next"><a href="#URL_ARTICLE" title="<:local:pager_suivant_info:> : [(#TITRE|attribut_html|couper{50})]"><:local:pager_suivant_info:></a></li>
+                   </BOUCLE_article_suivant>
+                   <li class="next disabled"><span><:local:pager_suivant_info:></span></li>
+                   <//B_article_suivant>
+                </ul>
+            </nav>
         </article>
     </div><!-- /.grid__item -->
 </div><!-- /.grid -->

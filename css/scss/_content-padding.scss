@@ -41,6 +41,7 @@
     ol,
     dl,
     blockquote,
+    .documents,
     h2, h3, h4, h5, h6 {
         @include media-query(desk) {
             @include pg-desk;
@@ -74,7 +75,13 @@
         dl,
         h2,h3,h4,h5,h6 {
             padding-left: 0;
+        } 
+    }
+    .documents {
+        dl,
+        h2,
+        p {
+            padding-left: 0;
         }
-        
     }
 }

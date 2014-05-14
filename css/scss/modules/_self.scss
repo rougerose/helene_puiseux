@@ -16,13 +16,14 @@
     .surtitre {
         margin-bottom: 0.5em;
         font-style: italic;
-        color: darken($couleur-degrade-clair,8%);
+        color: $couleur-degrade-clair;
     }
     .soustitre {
         display: block;
-        margin-top: .25em;
+        margin-top: .45em;
         font-style: italic;
         text-transform: none;
+        color: darken($couleur-degrade-clair,8%);
     }
     margin-bottom: 1.5em;
 }
