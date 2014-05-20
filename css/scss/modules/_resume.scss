@@ -5,7 +5,7 @@
 // .resume {}
 .resume__titre {
     margin-bottom: 1em;
-    a {color: #333;}
+    // a {color: in}
 }
 
 // .resume__desc {}
@@ -17,6 +17,7 @@
 .resume-article {
     .resume__titre {
         @include font-size(20px);
+        font-weight: 400;
     }
     .resume__desc {
         p {
@@ -34,6 +35,7 @@
     .resume__titre {
         @include font-size(20px);
         text-transform: uppercase;
+        font-weight: 400;
     }
 }
 

@@ -22,7 +22,7 @@ body {
     background-color: #ccc;
     position: relative;
     z-index: 100;
-    @include background-image(linear-gradient($couleur-degrade-sombre 0, $couleur-degrade-clair 100%));
+    @include linear-gradient($couleur-degrade-sombre,$couleur-degrade-clair);
     @include media-query(lap-and-up) {
         padding-top: 3em;
         height: 100%;

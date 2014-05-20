@@ -58,7 +58,7 @@ $use-greybox:       false;
 $english-quotes: false;
 
 // couleurs
-$base-color: #555;
+$base-color: #444;
 
 // inuit
 $base-ui-color: #ccc;
@@ -74,10 +74,11 @@ $base-font: $base-font-family;
 $text-color: #444;
 $gray: #cccac8;
 $gray-dark: darken($gray,20%);
-$link-color: #fc0;
+//$link-color: #fc0;
 $link-color-nav: #ff5200;
 
 $couleur-degrade-sombre: #ff5200;
-$couleur-degrade-clair: #ffcc00;
+$couleur-degrade-clair: #2989d8; //#ffcc00;
 
-
+$couleur-lien: darken($couleur-degrade-clair,30%);
+$couleur-lien-hover: $couleur-degrade-sombre;

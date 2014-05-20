@@ -1,0 +1,54 @@
+/* ==========================================================================
+   .pager
+   ========================================================================== */
+
+// .pager {}
+.pager__item {display: block;}
+.pager__item-label {
+    border-bottom: 1px solid $couleur-degrade-clair;
+    font-family: $lato-font;
+    @include font-size(24px);
+    text-transform: uppercase;
+    color: $couleur-degrade-clair;
+    @include transition(color .3s ease-out,border .3s ease-out);
+    a:hover & {
+        border-bottom-color: $couleur-lien-hover;
+        color: $couleur-lien-hover;
+    }
+}
+.pager__item-title {
+    margin-top: .3em;
+    @include transition(color .3s ease-out);
+    a:hover & {
+        color: $couleur-lien-hover
+    }
+}
+.label--is-disabled {
+    &,&:hover {
+        color: #ccc;
+        border-bottom-color: #ccc;
+    }
+}
+.label--previous {
+    &,
+    & + span {
+        margin-right: 5%;
+    }
+    &:before {
+        content: '\2190';
+        margin-right: .5em;
+        display: inline-block;
+    }
+}
+.label--next {
+    &,
+    & + span {
+        margin-left: 5%;
+        text-align: right;
+    }
+    &:after {
+        content:'\2192';
+        display: inline-block;
+        margin-left: .5em;
+    }
+}

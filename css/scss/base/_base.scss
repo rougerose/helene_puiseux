@@ -1,49 +1,12 @@
-/* 
-    spip
-    ========================================================================== */
-    hr.spip {
-        border: 0;
-        margin-top: 4em;
-        margin-bottom: 4em;
-        height: 2px;
-        background: $couleur-degrade-clair;
-        @include background-image(linear-gradient(to right, #fff 0, $couleur-degrade-clair 50%, #fff 100%));
-    }
+/* ==========================================================================
+   base
+   ========================================================================== */
 
-    // listes 
-    ul.spip,
-    ol.spip {
-        margin-left: 0;
-        li {
-            margin-left: 1.5em;
-        }
-        ul,ol {
-            padding-left: 0;
-        }
-    }
-    dl.spip {
-        dt {font-weight: bold;}
-        dd + dt {margin-top: 1.5em;}
-    }
+   // quotes
+   blockquote {
+       p {
+           padding-left: 0;
+       }
+   }
 
-    // table
-    table.spip {
-        caption {
-            border-bottom: 1px solid #000;
-            font-weight: bold;
-        }
-        thead th {
-            border: 1px solid #000;
-            border-width: 1px 0;
-        }
-        tr td {
-            border-bottom: 1px solid #ddd;
-        }
-    }
-
-    // quotes
-    blockquote {
-        p {
-            padding-left: 0;
-        }
-    }
+    

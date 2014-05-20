@@ -3,8 +3,9 @@
     ========================================================================== */
 
 .meta {
-    color: rgba(#000,0.2);
+    color: rgba(#000,0.5);
     @include font-size(14px);
+    font-style:italic;
 }
 
 // résumés

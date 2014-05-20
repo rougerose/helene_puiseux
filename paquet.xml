@@ -3,5 +3,6 @@
     <auteur lien="http://rouge-rose.net">christophe le drean</auteur>
     <licence>GNU/GPL</licence>
     <necessite nom="Zcore" compatibilite="[2.4.0;[" />
+    <utilise nom="medias" compatibilite="[2.7.58;[" />
     <chemin path=""/>
 </paquet>

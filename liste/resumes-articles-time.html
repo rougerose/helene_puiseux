@@ -14,7 +14,7 @@
         </BOUCLE_premier_annee>
         <BOUCLE_suite_annee(ARTICLES){id_rubrique}{mois_relatif=0}{!par date}{doublons}>
         <li class="resumes-article-list__item">
-            (#ENV{composition}|=={bibliographie}|?{
+            [(#ENV{composition}|=={bibliographie}|?{
                 #INCLURE{fond=resume/article-bibliographie,id_article},
                 #INCLURE{fond=resume/article,id_article}
             })]

@@ -14,6 +14,7 @@
 
 
 .self__header .hN,
+.self-article .pager,
 .resumes-article-list .resume-article,
 .resumes-rubrique-list .resume-rubrique {
     @include media-query(desk) {

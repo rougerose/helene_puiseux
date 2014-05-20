@@ -4,14 +4,14 @@
 <figure class="documents portfolio media">
    <h1 class="hN intertitre"><:medias:info_portfolio:></h1>
    <BOUCLE_documents_portfolio(DOCUMENTS){id_article?}{id_rubrique?}{mode=document}{extension IN png,jpg,gif}{par num titre, date}{vu=non}{si #ENV{carousel}|non}>[
-   <a class="mediabox[ item_(#COMPTEUR_BOUCLE|modulo{4})] media__link" href="(#URL_DOCUMENT)" type="#MIME_TYPE" rel="documents_portfolio[-a(#ID_ARTICLE)][-r(#ID_RUBRIQUE)]" [ title="(#TITRE|attribut_html|couper{80})"]>[(#FICHIER|image_reduire{150,100}|inserer_attribut{class,spip_logos media__img}|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]</a>]</BOUCLE_documents_portfolio>
+   <a class="mediabox[ item_(#COMPTEUR_BOUCLE|modulo{4})] media__link" href="(#URL_DOCUMENT)" type="#MIME_TYPE" rel="documents_portfolio[-a(#ID_ARTICLE)][-r(#ID_RUBRIQUE)]" [ title="(#TITRE|attribut_html|couper{80})"]>[(#FICHIER|image_reduire{150,150}|inserer_attribut{class,spip_logos media__img}|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]</a>]</BOUCLE_documents_portfolio>
 </figure>
 </B_documents_portfolio>
 
 [(#REM) Liste des autres documents joints ]
 <B_documents_joints>
 <figure class="documents fichiers">
-   <h1 class="hN intertitre"><:medias:titre_documents_joints:></h1>
+   <h1 class="hN intertitre"><:local:documents:></h1>
    <BOUCLE_documents_joints(DOCUMENTS){id_article?}{id_rubrique?}{extension !IN gif,jpg,png}{vu=non}{par num titre, date}>
    <dl class="block-list media">
       <dt>

@@ -1,60 +1,61 @@
-/* ==========================================================================
-   $page
-   ========================================================================== */
+/*  ==========================================================================
+    spip
+    ========================================================================== */
 
-html {}
-body {
-    color: $base-color;
-    background-color: #fff;
-}
-
-.inner {
-    max-width: 43.750em; // 800px
-    margin: 0 auto;
-}
-
-/* 
-   .page-header
-   ========================================================================== */
-
-.page-header {
-    text-align: center;
-    background-color: #ccc;
-    position: relative;
-    z-index: 100;
-    @include background-image(linear-gradient($couleur-degrade-clair 0, $couleur-degrade-sombre 100%));
-    @include media-query(lap-and-up) {
-        padding-top: 3em;
-        height: 100%;
-        width: 30%;
-        position: fixed;
-   }
-}
-
-/* .site-logo */
-.site-logo {
-    margin: 0;
-    padding: 0 0;
-    display:block;
-    font-family: $base-font;
-    @include font-size(32px,$line-height: false);
-    line-height: 1;
-    color: #fff;
-    @include media-query(palm){
-        padding: .5em 1.75em;
-        @include font-size(26px,$line-height: false);
+    hr.spip {
+        border: 0;
+        margin-top: 4em;
+        margin-bottom: 4em;
+        height: 2px;
+        background: $couleur-degrade-sombre;
+        @include background-image(linear-gradient(to right, #fff 0, $couleur-degrade-sombre 50%, #fff 100%));
     }
-}
 
-/* 
-   .page-content
-   ========================================================================== */
-
-.page-content {
-    padding: 3em $base-spacing-unit;
-    .page_sommaire & {padding-top: 3.8em;}
-    @include media-query(lap-and-up) {
-        margin-left: 30%;
+    // listes 
+    ul.spip,
+    ol.spip {
+        margin-left: 0;
+        li {
+            margin-left: 1.5em;
+        }
+        ul,ol {
+            padding-left: 0;
+        }
     }
-}
+    dl.spip {
+        dt {font-weight: bold;}
+        dd + dt {margin-top: 1.5em;}
+    }
 
+    // table
+    table.spip {
+        caption {
+            border-bottom: 1px solid #000;
+            font-weight: bold;
+        }
+        thead th {
+            border: 1px solid #000;
+            border-width: 1px 0;
+        }
+        tr td {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
+    .texte {
+        blockquote {
+            quotes: none;
+            text-indent: 0;
+            margin-left: 3em;
+        }
+    }
+
+    // notes
+    .spip_note_ref {
+        color: $couleur-degrade-clair;
+        @include transition(color .3s ease-out);
+        &:hover {color: $couleur-degrade-sombre;}
+        a {
+            color: $couleur-degrade-clair;
+        }
+    }

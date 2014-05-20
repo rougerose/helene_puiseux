@@ -29,8 +29,8 @@
     .resumes-list--time {
         > .hN {
             margin-bottom: 0;
-            @include font-size(30px);
-            font-weight: 100;
+            @include font-size(36px);
+            font-weight: 300;
             color: $couleur-degrade-sombre;
         }
     }
@@ -55,6 +55,20 @@
     .meta-list__item {
         display:inline-block;
     }
+
+/* 
+   pager-list
+   ========================================================================== */
+
+.pager-list {
+    @extend %bare-list;
+}
+.pager-list__item {
+    display:inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
 
     
 
