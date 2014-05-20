@@ -1,17 +1,27 @@
-/* ==========================================================================
-   content-padding
-   ========================================================================== */
+/*  ==========================================================================
+    marges
+    ========================================================================== */
 
-// marge gauche des contenus 
-
-@mixin pg-desk {
-    padding-left: 20%;
+// marge basse 1.5
+.self,
+.self__header,
+.self__body,
+.body__chapo,
+.body__texte,
+.body__notes {
+    @include marge-basse;
 }
 
-@mixin pg-lap {
-    padding-left: 8%;
+// marge basse 3
+.self-rubrique {
+    .self__header,
+    .body__chapo,
+    .body__img {
+        @include marge-basse(3em);
+    }
 }
 
+// marge gauche
 
 .self__header .hN,
 .self-article .pager,

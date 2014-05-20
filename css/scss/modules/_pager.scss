@@ -7,7 +7,8 @@
 .pager__item-label {
     border-bottom: 1px solid $couleur-degrade-clair;
     font-family: $lato-font;
-    @include font-size(24px);
+    @include font-size(20px);
+    font-weight: 300;
     text-transform: uppercase;
     color: $couleur-degrade-clair;
     @include transition(color .3s ease-out,border .3s ease-out);
@@ -30,10 +31,6 @@
     }
 }
 .label--previous {
-    &,
-    & + span {
-        margin-right: 5%;
-    }
     &:before {
         content: '\2190';
         margin-right: .5em;
@@ -41,14 +38,25 @@
     }
 }
 .label--next {
-    &,
-    & + span {
-        margin-left: 5%;
-        text-align: right;
-    }
     &:after {
         content:'\2192';
         display: inline-block;
         margin-left: .5em;
+    }
+}
+
+@include media-query(lap-and-up) {
+    .label--next {
+        &,
+        & + span {
+            margin-left: 5%;
+            text-align: right;
+        }
+    }
+    .label--previous {
+        &,
+        & + span {
+            margin-right: 5%;
+        }
     }
 }

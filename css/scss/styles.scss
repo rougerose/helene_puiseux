@@ -6,6 +6,8 @@
 @import "vars";
 @import "inuit";
 
+@import "mixins";
+
 //base
 @import 
     "base/typo",
@@ -23,8 +25,9 @@
      "modules/resume",
      "modules/meta",
      "modules/pager",
+     "modules/breadcrumb",
      
 // divers
-    "content-padding",
+    "marges",
     "spip/spip",
     "spip/admin";

@@ -5,6 +5,9 @@
     <div class="page-content" role="main">
         <div class="inner">
             <INCLURE{fond=content/#ENV{type-page},env} />
+            <nav class="breadcrumb">
+              <INCLURE{fond=breadcrumb/#ENV{type-page},env}>
+            </nav><!-- /.breadcrumb -->
         </div><!-- /.inner -->
     </div><!-- /.main -->
     <footer class="page-footer">

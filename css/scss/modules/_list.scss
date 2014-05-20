@@ -64,9 +64,25 @@
     @extend %bare-list;
 }
 .pager-list__item {
-    display:inline-block;
-    vertical-align: top;
-    width: 50%;
+    padding-bottom: 1.5em;
+    @include media-query(lap-and-up) {
+        display:inline-block;
+        width: 50%;
+        vertical-align: top;
+    }
+}
+
+/* 
+    breadcrumb-list
+    ========================================================================== */
+.breadcrumb-list {@extend %bare-list;}
+.breadcrumb-list__item {
+    display: inline-block;
+    margin-right: .375em; /* 6px */
+    &:before {
+        content:"/ ";
+        color: $couleur-degrade-clair;
+    }
 }
 
 
