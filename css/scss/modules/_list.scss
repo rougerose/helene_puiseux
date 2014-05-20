@@ -12,6 +12,17 @@
     }
 
 /* 
+    inline-list
+    ========================================================================== */
+    .inline-list {
+        list-style: none;
+        margin: 0;
+        > li {display: inline-block;}
+    }
+
+
+
+/* 
     resumes-rubrique-list
     ========================================================================== */ 
 
@@ -45,16 +56,7 @@
     }
 
 
-/* 
-    meta-list
-    ========================================================================== */
-
-    .meta-list {
-        @extend %bare-list;
-    }
-    .meta-list__item {
-        display:inline-block;
-    }
+    
 
 /* 
    pager-list

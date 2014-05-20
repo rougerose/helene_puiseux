@@ -3,9 +3,13 @@
     ========================================================================== */
 
 .meta {
+    @extend %bare-list;
     color: rgba(#000,0.5);
     @include font-size(14px);
     font-style:italic;
+}
+.meta__item {
+    display: inline-block;
 }
 
 // résumés
@@ -15,17 +19,27 @@
 
 // articles
 .meta-article {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 // auteur
-.meta-auteur {
-    .meta-article & {
-        margin-left: .5em;
-        &:before {
-            content:'\2022 ';
-            margin-right: .5em;
-        }
+.meta-article__auteur {
+    margin-left: .5em;
+    &:before {
+        content:'\2022 ';
+        margin-right: .5em;
+    }
+}
+
+// mots
+.meta-article__mots {
+    display: list-item;
+}
+.meta-mot {
+    margin-right: .5em;
+    &:before {
+        content: '#';
+        margin-right: .25em;
     }
 }

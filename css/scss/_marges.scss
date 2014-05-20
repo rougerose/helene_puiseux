@@ -26,7 +26,8 @@
 .self__header .hN,
 .self-article .pager,
 .resumes-article-list .resume-article,
-.resumes-rubrique-list .resume-rubrique {
+.resumes-rubrique-list .resume-rubrique,
+.body__notes {
     @include media-query(desk) {
         @include pg-desk;
     }
@@ -90,6 +91,12 @@
     }
     .documents {
         dl,
+        h2,
+        p {
+            padding-left: 0;
+        }
+    }
+    .body__notes {
         h2,
         p {
             padding-left: 0;

@@ -39,7 +39,8 @@
     .hN {
         padding-top: 1em;
         margin-bottom: .5em;
-        @include font-size($h3-size);
+        @include font-size($h3-size,$line-height: false);
+        line-height: 1.5em;
         font-style:italic;
         color: $couleur-degrade-sombre;
     }
@@ -52,6 +53,9 @@
 }
 // notes 
 .body__notes {
+    .hN {
+        border-bottom: 1px solid $couleur-degrade-sombre;
+    }
     p {
         width: 70%;
         @include font-size(14px);
