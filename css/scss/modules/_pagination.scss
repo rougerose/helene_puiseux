@@ -6,17 +6,22 @@
     position: relative;
     border-top: 1px solid #ddd;
     font-family: $lato-font;
+    @include media-query(palm) {text-align:center;}
     ul {
-        float: left;
-        width: 80%;
+        @include media-query(lap-and-up) {
+            float: left;
+            width: 80%;
+        }
     }
 }
 .pagination__label {
     @include font-size(16px);
-    float: left;
-    width: 20%;
     color: $couleur-degrade-sombre;
     font-weight: 400;
+    @include media-query(lap-and-up) {
+        float: left;
+        width: 20%;
+    }
 }
 .pagination__item {
     a,
