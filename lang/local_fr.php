@@ -5,6 +5,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
     // D
     'documents' => "Documents",
     // I
+    'info_page' => "Page",
     'info_ps' => "Post-scriptum",
     // P
     'pager_precedent' => '&#8249;',

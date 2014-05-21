@@ -3,8 +3,15 @@
    ========================================================================== */
 
 // .pager {}
-.pager__item {display: block;}
-.pager__item-label {
+.pager__item {
+    @include media-query(lap-and-up) {
+        display:inline-block;
+        width: 50%;
+        vertical-align: top;
+    }
+}
+.pager__item-child {display: block;}
+.pager-label {
     border-bottom: 1px solid $couleur-degrade-clair;
     font-family: $lato-font;
     @include font-size(20px);
@@ -17,7 +24,7 @@
         color: $couleur-lien-hover;
     }
 }
-.pager__item-title {
+.pager-title {
     margin-top: .3em;
     @include transition(color .3s ease-out);
     a:hover & {

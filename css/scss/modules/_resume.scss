@@ -5,16 +5,30 @@
 // .resume {}
 .resume__titre {
     margin-bottom: 1em;
-    // a {color: in}
 }
 
 // .resume__desc {}
+
+/* 
+    .resumes-articles
+    ========================================================================== */
+
+.resumes-articles--time {
+    > .hN {
+        margin-bottom: 0;
+        @include font-size(36px);
+        font-weight: 300;
+        color: $couleur-degrade-sombre;
+    }
+}
+
 
 /* 
     .resume-article
     ========================================================================== */
 
 .resume-article {
+    margin-bottom: 3em;
     .resume__titre {
         @include font-size(20px);
         font-weight: 400;
@@ -32,6 +46,7 @@
    ========================================================================== */
 
 .resume-rubrique {
+    margin-bottom: 3em;
     .resume__titre {
         @include font-size(20px);
         text-transform: uppercase;

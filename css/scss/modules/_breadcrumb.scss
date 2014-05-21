@@ -5,14 +5,22 @@
 .breadcrumb {
     border: 1px solid $couleur-degrade-clair;
     border-width: 1px 0 0;
-    // border-top-color: $couleur-degrade-sombre;
     padding: .5em 0;
-    // font-family: $lato-font;
     @include font-size(14px);
-    // text-transform: uppercase;
     strong {
         font-weight: normal;
         color: #999;
     }
-    a:hover {color: $couleur-degrade-sombre;}
+}
+.breadcrumb__item {
+    margin-right: .375em; /* 6px */
+    &:before {
+        content:"/ ";
+        color: $couleur-degrade-clair;
+    }
+    a {
+        &:hover {
+            color: $couleur-degrade-sombre;
+        }
+    }
 }

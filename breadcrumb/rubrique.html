@@ -1,9 +1,9 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
-<ul class="breadcrumb-list">
-   <li class="breadcrumb-list__item"><a href="#URL_SITE_SPIP"><:accueil_site:></a></li>
+<ul class="inline-list">
+   <li class="breadcrumb__item"><a href="#URL_SITE_SPIP"><:accueil_site:></a></li>
    <BOUCLE_bc(HIERARCHIE){id_rubrique}>
-   <li class="breadcrumb-list__item"><a href="#URL_RUBRIQUE">[(#TITRE)]</a></li>
+   <li class="breadcrumb__item"><a href="#URL_RUBRIQUE">[(#TITRE)]</a></li>
    </BOUCLE_bc>
-   <li class="breadcrumb-list__item">[<strong>(#TITRE)</strong>]</li>
+   <li class="breadcrumb__item">[<strong>(#TITRE)</strong>]</li>
 </ul>
 </BOUCLE_rubrique>

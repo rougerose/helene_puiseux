@@ -3,6 +3,7 @@
     ========================================================================== */
 
 // marge basse 1.5
+.pager__item,
 .self,
 .self__header,
 .self__body,
@@ -25,8 +26,8 @@
 
 .self__header .hN,
 .self-article .pager,
-.resumes-article-list .resume-article,
-.resumes-rubrique-list .resume-rubrique,
+.resumes-articles .resume-article,
+.self-rubrique .resume-rubrique,
 .body__notes {
     @include media-query(desk) {
         @include pg-desk;

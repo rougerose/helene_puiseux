@@ -22,9 +22,9 @@
 
             [(#REM) les sous-rubriques ]
             <B_sousrubriques>
-            <ul class="list resumes-rubrique-list">
+            <ul class="bare-list">
                 <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}>
-                <li class="resumes-rubrique-list__item">
+                <li>
                     <article class="resume resume-rubrique">
                         <h2 class="hN resume__titre"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
                         [<div class="#EDIT{intro} resume__desc introduction entry-content">

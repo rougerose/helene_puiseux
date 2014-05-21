@@ -1,31 +1,31 @@
 <BOUCLE_pager(ARTICLES){id_article}>
 <nav class="pager">
-    <ul class="pager-list">
+    <ul class="bare-list">
         <BOUCLE_article_precedent(ARTICLES){id_rubrique}{par date}{precedent}>
-        <li class="pager-list__item">
+        <li class="pager__item">
             <a class="" href="#URL_ARTICLE">
-                <span class="pager__item pager__item-label label--previous"><:local:pager_precedent_info:></span>
-                <span class="pager__item pager__item-title">[<i>(#TITRE|couper{30})</i>]</span>
+                <span class="pager__item-child pager-label label--previous"><:local:pager_precedent_info:></span>
+                <span class="pager__item-child pager-title">[<i>(#TITRE|couper{30})</i>]</span>
             </a>
         </li>
         </BOUCLE_article_precedent>
-        <li class="pager-list__item">
+        <li class="pager__item">
             <span class="">
-                <span class="pager__item pager__item-label label--previous label--is-disabled"><:local:pager_precedent_info:></span>
+                <span class="pager__item-child pager-label label--previous label--is-disabled"><:local:pager_precedent_info:></span>
             </span>
         </li>
         <//B_article_precedent>
         <BOUCLE_article_suivant(ARTICLES){id_rubrique}{par date}{suivant}>
-        <li class="pager-list__item">
+        <li class="pager__item">
             <a class="" href="#URL_ARTICLE">
-                <span class="pager__item pager__item-label label--next"><:local:pager_suivant_info:></span>
-                <span class="pager__item pager__item-title">[<i>(#TITRE|couper{30})</i>]</span>
+                <span class="pager__item-child pager-label label--next"><:local:pager_suivant_info:></span>
+                <span class="pager__item-child pager-title">[<i>(#TITRE|couper{30})</i>]</span>
             </a>
         </li>
         </BOUCLE_article_suivant>
-        <li class="pager-list__item">
+        <li class="pager__item">
             <span class="">
-                <span class="pager__item pager__item-label label--next label--is-disabled"><:local:pager_suivant_info:></span>
+                <span class="pager__item-child pager-label label--next label--is-disabled"><:local:pager_suivant_info:></span>
             </span>
         </li>
         <//B_article_suivant>
