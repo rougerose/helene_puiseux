@@ -1,7 +1,7 @@
-<B_resumes_articles_time>
+<B_articles>
 <section class="resumes-articles resumes-articles--time">
     #ANCRE_PAGINATION
-    <BOUCLE_resumes_articles_time(ARTICLES){id_rubrique}{!par date}{pagination #ENV{nb,30}}>
+    <BOUCLE_articles(ARTICLES){id_rubrique}{!par date}{pagination #ENV{nb,1}}>
     <BOUCLE_premier_annee(ARTICLES){id_article}{doublons}>
     <h2 class="hN">[(#DATE|annee|unique)]</h2>
     <ul class="bare-list">
@@ -21,7 +21,7 @@
         </li>
         </BOUCLE_suite_annee>
     </ul>
-    </BOUCLE_resumes_articles_time>
+    </BOUCLE_articles>
     [<nav class="pagination cf">(#PAGINATION{li})</nav>]
 </section>
-</B_resumes_articles_time>
+</B_articles>
