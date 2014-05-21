@@ -81,26 +81,25 @@
             margin-left: 8%;
         }
     }
+    // marge gauche annulée
     blockquote {
         p,
         ul,
         ol,
         dl,
-        h2,h3,h4,h5,h6 {
-            padding-left: 0;
-        } 
+        h2,h3,h4,h5,h6 {padding-left: 0;} 
     }
     .documents {
         dl,
         h2,
-        p {
-            padding-left: 0;
-        }
+        p {padding-left: 0;}
+    }
+    .spip_doc_legende {
+        .spip_doc_titre,
+        .spip_doc_descriptif {padding-left:0;}
     }
     .body__notes {
         h2,
-        p {
-            padding-left: 0;
-        }
+        p {padding-left: 0;}
     }
 }
