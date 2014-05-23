@@ -14,7 +14,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
     'pager_suivant_info' => 'Suivant',
     "par" => "Par",
     // S
-    "suite" => "Lire la suite <em>&#8594;</em>"
+    "suite" => "Lire la suite <em>&#8594;</em>",
+    // T
+    "trier" => "Trier"
    
    );
 ?>

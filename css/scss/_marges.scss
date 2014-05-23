@@ -28,7 +28,8 @@
 .self-article .pager,
 .resumes-articles .resume-article,
 .self-rubrique .resume-rubrique,
-.body__notes {
+.body__notes,
+.filtres {
     @include media-query(desk) {
         @include pg-desk;
     }
