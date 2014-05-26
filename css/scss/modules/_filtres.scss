@@ -6,7 +6,6 @@
     nav {clear:both;}
 }
 .filtres-toggle {
-    // float: right;
     padding: 0 .2em 0 2em;
     border-bottom: 1px solid #ccc;
     font-family: $lato-font;
@@ -19,8 +18,9 @@
 
         border-bottom-width: 1px;
         border-bottom-color: transparent;
-        padding: .25em .25em .2em .75em;
-        padding: .25rem .25rem .2rem .75rem;
+        // padding: .25em .25em .2em .75em;
+        // padding: .25rem .25rem .2rem .75rem;
+        padding-bottom: .125em;
         @include font-size(16px);
         color: $couleur-degrade-sombre;
         &.is-active,
@@ -69,10 +69,13 @@
 }
     .filtre-mot--link {
         color: $couleur-degrade-sombre;
+        &:hover {
+            color: #fff;
+            background: $couleur-degrade-sombre;
+        }
     }
-    .filtre-mot--link:hover,
     .filtre-mot--is-selected {
-        background-color: lighten($couleur-degrade-sombre,3%);
+        background:$couleur-degrade-sombre;
         color: #fff;
     }
     .filtre-mot--is-disabled {
