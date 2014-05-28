@@ -1,4 +1,11 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+
+[(#REM) article d'accueil ? On le charge ]
+<BOUCLE_accueil(ARTICLES){id_article=#ID_ARTICLE_ACCUEIL}>
+<INCLURE{fond=content/article,id_article,env} />
+</BOUCLE_accueil>
+
+[(#REM) pas d'article d'accueil ? La rubrique s'affiche ]
 [(#LOGO_RUBRIQUE|oui)
     [(#LOGO_RUBRIQUE|largeur|>{[(#LOGO_RUBRIQUE|hauteur)]}|?{[(#SET{logo-format,logo-horizontal})],[(#SET{logo-format,logo-vertical})]})]
 ]
@@ -35,4 +42,5 @@
         </article>
     </div><!-- /.grid__item -->
 </div><!-- /.grid -->
+<//B_accueil>
 </BOUCLE_rubrique>
