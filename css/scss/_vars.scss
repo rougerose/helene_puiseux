@@ -75,10 +75,14 @@ $text-color: #444;
 $gray: #cccac8;
 $gray-dark: darken($gray,20%);
 //$link-color: #fc0;
+
 $link-color-nav: #ff5200;
 
 $couleur-degrade-sombre: #ff5200;
-$couleur-degrade-clair: #2989d8; //#ffcc00;
+$couleur-degrade-clair: #2989d8;
+
+$couleur-ok: #c1e732;
+$couleur-erreur: #e75d32;
 
 $couleur-lien: darken($couleur-degrade-clair,30%);
 $couleur-lien-hover: $couleur-degrade-sombre;

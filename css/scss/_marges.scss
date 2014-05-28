@@ -75,7 +75,8 @@
             width: 92%;
         }
     }
-    hr.spip {
+    hr.spip,
+    .reponse_formulaire {
         @include media-query(desk) {
             margin-left: 20%;
         }
@@ -84,6 +85,7 @@
         }
     }
     // marge gauche annulée
+    .reponse_formulaire {padding-left: 0;}
     blockquote {
         p,
         ul,
