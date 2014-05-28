@@ -1,7 +1,6 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
-#SET{media-type,''}
 [(#LOGO_RUBRIQUE|oui)
-    [(#LOGO_RUBRIQUE|largeur|>{[(#LOGO_RUBRIQUE|hauteur)]}|oui) #SET{media-type,media--block} ]
+    [(#LOGO_RUBRIQUE|largeur|>{[(#LOGO_RUBRIQUE|hauteur)]}|?{[(#SET{logo-format,logo-horizontal})],[(#SET{logo-format,logo-vertical})]})]
 ]
 <div class="grid">
     <div class="grid__item">
@@ -9,11 +8,12 @@
             <header class="self__header">
                 <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span></h1>
             </header>
-            [<div class="self__body media[ (#GET{media-type})]">
-                [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" class="body__img media__img" alt="#TITRE">]
-                <div class="#EDIT{texte} body__chapo surlignable media__body">
-                    (#TEXTE|image_reduire{500,0})
-                </div>
+            [(#TEXTE|ou{#LOGO_RUBRIQUE}|oui)
+            <div class="self__body[(#LOGO_RUBRIQUE|oui) cf]">
+                [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" class="media__img media__img--logo [media__img--(#GET{logo-format})]" alt="#TITRE">]
+                [<div class="#EDIT{texte} body__chapo surlignable media__body">
+                    (#TEXTE)
+                </div>]
             </div>]
             [(#REM) Les articles de la rubrique ]
             <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>

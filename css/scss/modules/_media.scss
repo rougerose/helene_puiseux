@@ -5,8 +5,15 @@
 .media--block {
     .media__img {float: none;}
 }
-
-// HpC
+.media__img--logo {
+  margin-bottom: 3em;
+}
+.media__img--logo-vertical {
+  @include media-query(palm) {float:none;}
+  @include media-query(lap){width: 40%; margin-bottom: 1.5em;}
+  @include media-query(desk) {width: 50%; margin-bottom: 1.5em;}
+}
+.media__img--logo-horizontal {float:none;}
 
 .media-logo,
 .documents .media__img {
@@ -33,7 +40,12 @@
 /*==========  documents et images  ==========*/
 
 // documents insérés dans le texte
-.spip_documents_center {text-align: center;}
+.spip_documents_center {
+  &, 
+  & .spip_doc_legende {
+    text-align: center;
+  }
+}
 .spip_documents_left {
   float: left;
   margin-right: 1.5em;
