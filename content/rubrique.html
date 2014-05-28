@@ -24,19 +24,14 @@
             <B_sousrubriques>
             <ul class="bare-list">
                 <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}>
-                <li>
-                    <article class="resume resume-rubrique">
-                        <h2 class="hN resume__titre"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
-                        [<div class="#EDIT{intro} resume__desc introduction entry-content">
-                            (#INTRODUCTION|couper{300}|propre)
-                        </div>]
-                    </article>
-                </li>
+                [<li>
+                    (#INCLURE{fond=resume/rubrique,id_rubrique})
+                </li>]
                 </BOUCLE_sousrubriques>
             </ul><!-- /.resumes-rubrique-list -->
             </B_sousrubriques>
             <//B_articles>
-
+            
         </article>
     </div><!-- /.grid__item -->
 </div><!-- /.grid -->

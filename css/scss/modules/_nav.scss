@@ -13,8 +13,6 @@
 
 .site-navigation {
     padding-top: 2em;
-    text-transform: uppercase;
-    @include font-size(18px);
 }
 
 /* 
@@ -23,8 +21,9 @@
 
 .site-nav {
     @extend %nav;
-    
-}
+    text-transform: uppercase;
+    @include font-size(18px);
+} 
 .site-nav__item {
     > a {
         display: block;
@@ -37,6 +36,26 @@
 .site-nav__item--is-active {
     > a {
         color: #fff;
+    }
+}
+
+.site-nav--secondaire {
+    @include media-query(lap-and-up) {
+        position: absolute;
+        bottom: 1em;
+        width: 100%;
+        @include font-size(14px);
+        .site-nav__item {
+            display: inline;
+            > a {
+                display: inline;
+            }
+            &:first-child {
+                border-right: 1px solid rgba(#fff,0.5);
+                padding-right: .5em;
+                margin-right: .5em;
+            }
+        }
     }
 }
 

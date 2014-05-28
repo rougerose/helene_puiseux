@@ -9,19 +9,25 @@
 
 // .resume__desc {}
 
-/* 
-    .resumes-articles
-    ========================================================================== */
+/* ==========================================================================
+   .resumes
+   ========================================================================== */
 
-.resumes-articles--time {
+.resumes {
     > .hN {
         margin-bottom: 0;
-        @include font-size(36px);
+        @include font-size(32px);
         font-weight: 300;
         color: $couleur-degrade-sombre;
     }
 }
 
+
+/* 
+    .resumes-articles
+    ========================================================================== */
+
+// .resumes-articles {}
 
 /* 
     .resume-article
@@ -40,7 +46,6 @@
     }
 }
 
-
 /* 
    .resume-rubrique
    ========================================================================== */
@@ -52,5 +57,13 @@
         text-transform: uppercase;
         font-weight: 400;
     }
+}
+
+/* 
+    .resumes-documents
+    ========================================================================== */
+
+.resumes-documents {
+    > .hN {margin-bottom: 0.5em;}
 }
 

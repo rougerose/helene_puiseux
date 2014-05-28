@@ -1,0 +1,19 @@
+<B_mots>
+<section class="resumes resumes-mots">
+    #ANCRE_PAGINATION
+    <h2 class="hN">[(#GRAND_TOTAL|singulier_ou_pluriel{local:info_recherche_mot,local:info_recherche_mots,nb})]</h2>
+    <ul class="bare-list">
+        <BOUCLE_mots(MOTS){id_mot IN #ENV{selection}}{pagination #ENV{nb,10}}>
+        <li>
+            <article class="resume resume-mot">
+                <h2 class="hN resume__titre"><a href="#URL_MOT">#TITRE</a></h2>
+                [<div class="#EDIT{intro} resume__desc introduction">
+                    (#INTRODUCTION|couper{300}|propre)
+                </div>]
+            </article>
+        </li>
+        </BOUCLE_mots>
+    </ul><!-- /.resumes-rubrique-list -->
+    [<nav class="pagination cf">(#PAGINATION{li})</nav>]
+</section>
+</B_mots>

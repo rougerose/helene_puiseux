@@ -1,0 +1,41 @@
+<BOUCLE_article(MOTS){id_mot}>
+[(#REM) constantes ]
+    [(#SET{total,''})] #SET{articles, #ARRAY} #SET{rubriques, #ARRAY} #SET{documents, #ARRAY}
+    <BOUCLE_articles(ARTICLES){id_mot}>
+    [(#SET{articles,#GET{articles}|push{#ID_ARTICLE}})]</BOUCLE_articles>
+    <BOUCLE_rubriques(RUBRIQUES){id_mot}>
+    [(#SET{rubriques,#GET{rubriques}|push{#ID_RUBRIQUE}})]</BOUCLE_rubriques>
+    <BOUCLE_documents(DOCUMENTS){id_mot}{vu=non}>[(#SET{documents,#GET{documents}|push{#ID_DOCUMENT}})]</BOUCLE_documents>
+    [(#SET{total,#GET{articles}|count
+        |plus{#GET{rubriques}|count}
+        |plus{#GET{documents}|count}})]
+<div class="grid">
+    <div class="grid__item">
+        <article class="self self-mot">
+            <header class="self__header">
+                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span></h1>
+            </header>
+
+            <div class="self__body">
+                [<section class="#EDIT{chapo} chapo body__chapo surlignable">
+                    (#TEXTE)
+                </section>]
+                [<section class="notes body__notes">
+                    <h2 class="hN"><:info_notes:></h2>
+                    (#NOTES)
+                </section>]
+            </div>
+            [(#GET{total}|>{0}|oui)
+            <div class="">
+                [(#GET{articles}|count|>{0}|oui)
+                    [(#INCLURE{fond=liste/recherche-articles,selection=#GET{articles},nb=6,env,ajax})]
+                ][(#GET{rubriques}|count|>{0}|oui)
+                    [(#INCLURE{fond=liste/recherche-rubriques,selection=#GET{rubriques},env,ajax})]
+                ][(#GET{documents}|count|>{0}|oui)
+                    [(#INCLURE{fond=liste/recherche-documents,selection=#GET{documents},env,ajax})]
+                ]
+            </div>]
+        </article>
+    </div><!-- /.grid__item -->
+</div><!-- /.grid -->
+</BOUCLE_article>

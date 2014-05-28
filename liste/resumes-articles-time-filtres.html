@@ -9,7 +9,7 @@
 ]
 [(#REM) Les articles triés ]
 <B_articles_tries>
-<section class="resumes-articles resumes-articles--time">
+<section class="resumes resumes-articles resumes-articles--time">
     #ANCRE_PAGINATION
     <BOUCLE_articles_tries(ARTICLES){mots_selon_id}{id_rubrique}{!par date}{pagination #ENV{nb,30}}>
     <BOUCLE_premier_annee(ARTICLES){id_article}{doublons}>
@@ -37,7 +37,7 @@
 </B_articles_tries>
 [(#REM) Les articles par défaut ]
 <B_articles_defaut>
-<section class="resumes-articles resumes-articles--time">
+<section class="resumes resumes-articles resumes-articles--time">
     #ANCRE_PAGINATION
     <BOUCLE_articles_defaut(ARTICLES){id_rubrique}{!par date}{pagination #ENV{nb,30}}>
     <BOUCLE_premier_annee_defaut(ARTICLES){id_article}{doublons}>

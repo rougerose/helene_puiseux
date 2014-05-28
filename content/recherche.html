@@ -1,0 +1,46 @@
+[(#REM) constante ]
+    [(#SET{total,''})] #SET{articles, #ARRAY} #SET{rubriques, #ARRAY} #SET{mots, #ARRAY} #SET{documents, #ARRAY}
+
+<BOUCLE_articles(ARTICLES){recherche}{!par points}>
+[(#SET{articles,#GET{articles}|push{#ID_ARTICLE}})]</BOUCLE_articles>
+<BOUCLE_rubriques(RUBRIQUES){recherche}{!par points}>
+[(#SET{rubriques,#GET{rubriques}|push{#ID_RUBRIQUE}})]</BOUCLE_rubriques>
+<BOUCLE_mots(MOTS){recherche}{!par points}>[(#SET{mots,#GET{mots}|push{#ID_MOT}})]</BOUCLE_mots>
+<BOUCLE_documents(DOCUMENTS){recherche}{!par points}{vu=non}>[(#SET{documents,#GET{documents}|push{#ID_DOCUMENT}})]</BOUCLE_documents>
+
+[(#SET{total,#GET{articles}|count
+    |plus{#GET{rubriques}|count}
+    |plus{#GET{documents}|count}
+    |plus{#GET{mots}|count}})]
+
+<div class="grid">
+    <div class="grid__item">
+        <article class="self self-recherche">
+            <header class="self__header">
+                <h1 class="hN"><span class="#EDIT{titre} titre"><:info_recherche_label:></span></h1>
+            </header>
+
+            <div class="self__body">
+                #FORMULAIRE_RECHERCHE
+                [(#ENV{recherche}|oui)
+                <section class="chapo body__chapo surlignable">
+                    [(#GET{total}|>{0}|?{
+                    [<p class="resultats--total info">(#GET{total}|singulier_ou_pluriel{local:info_recherche_resultat,local:info_recherche_resultats,nb})</p>],
+                    <p class="resultats--total info"><:local:info_recherche_pas_de_resultat:></p>})]
+                </section>]
+            </div>
+            [(#GET{total}|>{0}|oui)
+            <div class="">
+                [(#GET{articles}|count|>{0}|oui)
+                    [(#INCLURE{fond=liste/recherche-articles,selection=#GET{articles},nb=6,env,ajax})]
+                ][(#GET{rubriques}|count|>{0}|oui)
+                    [(#INCLURE{fond=liste/recherche-rubriques,selection=#GET{rubriques},env,ajax})]
+                ][(#GET{documents}|count|>{0}|oui)
+                    [(#INCLURE{fond=liste/recherche-documents,selection=#GET{documents},env,ajax})]
+                ][(#GET{mots}|count|>{0}|oui)
+                    [(#INCLURE{fond=liste/recherche-mots,selection=#GET{mots},env,ajax})]
+                ]
+            </div>]
+        </article>
+    </div><!-- /.grid__item -->
+</div><!-- /.grid -->

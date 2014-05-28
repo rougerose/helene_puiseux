@@ -1,0 +1,17 @@
+<B_articles>
+<section class="resumes resumes-articles">
+    #ANCRE_PAGINATION
+    <h2 class="hN">[(#GRAND_TOTAL|singulier_ou_pluriel{local:info_recherche_article,local:info_recherche_articles,nb})]</h2>
+    <ul class="bare-list">
+        <BOUCLE_articles(ARTICLES){id_article IN #ENV{selection}}{pagination #ENV{nb,10}}>
+        <li class="resumes-article-list__item">
+            [(#ENV{composition}|=={bibliographie}|?{
+                #INCLURE{fond=resume/article-bibliographie,id_article},
+                #INCLURE{fond=resume/article,id_article}
+            })]
+        </li>
+        </BOUCLE_articles>
+    </ul>
+    [<nav class="pagination cf">(#PAGINATION{li})</nav>]
+</section>
+</B_articles>

@@ -4,15 +4,21 @@
 // ====================================
 @import "bourbon";
 @import "vars";
-@import "inuit";
-
 @import "mixins";
 
-//base
+// base 
+@import "base/base";
+
+// inuit 
+@import "inuit";
+
+
+
+// css
 @import 
     "base/typo",
-    "base/base",
     "base/page",
+    "base/form",
 
 // modules
      "modules/nav",

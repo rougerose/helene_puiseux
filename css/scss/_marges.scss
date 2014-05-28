@@ -26,10 +26,11 @@
 
 .self__header .hN,
 .self-article .pager,
-.resumes-articles .resume-article,
+.resumes .resume,
 .self-rubrique .resume-rubrique,
 .body__notes,
-.filtres {
+.filtres,
+.search__form {
     @include media-query(desk) {
         @include pg-desk;
     }
