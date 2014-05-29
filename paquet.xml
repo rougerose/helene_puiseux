@@ -4,5 +4,6 @@
     <licence>GNU/GPL</licence>
     <necessite nom="Zcore" compatibilite="[2.4.0;[" />
     <utilise nom="medias" compatibilite="[2.7.58;[" />
+    <utilise nom="IntertitresTdm" compatibilite="[0.9.6;[" />
     <chemin path=""/>
 </paquet>
