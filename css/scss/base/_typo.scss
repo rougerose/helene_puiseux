@@ -17,7 +17,7 @@ p,
 .resume__titre {
     a {
         color:$couleur-lien;
-        border-bottom: 2px solid $couleur-degrade-clair;
+        border-bottom: 1px solid $couleur-degrade-clair;
         &:hover {
             color: $couleur-lien-hover;
             border-bottom-color: $couleur-lien-hover;
