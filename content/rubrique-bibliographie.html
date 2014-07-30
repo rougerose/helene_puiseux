@@ -17,7 +17,7 @@
             </div>]
             [(#REM) Les articles de la rubrique ]
             <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
-                <INCLURE{fond=liste/resumes-articles-time-filtres,env,ajax} />
+                <INCLURE{fond=liste/resumes-articles-time,nb=20,env,ajax} />
             </BOUCLE_articles>
 
             [(#REM) les sous-rubriques ]

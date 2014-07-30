@@ -3,9 +3,9 @@
     <ul class="bare-list">
         <BOUCLE_article_precedent(ARTICLES){id_rubrique}{par date}{precedent}>
         <li class="pager__item">
-            <a class="" href="#URL_ARTICLE">
+            <a href="#URL_ARTICLE" title="[(#TITRE|attribut_html)]">
                 <span class="pager__item-child pager-label label--previous"><:local:pager_precedent_info:></span>
-                <span class="pager__item-child pager-title">[<i>(#TITRE|couper{30})</i>]</span>
+                <span class="pager__item-child pager-title">[<i>(#TITRE|couper{25})</i>]</span>
             </a>
         </li>
         </BOUCLE_article_precedent>
@@ -17,9 +17,9 @@
         <//B_article_precedent>
         <BOUCLE_article_suivant(ARTICLES){id_rubrique}{par date}{suivant}>
         <li class="pager__item">
-            <a class="" href="#URL_ARTICLE">
+            <a href="#URL_ARTICLE" title="[(#TITRE|attribut_html)]">
                 <span class="pager__item-child pager-label label--next"><:local:pager_suivant_info:></span>
-                <span class="pager__item-child pager-title">[<i>(#TITRE|couper{30})</i>]</span>
+                <span class="pager__item-child pager-title">[<i>(#TITRE|couper{25})</i>]</span>
             </a>
         </li>
         </BOUCLE_article_suivant>
