@@ -5,6 +5,13 @@
 // .resume {}
 .resume__titre {
     margin-bottom: 1em;
+    .soustitre {
+        display: block;
+        font-style: italic;
+        color: $couleur-degrade-clair;
+        line-height: 1.4;
+        font-size: inherit;
+    }
 }
 
 // .resume__desc {}
