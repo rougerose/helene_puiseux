@@ -41,9 +41,13 @@
 
 // documents insérés dans le texte
 .spip_documents_center {
+  padding-left: 20%;
   &, 
   & .spip_doc_legende {
     text-align: center;
+  }
+  img {
+    margin: 0 auto;
   }
 }
 .spip_documents_left {
@@ -61,6 +65,7 @@
   margin-top: .5em;
   font-family: $lato-font;
   text-align: left;
+  color: $gray-dark;
   .spip_doc_titre {
     margin-bottom: 0;
     @include font-size(14px,$line-height:false);

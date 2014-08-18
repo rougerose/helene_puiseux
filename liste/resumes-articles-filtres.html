@@ -1,0 +1,44 @@
+[(#REM) La liste des articles + Test présence de mot-clé pour afficher le menu de tri ? ]
+<BOUCLE_articles_rubrique(ARTICLES){id_rubrique}>#SET_PUSH{articles,#ID_ARTICLE}
+<BOUCLE_test_mot(MOTS){id_article}{0,1}>#SET{test_mot,' '}</BOUCLE_test_mot>
+</BOUCLE_articles_rubrique>
+
+[(#REM) Menu de filtrage des articles ]
+[(#GET{test_mot}|oui)
+<INCLURE{fond=nav/menu-filtre,articles=#GET{articles},env} />
+]
+[(#REM) Les articles triés ]
+<B_articles_tries>
+<section class="resumes resumes-articles">
+    #ANCRE_PAGINATION
+    <ul class="bare-list">
+        <BOUCLE_articles_tries(ARTICLES){mots_selon_id}{id_rubrique}{!par date}{pagination #ENV{nb,30}}>
+        <li class="resumes-article-list__item">
+            [(#ENV{composition}|=={bibliographie}|?{
+                #INCLURE{fond=resume/article-bibliographie,id_article},
+                #INCLURE{fond=resume/article,id_article}
+            })]
+        </li>
+        </BOUCLE_articles_tries>
+    </ul>
+    [<nav class="pagination cf">(#PAGINATION{li})</nav>]
+</section>
+</B_articles_tries>
+[(#REM) Les articles par défaut ]
+<B_articles_defaut>
+<section class="resumes resumes-articles">
+    #ANCRE_PAGINATION
+    <ul class="bare-list">
+        <BOUCLE_articles_defaut(ARTICLES){id_rubrique}{!par date}{pagination #ENV{nb,30}}>
+        <li class="resumes-article-list__item">
+            [(#ENV{composition}|=={bibliographie}|?{
+                #INCLURE{fond=resume/article-bibliographie,id_article},
+                #INCLURE{fond=resume/article,id_article}
+            })]
+        </li>
+        </BOUCLE_articles_defaut>
+    </ul>
+    [<nav class="pagination cf">(#PAGINATION{li})</nav>]
+</section>
+</B_articles_defaut>
+<//B_articles_tries>
