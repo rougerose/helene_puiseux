@@ -43,10 +43,8 @@
                 </section>]
                 ]
             </div>
-            <BOUCLE_test_autre_article(ARTICLES){id_rubrique}{exclus}{0,1}>
             <INCLURE{fond=nav/pager-article,id_article}/>
-            </BOUCLE_test_autre_article>
-
+            
             <BOUCLE_credits(RUBRIQUES){id_rubrique}{si #ID_RUBRIQUE|=={5}}>
             #INCLURE{fond=inclure/credits_site}
             </BOUCLE_credits>
