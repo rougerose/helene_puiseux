@@ -1,0 +1,54 @@
+/* ==========================================================================
+   $page
+   ========================================================================== */
+
+.inner {
+    max-width: 43.750em; // 800px
+    margin: 0 auto;
+}
+
+/* 
+   .page-header
+   ========================================================================== */
+
+.page-header {
+    text-align: center;
+    background-color: #ccc;
+    position: relative;
+    z-index: 100;
+    @include linear-gradient($couleur-degrade-sombre,$couleur-degrade-clair);
+    @include media-query(lap-and-up) {
+        padding-top: 3em;
+        height: 100%;
+        width: 30%;
+        position: fixed;
+   }
+}
+
+/* .site-logo */
+.site-logo {
+    margin: 0;
+    padding: 0 0;
+    display:block;
+    font-family: $base-font;
+    @include font-size(32px,$line-height: false);
+    line-height: 1;
+    color: #fff;
+    @include media-query(palm){
+        padding: .5em 1.75em;
+        @include font-size(26px,$line-height: false);
+    }
+}
+
+/* 
+   .page-content
+   ========================================================================== */
+
+.page-content {
+    padding: 2.5em $base-spacing-unit;
+    .page_sommaire & {padding-top: 3.8em;}
+    @include media-query(lap-and-up) {
+        margin-left: 30%;
+    }
+}
+

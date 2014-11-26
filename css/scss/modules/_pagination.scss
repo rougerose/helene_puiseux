@@ -1,0 +1,48 @@
+/*  ==========================================================================
+    pagination
+    ========================================================================== */
+
+.pagination {
+    position: relative;
+    border-top: 1px solid #ddd;
+    font-family: $lato-font;
+    @include media-query(palm) {text-align:center;}
+    ul {
+        @include media-query(lap-and-up) {
+            float: left;
+            width: 80%;
+        }
+    }
+}
+.pagination__label {
+    @include font-size(16px);
+    color: $couleur-degrade-sombre;
+    font-weight: 400;
+    @include media-query(lap-and-up) {
+        float: left;
+        width: 20%;
+    }
+}
+.pagination__item {
+    a,
+    span,
+    strong {
+        display: inline-block;
+        padding: 0 .5em;
+        margin-top: -1px;
+    }
+    strong {
+        border-top: 1px solid $couleur-degrade-sombre;
+        color: $couleur-degrade-sombre;
+    }
+    a {
+        &:hover {
+            color: $couleur-degrade-sombre;
+        }
+    }
+}
+
+.tbc,
+.disabled {
+    // color: $gray-light;
+}

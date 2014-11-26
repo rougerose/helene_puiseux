@@ -1,7 +1,9 @@
 # fichiers systemes
 .DS_Store
 
-# autres
-csswizardry-grids
+node_modules/
+bower_components/
+.sass-cache
+
 *.sublime-project
 *.sublime-workspace

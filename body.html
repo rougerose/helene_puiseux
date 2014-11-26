@@ -1,0 +1,17 @@
+<body id="top" class="page">
+    <header class="page-header" role="banner">
+        <INCLURE{fond=header/#ENV{type-page},env} />
+    </header>
+    <div class="page-content" role="main">
+        <div class="inner">
+            <INCLURE{fond=content/#ENV{type-page},env} />
+            <nav class="breadcrumb">
+              <INCLURE{fond=breadcrumb/#ENV{type-page},env}>
+            </nav><!-- /.breadcrumb -->
+        </div><!-- /.inner -->
+    </div><!-- /.main -->
+    <footer class="page-footer">
+        <INCLURE{fond=footer/#ENV{type-page},env} />
+    </footer>
+    [<script src="(#CHEMIN{js/public.js})"></script>]
+</body>

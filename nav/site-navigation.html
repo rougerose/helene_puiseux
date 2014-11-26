@@ -1,0 +1,16 @@
+<B_site_navigation>
+<a id="nav-open" href="#nav" class="site-nav-btn site-nav-open">Menu</a>
+<nav id="nav" class="site-navigation" role="navigation">
+    <ul class="site-nav">
+        <BOUCLE_site_navigation(RUBRIQUES){racine}{par num titre, titre}>
+        <li class="site-nav__item [(#EXPOSE|oui)site-nav__item--is-active]"><a href="#URL_RUBRIQUE">#TITRE</a></li>
+        </BOUCLE_site_navigation>
+    </ul>
+    <ul class="site-nav site-nav--secondaire">
+        <li class="site-nav__item"><a href="#URL_PAGE{recherche}">Recherche</a></li>
+        <li class="site-nav__item"><a href="#URL_PAGE{contact}">CONTACT</a></li>
+    </ul>
+    <a id="nav-close" href="#top" class="site-nav-btn site-nav-close">Fermer</a>
+</nav>
+
+</B_site_navigation>

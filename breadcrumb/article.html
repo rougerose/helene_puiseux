@@ -1,0 +1,9 @@
+<BOUCLE_article(ARTICLES){id_article}>
+<ul class="inline-list">
+   <li class="breadcrumb__item"><a href="#URL_SITE_SPIP"><:accueil_site:></a></li>
+   <BOUCLE_bc(HIERARCHIE){id_article}>
+   <li class="breadcrumb__item"><a href="#URL_RUBRIQUE">[(#TITRE)]</a></li>
+   </BOUCLE_bc>
+   <li class="breadcrumb__item">[<strong>(#TITRE)</strong>]</li>
+</ul>
+</BOUCLE_article>

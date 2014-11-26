@@ -1,0 +1,73 @@
+/*  ==========================================================================
+    .self
+    ========================================================================== */
+
+.self__header {
+    .hN {
+        margin-bottom: 0;
+        @include font-size(36px,$line-height: false);
+        line-height: 1.3;
+        font-weight: 300;
+        color: $couleur-degrade-sombre;
+        // text-transform: uppercase;
+    }
+    .surtitre {
+        margin-bottom: 0.5em;
+        font-style: italic;
+        color: $couleur-degrade-clair;
+    }
+    .soustitre {
+        display: block;
+        margin-top: .45em;
+        font-style: italic;
+        text-transform: none;
+        color: $couleur-degrade-clair;
+    }
+}
+
+// chapo
+.body__chapo {
+    p {
+        @include font-size(18px);
+        color: #333;
+    }
+}
+
+// ps et notes
+.body__ps,
+.body__notes {
+    .hN {
+        padding-top: 1em;
+        margin-bottom: .5em;
+        @include font-size($h3-size,$line-height: false);
+        line-height: 1.5em;
+        font-style:italic;
+        color: $couleur-degrade-sombre;
+    }
+}
+// ps 
+.body__ps {
+    background-color: rgba(#ccc,0.3);
+    padding: .1em;
+    margin-bottom: 1.5em;
+}
+// notes 
+.body__notes {
+    .hN {
+        border-bottom: 1px solid $couleur-degrade-sombre;
+    }
+    p {
+        width: 70%;
+        @include font-size(14px);
+    }
+}
+
+// rubrique
+// .self-rubrique {}
+
+// article
+.self-article {
+    .self__header {
+        .hN {line-height: 1;}
+    }
+}

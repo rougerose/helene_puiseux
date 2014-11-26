@@ -1,0 +1,17 @@
+{
+  "name": "helene_puiseux",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://rougerose@bitbucket.org/rougerose/helene_puiseux.git"
+  },
+  "author": "christophe le drean",
+  "license": "",
+  "homepage": "https://bitbucket.org/rougerose/helene_puiseux",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-css-metrics": "^0.1.2"
+  }
+}

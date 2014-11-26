@@ -1,0 +1,26 @@
+/* ==========================================================================
+   breadcrumb
+   ========================================================================== */
+
+.breadcrumb {
+    border: 1px solid $couleur-degrade-clair;
+    border-width: 1px 0 0;
+    padding: .5em 0;
+    @include font-size(14px);
+    strong {
+        font-weight: normal;
+        color: #999;
+    }
+}
+.breadcrumb__item {
+    margin-right: .375em; /* 6px */
+    &:before {
+        content:"/ ";
+        color: $couleur-degrade-clair;
+    }
+    a {
+        &:hover {
+            color: $couleur-degrade-sombre;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+//
+// mixins
+//
+
+// marge basse
+@mixin marge-basse($padding-bottom:1.5em) {
+    padding-bottom: $padding-bottom;
+}
+
+//marge gauche
+@mixin pg-desk {
+    padding-left: 20%;
+}
+
+@mixin pg-lap {
+    padding-left: 8%;
+}

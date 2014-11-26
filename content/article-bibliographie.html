@@ -1,0 +1,50 @@
+<BOUCLE_article(ARTICLES){id_article}>
+[(#LOGO_ARTICLE|oui)
+    [(#LOGO_ARTICLE|largeur|>{[(#LOGO_ARTICLE|hauteur)]}|?{[(#SET{logo-format,logo-horizontal})],[(#SET{logo-format,logo-vertical})]})]
+]
+<div class="grid">
+    <div class="grid__item">
+        <article class="self self-article">
+            <header class="self__header">
+                [<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
+                <h1 class="hN"><span class="#EDIT{titre} titre">#TITRE</span>[ <small class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]</h1>
+                <ul class="meta meta-article">
+                    <li class="meta__item"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
+                    [<li class="meta__item meta-article__auteur"><:local:par:> (#LESAUTEURS)</li>]
+                    [(#INCLURE{fond=liste/mots,id_article})]
+                </ul>
+            </header>
+            <div class="self__body">
+                [<img src="(#LOGO_ARTICLE|extraire_attribut{src})" class="media__img media__img--logo [media__img--(#GET{logo-format})]" alt="#TITRE">]
+                [<section class="#EDIT{chapo} chapo body__chapo surlignable">
+                    (#CHAPO)
+                </section>]
+                [<section class="#EDIT{texte} texte body__texte surlignable">
+                    (#TEXTE|sinon{#DESCRIPTIF})
+                </section>]
+                [<section class="#EDIT{hyperlien} hyperlien body__texte">
+                    <p><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE)]})]</a></p>
+                </section>]
+                [<section class="#EDIT{ps} ps body__ps surlignable">
+                    <h2 class="hN"><:info_ps:></h2>
+                    (#PS)
+                </section>]
+                [<section class="notes body__notes">
+                    <h2 class="hN"><:info_notes:></h2>
+                    (#NOTES)
+                </section>]
+
+                [(#REM) Gestion du portfolio et des documents ]
+                [(#INCLURE{fond=inclure/documents,id_article})]
+
+                [(#PAGE|=={contact}|oui)
+                [<section class="texte surlignable self-article__texte">
+                    (#FORMULAIRE_ECRIRE_AUTEUR)
+                </section>]
+                ]
+            </div>
+            <INCLURE{fond=nav/pager-article,id_article}/>
+        </article>
+    </div><!-- /.grid__item -->
+</div><!-- /.grid -->
+</BOUCLE_article>

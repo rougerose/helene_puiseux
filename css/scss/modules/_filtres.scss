@@ -1,0 +1,84 @@
+/* ==========================================================================
+   filtres
+   ========================================================================== */
+
+.filtres {
+    margin-bottom: 1em;
+    nav {clear:both;}
+}
+.filtres-toggle {
+    padding: 0 .2em 0 2em;
+    border-bottom: 1px solid #ccc;
+    font-family: $lato-font;
+    text-transform: uppercase;
+    text-align: right;
+    &.is-active {
+        border-bottom-color: $couleur-degrade-sombre;
+    }
+    a {
+
+        border-bottom-width: 1px;
+        border-bottom-color: transparent;
+        // padding: .25em .25em .2em .75em;
+        // padding: .25rem .25rem .2rem .75rem;
+        padding-bottom: .125em;
+        @include font-size(16px);
+        color: $couleur-degrade-sombre;
+        &.is-active,
+        &:hover {
+            border-bottom-color: $couleur-degrade-sombre;
+        }
+    }
+}
+.filtres-groupe {
+    margin-bottom: 1.5em;
+}
+.filtres-categories {
+    margin-bottom: 0;
+    font-family: $lato-font;
+    @include font-size(16px);
+    text-transform: uppercase;
+    border-bottom: 1px solid $couleur-degrade-clair;
+    color: $couleur-degrade-clair;
+}
+
+.filtres-selection {
+    .filtre-mot {
+        &:after {
+            content:'x';
+            margin-left: .25em;
+            font-family: $lato-font;
+            color: #fff;
+            @include transition(color .3s ease-out,background-color .3s ease-out);
+        }
+        &:hover {
+            background: darken($couleur-degrade-sombre,30%);
+            &:after {
+                color: $couleur-lien-hover;
+            }
+        }
+    }
+}
+
+.filtre-mot {
+    display: inline-block;
+    padding: .15em .35em;
+    margin: .5em .5em;
+    margin-left: 0;
+    border-radius: 5px;
+    border: 0;
+}
+    .filtre-mot--link {
+        color: $couleur-degrade-sombre;
+        &:hover {
+            color: #fff;
+            background: $couleur-degrade-sombre;
+        }
+    }
+    .filtre-mot--is-selected {
+        background:$couleur-degrade-sombre;
+        color: #fff;
+    }
+    .filtre-mot--is-disabled {
+        color: #ccc;
+    }

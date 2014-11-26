@@ -1,0 +1,61 @@
+/*  ==========================================================================
+    spip
+    ========================================================================== */
+
+    hr.spip {
+        border: 0;
+        margin-top: 4em;
+        margin-bottom: 4em;
+        height: 2px;
+        background: $couleur-degrade-sombre;
+        @include background-image(linear-gradient(to right, #fff 0, $couleur-degrade-sombre 50%, #fff 100%));
+    }
+
+    // listes 
+    ul.spip,
+    ol.spip {
+        margin-left: 0;
+        li {
+            margin-left: 1.5em;
+        }
+        ul,ol {
+            padding-left: 0;
+        }
+    }
+    dl.spip {
+        dt {font-weight: bold;}
+        dd + dt {margin-top: 1.5em;}
+    }
+
+    // table
+    table.spip {
+        caption {
+            border-bottom: 1px solid #000;
+            font-weight: bold;
+        }
+        thead th {
+            border: 1px solid #000;
+            border-width: 1px 0;
+        }
+        tr td {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
+    .texte {
+        blockquote {
+            quotes: none;
+            text-indent: 0;
+            margin-left: 3em;
+        }
+    }
+
+    // notes
+    .spip_note_ref {
+        color: $couleur-degrade-clair;
+        @include transition(color .3s ease-out);
+        &:hover {color: $couleur-degrade-sombre;}
+        a {
+            color: $couleur-degrade-clair;
+        }
+    }

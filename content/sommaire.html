@@ -1,0 +1,25 @@
+<div class="grid">
+    [<div class="grid__item">
+        <div class="site-introduction landmark">
+            (#DESCRIPTIF_SITE_SPIP)
+        </div>
+    </div><!-- /.grid__item -->]
+    <B_rubriques>
+    <div class="resumes-rubrique-grid">
+        <BOUCLE_rubriques(RUBRIQUES){racine}{par num titre, titre}{0,4}>
+        <div class="grid__item desk-one-half">
+            <a id="rubrique-#ID_RUBRIQUE" href="#URL_RUBRIQUE" class="resumes-rubrique-grid__item">
+                <div class="thumbnail">
+                    <div class="img-container">
+                        [<img src="(#LOGO_RUBRIQUE|extraire_attribut{src})" alt="#TITRE">]
+                    </div>
+                </div>
+                <div>
+                    <h1 class="hN">#TITRE</h1>
+                </div>
+            </a>
+        </div><!-- /.grid__item -->
+        </BOUCLE_rubriques>
+    </div><!-- /.list -->
+    </B_rubriques>
+</div><!-- /.grid -->

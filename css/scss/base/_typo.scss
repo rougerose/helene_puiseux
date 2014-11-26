@@ -1,0 +1,115 @@
+/* ==========================================================================
+   $typo
+   ========================================================================== */
+
+
+/* 
+    liens
+    ========================================================================== */
+
+a {
+    color: #000;
+    text-decoration: none;
+    @include transition(color .3s ease-out,border .3s ease-out);
+}
+
+p,
+.resume__titre {
+    a {
+        color:$couleur-lien;
+        border-bottom: 1px solid $couleur-degrade-clair;
+        &:hover {
+            color: $couleur-lien-hover;
+            border-bottom-color: $couleur-lien-hover;
+        }
+    }
+}
+
+.suite {
+    font-style: italic;
+    em {
+        font-weight: bold;
+        @include transition(padding .3s ease-out);
+    }
+    &:hover {
+        em {
+            padding-left: 1em;
+        }
+    }
+}
+
+
+
+/* 
+    intertitres
+    ========================================================================== */
+
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+.hN,
+.site-logo,
+.site-navigation {
+    font-family: $lato-font;
+    font-weight: 300;
+}
+
+h2.spip {
+    @include font-size(28px);
+    color: $couleur-degrade-sombre;
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+}
+h3.spip {
+    @include font-size(25px);
+    color: darken($couleur-degrade-sombre,8%);
+    p + &,
+    dl + &,
+    blockquote + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h2.spip & {padding-top: 0;}
+}
+h4.spip {
+    @include font-size(22px);
+    color: darken($couleur-degrade-sombre,20%);
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h3.spip & {padding-top: 0;}
+}
+h5.spip {
+    @include font-size(19px);
+    color: darken($couleur-degrade-sombre,8%);
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h4.spip & {padding-top: 0;}
+}
+h6.spip {
+    @include font-size(16px);
+    font-style:italic;
+    color: $couleur-degrade-sombre;
+    p + &,
+    blockquote + &,
+    dl + &,
+    li + & {
+        padding-top: 1em;
+    }
+    h5.spip & {padding-top: 0;}
+}
+
+blockquote {
+    p {
+        padding-left: 0;
+    }
+}

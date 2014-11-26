@@ -1,0 +1,15 @@
+/* ==========================================================================
+   .grid
+   ========================================================================== */
+
+   // .resumes-rubrique-grid {}
+   .resumes-rubrique-grid__item {
+        display: block;
+        margin-bottom: 1em;
+        overflow: hidden;
+        .hN {
+            border-bottom: 2px solid transparent;
+            @include font-size(32px);
+            @include transition(color .2s ease,border .3s ease);
+        }
+    }

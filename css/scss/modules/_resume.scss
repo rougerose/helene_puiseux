@@ -1,0 +1,76 @@
+/* ==========================================================================
+   .resume
+   ========================================================================== */
+
+// .resume {}
+.resume__titre {
+    margin-bottom: 1em;
+    .soustitre {
+        display: block;
+        font-style: italic;
+        color: $couleur-degrade-clair;
+        line-height: 1.4;
+        font-size: inherit;
+    }
+}
+
+// .resume__desc {}
+
+/* ==========================================================================
+   .resumes
+   ========================================================================== */
+
+.resumes {
+    > .hN {
+        margin-bottom: 0;
+        @include font-size(32px);
+        font-weight: 300;
+        color: $couleur-degrade-sombre;
+    }
+}
+
+
+/* 
+    .resumes-articles
+    ========================================================================== */
+
+// .resumes-articles {}
+
+/* 
+    .resume-article
+    ========================================================================== */
+
+.resume-article {
+    margin-bottom: 3em;
+    .resume__titre {
+        @include font-size(20px);
+        font-weight: 400;
+    }
+    .resume__desc {
+        p {
+            margin-bottom: .5em;
+        }
+    }
+}
+
+/* 
+   .resume-rubrique
+   ========================================================================== */
+
+.resume-rubrique {
+    margin-bottom: 3em;
+    .resume__titre {
+        @include font-size(20px);
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}
+
+/* 
+    .resumes-documents
+    ========================================================================== */
+
+.resumes-documents {
+    > .hN {margin-bottom: 0.5em;}
+}
+

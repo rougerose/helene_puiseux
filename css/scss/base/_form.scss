@@ -1,0 +1,82 @@
+/*  ==========================================================================
+    form
+    ========================================================================== */
+
+    input.text,
+    textarea {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.09);
+        line-height: 1.5;
+        padding: .5em;
+    }
+
+    label,
+    .search__label {
+        @include accessibility;
+    }
+
+    // placeholder
+    ::-webkit-input-placeholder {font-style: italic;} // Firefox 18-
+    :-moz-placeholder {font-style: italic;} // Firefox 19+
+    ::-moz-placeholder {font-style: italic;}
+    :-ms-input-placeholder {font-style: italic;}
+
+    // reponse 
+    .reponse_formulaire {
+        padding: .2em .5em .1em !important;
+        border-radius: 3px;
+        color: #000;
+        @include font-size(20px);
+    }
+    .reponse_formulaire_ok {
+        background: $couleur-ok;
+    }
+    .reponse_formulaire_erreur {
+        background: $couleur-erreur;
+    }
+    .erreur_message {
+        display: block;
+        color: $couleur-erreur;
+        font-style: italic;
+    }
+
+/* 
+    send-message
+    ========================================================================== */
+
+    .send-message__fieldset {
+        border-width: 0;
+        padding: 0;
+    }
+    .send-message__field {
+        width: 100%;
+    }
+    .send-message__preview {
+        padding-top: 1.5em;
+        border: 1px solid $couleur-degrade-sombre;
+    }
+    .send-message__legend {
+        @include font-size(18px);
+        color: $couleur-degrade-clair;
+        text-transform: uppercase;
+    }
+
+
+/* 
+    search
+    ========================================================================== */
+
+    .search__form {
+        margin-bottom: 2em;
+        @include font-size(22px);
+    }
+    // .search__label {@include accessibility;}
+    .search__field {
+        padding-left: 0.2em;
+        width: 80%;
+        margin-right: 0.3em;
+        line-height: 1.5;
+    }
+    // .search__submit {}

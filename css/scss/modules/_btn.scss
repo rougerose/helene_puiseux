@@ -1,0 +1,21 @@
+/*  ==========================================================================
+    .btn
+    ========================================================================== */
+
+.btn {
+    padding: .5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fefefe;
+    color:#444;
+    line-height: 1.4;
+    @include transition (all 0.3s ease-in-out);
+    &:hover {
+        color: $couleur-lien-hover;
+    }
+}
+
+.btn--send {
+    margin-top: 1.5em;
+}
+

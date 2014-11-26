@@ -1,0 +1,18 @@
+<BOUCLE_article_bibliographie(ARTICLES){id_article}{statut?}>
+<article class="resume resume-article">
+    <h2 class="hN resume__titre entry-title"><a href="#URL_ARTICLE" rel="bookmark">#TITRE[ <small class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]</a></h2>
+    [(#TEXTE|oui)
+    [<div class="#EDIT{intro} resume__desc introduction entry-content">
+        <p>(#INTRODUCTION|PtoBR)</p>
+        <p><a href="#URL_ARTICLE" class="suite"><:suite:></a></p>
+    </div>]
+    ][(#TEXTE|non)
+    [<div class="#EDIT{descriptif} resume__desc introduction entry-content">
+        (#DESCRIPTIF)
+    </div>]
+    ]
+    [<p><a href="(#URL_SITE)">[(#NOM_SITE|sinon{#URL_SITE})]</a></p>]
+
+    <p class="meta meta-resume"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></p>
+</article>
+</BOUCLE_article_bibliographie>

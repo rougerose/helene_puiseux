@@ -1,0 +1,10 @@
+.credits {
+    margin-left: 50%;
+    p {
+        text-align: right;
+        @include font-size(12px,$line-height: false);
+    }
+    p, a {
+        color: $gray-dark;
+    }
+}
