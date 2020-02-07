@@ -1,5 +1,5 @@
 <BOUCLE_recherche_par(ARTICLES){mots_selon_id}>
-[<li class="">(#ENV{id_mot}|unique|oui)<a class="filtre-mot filtre-mot--link ajax" href="[(#SELF|parametre_url{mots\[\],#ENV{id_mot}})]">#INFO_TITRE{mot,#ENV{id_mot}}</a></li>]
+[<li class="">(#ENV{id_mot}|unique|oui)<a class="filtre-mot filtre-mot--link ajax" href="[(#SELF|parametre_url{mots\[\],#ENV{id_mot}})]" rel="nofollow">#INFO_TITRE{mot,#ENV{id_mot}}</a></li>]
 </BOUCLE_recherche_par>
 [<li class=""><span class="filtre-mot[ (#ENV{id_mot}|in_array{#ENV{selection}}|?{filtre-mot--is-selected,filtre-mot--is-disabled})]">(#INFO_TITRE{mot,#ENV{id_mot}})</span></li>]
 <//B_recherche_par>
