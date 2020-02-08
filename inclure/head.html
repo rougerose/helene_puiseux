@@ -11,7 +11,7 @@
 <meta name="generator" content="SPIP[ (#SPIP_VERSION)]" />
 
 [(#REM) Lien vers le flux RSS du site ]
-[<link rel="alternate" type="application/rss+xml" title="<:syndiquer_site:>" href="(#URL_PAGE{backend})" />]
+[<link rel="alternate" type="application/rss+xml" title="#NOM_SITE_SPIP" href="(#URL_PAGE{backend})" />]
 
 [(#REM) Balise permettant aux plugins d'inserer des fichiers CSS ]
 #INSERT_HEAD_CSS
@@ -20,15 +20,9 @@
 #INCLURE{fond=inc-theme-head,env}
 ]
 
-<link href='http://fonts.googleapis.com/css?family=Lato:300,300italic,400|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-[<link href="(#CSS{css/interface-couleurs.css})" rel="stylesheet" type="text/css" />]
-[<link href="(#CSS{css/styles.css})" rel="stylesheet" type="text/css" />]
-
 [(#REM) Balise permettant aux plugins d'inserer des appels javascript ou css ;
     C'est ici que SPIP va inserer l'appel de la librairie jQuery
     Et appeler a la fin compacte_head pour agreger et compacter tout le head dans des fichiers statiques
     si l'option est cochee dans Configuration
 ]
 #INSERT_HEAD
-
-[<script src="(#CHEMIN{js/modernizr-2.8.0-min.js})"></script>]
