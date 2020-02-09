@@ -7,7 +7,7 @@
     margin: 0 auto;
 }
 
-/* 
+/*
    .page-header
    ========================================================================== */
 
@@ -16,7 +16,8 @@
     background-color: #ccc;
     position: relative;
     z-index: 100;
-    @include linear-gradient($couleur-degrade-sombre,$couleur-degrade-clair);
+    background: linear-gradient($couleur-degrade-sombre, $couleur-degrade-clair);
+    // @include linear-gradient($couleur-degrade-sombre,$couleur-degrade-clair);
     @include media-query(lap-and-up) {
         padding-top: 3em;
         height: 100%;
@@ -40,7 +41,7 @@
     }
 }
 
-/* 
+/*
    .page-content
    ========================================================================== */
 
@@ -51,4 +52,3 @@
         margin-left: 30%;
     }
 }
-

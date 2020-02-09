@@ -10,6 +10,7 @@
         .hN {
             border-bottom: 2px solid transparent;
             @include font-size(32px);
-            @include transition(color .2s ease,border .3s ease);
+            transition: color .2s ease, border .3s ease;
+            // @include transition(color .2s ease,border .3s ease);
         }
     }

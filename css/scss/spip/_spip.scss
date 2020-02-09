@@ -8,10 +8,11 @@
         margin-bottom: 4em;
         height: 2px;
         background: $couleur-degrade-sombre;
-        @include background-image(linear-gradient(to right, #fff 0, $couleur-degrade-sombre 50%, #fff 100%));
+        // @include background-image(linear-gradient(to right, #fff 0, $couleur-degrade-sombre 50%, #fff 100%));
+        background: linear-gradient(to right, #fff 0, $couleur-degrade-sombre 50%, #fff 100%);
     }
 
-    // listes 
+    // listes
     ul.spip,
     ol.spip {
         margin-left: 0;
@@ -53,7 +54,8 @@
     // notes
     .spip_note_ref {
         color: $couleur-degrade-clair;
-        @include transition(color .3s ease-out);
+        transition: color .3s ease-out;
+        // @include transition(color .3s ease-out);
         &:hover {color: $couleur-degrade-sombre;}
         a {
             color: $couleur-degrade-clair;

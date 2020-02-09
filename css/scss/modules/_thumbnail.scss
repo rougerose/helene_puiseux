@@ -14,9 +14,10 @@
         height: 115%;
         margin-left:-5%;
         margin-top:-5%;
-        @include transition(all 0.3s linear);
+        // @include transition(all 0.3s linear);
+        transition: all .3s linear;
         &:hover {
-             @include transform(scale(0.97,0.97));
-         }
+          transform: scale(0.97,0.97);
+        }
     }
 }
