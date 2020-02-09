@@ -1,26 +1,24 @@
-<div id="filtres" class="filtres cf">
-    <p class="filtres-toggle"><a id="filtres-toggle" href="#filtres"><:trier:></a></p>
+<div id="filtresConteneur" class="filtres cf">
+    <span class="filtres-toggle">
+      <button id="btnFiltres" type="button" class="btn btn--flat btn--filtres"><:trier:>[(#INCLURE{fond=img/icon-caret-16.svg})]</button>
+    </span>
     <B_selection>
     <p class="filtres-selection">
-        <BOUCLE_selection(MOTS){id_mot IN #ENV{mots}}{par titre}{" "}>[(#SET{lesautresmots,[(#ENV{mots}|critere_mots_enleve_mot_de_liste{#ID_MOT})]})]<a class="filtre-mot filtre-mot--is-selected ajax" href="[(#SELF|parametre_url{mots,''}|parametre_url{mots,#GET{lesautresmots}}|ancre_url{filtres})]"[ title="Supprimer (#TITRE|attribut_html)"]>[(#TITRE)]</a></BOUCLE_selection>
+        <BOUCLE_selection(MOTS){id_mot IN #ENV{mots}}{par titre}{" "}>[(#SET{lesautresmots,[(#ENV{mots}|critere_mots_enleve_mot_de_liste{#ID_MOT})]})]<a class="filtre-mot filtre-mot--is-selected ajax" data-id="#ID_MOT" href="[(#SELF|parametre_url{mots,''}|parametre_url{mots,#GET{lesautresmots}}|ancre_url{filtres})]"[ title="Supprimer (#TITRE|attribut_html)"]>[(#TITRE)]</a></BOUCLE_selection>
     </p>
     </B_selection>
 
     <B_groupes>
-    <nav>
+    <nav class="js-filtres-nav">
         <BOUCLE_groupes(GROUPES_MOTS){par num titre, titre}>
         <B_MotsDuGroupe>
         <div class="filtres-groupe">
             <h2 class="filtres-categories">#TITRE</h2>
             <ul class="inline-list">
                 <BOUCLE_MotsDuGroupe(MOTS spip_mots_liens){id_objet IN #ENV{articles}}{id_groupe}{objet=article}{par titre}>
-                #SET{mot_en_plus, #ARRAY{}} #SET{url_suppression,''}
-                [(#SET{mot_en_plus,[(#ENV{mots, #ARRAY{}}|push{#ID_MOT})]})]
-                [(#ID_MOT|in_array{#ENV{mots}}|oui)
-                    [(#SET{lesautresmots,[(#ENV{mots}|critere_mots_enleve_mot_de_liste{#ID_MOT})]})]
-                    [(#SET{url_suppression,[(#SELF|parametre_url{mots,''}|parametre_url{mots,#GET{lesautresmots}})]})]
-                ]
-                <INCLURE{fond=liste/mots-menu-filtre,mots=#GET{mot_en_plus},id_mot=#_MotsDuGroupe:ID_MOT,selection=#ENV{mots}} />
+                  #SET{mot_en_plus, #ARRAY}
+                  [(#SET{mot_en_plus,[(#ENV{mots, #ARRAY}|push{#ID_MOT})]})]
+                  <INCLURE{fond=liste/mots-menu-filtre, mots=#GET{mot_en_plus}, titre=#TITRE, id_rubrique=#ENV{id_rubrique}, id_mot=#ID_MOT, selection=#ENV{mots}} />
                 </BOUCLE_MotsDuGroupe>
             </ul>
         </div>

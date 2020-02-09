@@ -7,13 +7,14 @@
 [(#GET{test_mot}|oui)
 <INCLURE{fond=nav/menu-filtre,articles=#GET{articles},env} />
 ]
+
 [(#REM) Les articles triés ]
 <B_articles_tries>
 <section class="resumes resumes-articles">
     #ANCRE_PAGINATION
     <ul class="bare-list">
         <BOUCLE_articles_tries(ARTICLES){mots_selon_id}{id_rubrique}{!par date}{pagination #ENV{nb,30}}>
-        <li class="resumes-article-list__item">
+        <li class="resumes-article-list__item x">
             [(#ENV{composition}|=={bibliographie}|?{
                 #INCLURE{fond=resume/article-bibliographie,id_article},
                 #INCLURE{fond=resume/article,id_article}

@@ -24,7 +24,9 @@
             </div>]
             [(#REM) Les articles de la rubrique ]
             <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
-                <INCLURE{fond=liste/resumes-articles-filtres,env,ajax} />
+              <div class="articles-liste">
+                <INCLURE{fond=liste/resumes-articles-filtres, env, ajax} />
+              </div>
             </BOUCLE_articles>
 
             [(#REM) les sous-rubriques ]
@@ -38,7 +40,7 @@
             </ul><!-- /.resumes-rubrique-list -->
             </B_sousrubriques>
             <//B_articles>
-            
+
         </article>
     </div><!-- /.grid__item -->
 </div><!-- /.grid -->

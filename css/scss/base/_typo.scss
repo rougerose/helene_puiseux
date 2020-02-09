@@ -3,14 +3,14 @@
    ========================================================================== */
 
 
-/* 
+/*
     liens
     ========================================================================== */
 
 a {
     color: #000;
     text-decoration: none;
-    @include transition(color .3s ease-out,border .3s ease-out);
+    transition: color .3s ease-out, border .3s ease-out;
 }
 
 p,
@@ -29,7 +29,7 @@ p,
     font-style: italic;
     em {
         font-weight: bold;
-        @include transition(padding .3s ease-out);
+        transition: padding .3s ease-out;
     }
     &:hover {
         em {
@@ -40,7 +40,7 @@ p,
 
 
 
-/* 
+/*
     intertitres
     ========================================================================== */
 

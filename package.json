@@ -6,12 +6,26 @@
     "url": "https://rougerose@bitbucket.org/rougerose/helene_puiseux.git"
   },
   "author": "christophe le drean",
-  "license": "",
+  "license": "SEE LICENSE IN README.md",
   "homepage": "https://bitbucket.org/rougerose/helene_puiseux",
+  "browserslist": [
+    "last 4 versions"
+  ],
+  "scripts": {
+    "gulp-build": "NODE_ENV='development' gulp",
+    "gulp-compile": "NODE_ENV='production' gulp"
+  },
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-css-metrics": "^0.1.2"
-  }
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.13.1",
+    "pump": "^3.0.0"
+  },
+  "dependencies": {}
 }

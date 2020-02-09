@@ -18,7 +18,8 @@
     font-weight: 300;
     text-transform: uppercase;
     color: $couleur-degrade-clair;
-    @include transition(color .3s ease-out,border .3s ease-out);
+    // @include transition(color .3s ease-out,border .3s ease-out);
+    transition: color .3s ease-out, border .3s ease-out;
     a:hover & {
         border-bottom-color: $couleur-lien-hover;
         color: $couleur-lien-hover;
@@ -26,7 +27,8 @@
 }
 .pager-title {
     margin-top: .3em;
-    @include transition(color .3s ease-out);
+    transition: color .3s ease-out;
+    // @include transition(color .3s ease-out);
     a:hover & {
         color: $couleur-lien-hover
     }

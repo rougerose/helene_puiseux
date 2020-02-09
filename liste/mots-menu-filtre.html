@@ -1,5 +1,7 @@
-<BOUCLE_recherche_par(ARTICLES){mots_selon_id}>
-[<li class="">(#ENV{id_mot}|unique|oui)<a class="filtre-mot filtre-mot--link ajax" href="[(#SELF|parametre_url{mots\[\],#ENV{id_mot}})]">#INFO_TITRE{mot,#ENV{id_mot}}</a></li>]
-</BOUCLE_recherche_par>
-[<li class=""><span class="filtre-mot[ (#ENV{id_mot}|in_array{#ENV{selection}}|?{filtre-mot--is-selected,filtre-mot--is-disabled})]">(#INFO_TITRE{mot,#ENV{id_mot}})</span></li>]
-<//B_recherche_par>
+<BOUCLE_mot_filtre(ARTICLES){id_rubrique=#ENV{id_rubrique}}{mots_selon_id}>
+  [(#ENV{id_mot}|unique|oui)
+    [<li><a href="[(#SELF|parametre_url{debut_page, ''}|parametre_url{mots\[\], #ENV{mots}})]" class="filtre-mot filtre-mot--link ajax" rel="nofollow" data-id="#ENV{id_mot}">(#ENV{titre})</a></li>]
+  ]
+</BOUCLE_mot_filtre>
+  [<li><span class="filtre-mot[ (#ENV{id_mot}|in_array{#ENV{selection}}?{filtre-mot--is-selected, filtre-mot--is-disabled})]">(#ENV{titre})</span></li>]
+<//B_mot_filtre>

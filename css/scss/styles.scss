@@ -2,20 +2,21 @@
 
 // Bibliothèques et variables
 // ====================================
-@import "bourbon";
+// @import "bourbon/core/bourbon";
 @import "vars";
 @import "mixins";
 
-// base 
+// base
 @import "base/base";
 
-// inuit 
-@import "inuit";
+// inuit
+@import "inuit.css/inuit";
 
 
 
 // css
-@import 
+@import
+    "base/webfonts",
     "base/typo",
     "base/page",
     "base/form",
@@ -35,8 +36,10 @@
      "modules/breadcrumb",
      "modules/btn",
      "modules/credits",
-     
+     "modules/icon",
+
 // divers
     "marges",
     "spip/spip",
-    "spip/admin";
+    "spip/admin",
+    "utilitaires";
