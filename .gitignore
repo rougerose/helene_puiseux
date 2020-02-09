@@ -3,7 +3,6 @@
 
 node_modules/
 bower_components/
+yarn.*
+yarn-*
 .sass-cache
-
-*.sublime-project
-*.sublime-workspace

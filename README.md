@@ -1,2 +1,4 @@
 # Helene Puiseux
-Plugin Spip
+Plugin pour Spip
+
+Tous droits réservés.

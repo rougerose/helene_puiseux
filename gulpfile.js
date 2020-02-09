@@ -6,8 +6,8 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const rename = require('gulp-rename');
 // const concat = require('gulp-concat');
-// const uglify = require('gulp-uglify');
-// const pump = require('pump');
+const uglify = require('gulp-uglify');
+const pump = require('pump');
 
 sass.compiler = require('node-sass');
 
@@ -22,7 +22,7 @@ const options = {
       outputStyle: 'compact',
       errLogToConsole: true
     },
-    watch: 'scss/**/*'
+    watch: 'css/scss/**/*'
   },
   css: {
     src: {
@@ -30,10 +30,10 @@ const options = {
     },
     dest: 'css/'
   },
-  // js: {
-  //   src: ['javascript/src/*.js', 'javascript/init.js'],
-  //   dest: 'javascript/'
-  // },
+  js: {
+    src: ['js/public.js'],
+    dest: 'js/'
+  },
   // libJs: {
   //   src: {
   //     public: [
@@ -81,14 +81,14 @@ function scss(cb) {
 //   ], cb);
 // };
 //
-// function minifyJs(cb) {
-//   return pump([
-//     src('javascript/odse.js'),
-//     uglify(),
-//     rename({suffix: '.min'}),
-//     dest(options.js.dest)
-//   ], cb);
-// };
+function minifyJs(cb) {
+  return pump([
+    src(options.js.src),
+    uglify(),
+    rename({suffix: '.min'}),
+    dest(options.js.dest)
+  ], cb);
+};
 //
 // function libJs(cb) {
 //   src(options.libJs.src.public)
@@ -101,7 +101,7 @@ function scss(cb) {
 //   cb();
 // }
 //
-// exports.js = series(compileJs, minifyJs, libJs);
+exports.js = series(minifyJs);
 
 // var info = autoprefixer().info();
 // console.log(info);
@@ -109,7 +109,7 @@ function scss(cb) {
 // ----- watch ----- //
 
 watch(options.sass.watch, scss);
-// watch(options.js.src, exports.js);
+watch(options.js.src, exports.js);
 
 // ----- tasks ----- //
 
@@ -117,7 +117,7 @@ if (process.env.NODE_ENV === 'production') {
   // exports.build = series(minifycss);
 } else {
   // exports.build = series(clean, scss, exports.js);
-  exports.build = series(clean, scss);
+  exports.build = series(clean, scss, exports.js);
 }
 
 exports.default = exports.build;
