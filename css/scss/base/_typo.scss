@@ -44,7 +44,10 @@ p,
     intertitres
     ========================================================================== */
 
-h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
 .hN,
 .site-logo,
 .site-navigation {
@@ -52,8 +55,9 @@ h1,h2,h3,h4,h5,h6 {font-weight: normal;}
     font-weight: 300;
 }
 
-h2.spip {
-    @include font-size(28px);
+h2.spip, h2.h2 {
+    @include font-size(28px, $line-height: false);
+    line-height: 1.2;
     color: $couleur-degrade-sombre;
     p + &,
     blockquote + &,
@@ -62,8 +66,9 @@ h2.spip {
         padding-top: 1em;
     }
 }
-h3.spip {
-    @include font-size(25px);
+h3.spip, h3.h3 {
+    @include font-size(25px, $line-height: false);
+    line-height: 1.2;
     color: darken($couleur-degrade-sombre,8%);
     p + &,
     dl + &,
@@ -74,7 +79,8 @@ h3.spip {
     h2.spip & {padding-top: 0;}
 }
 h4.spip {
-    @include font-size(22px);
+    @include font-size(22px, $line-height: false);
+    line-height: 1.2;
     color: darken($couleur-degrade-sombre,20%);
     p + &,
     blockquote + &,
@@ -85,7 +91,8 @@ h4.spip {
     h3.spip & {padding-top: 0;}
 }
 h5.spip {
-    @include font-size(19px);
+    @include font-size(19px, $line-height: false);
+    line-height: 1.2;
     color: darken($couleur-degrade-sombre,8%);
     p + &,
     blockquote + &,
@@ -96,7 +103,8 @@ h5.spip {
     h4.spip & {padding-top: 0;}
 }
 h6.spip {
-    @include font-size(16px);
+    @include font-size(16px, $line-height: false);
+    line-height: 1.2;
     font-style:italic;
     color: $couleur-degrade-sombre;
     p + &,
