@@ -12,14 +12,14 @@
         "last 4 versions"
     ],
     "scripts": {
-        "build": "NODE_ENV=production npm run compile",
-        "compile": "npm run compile:css",
-        "compile:css": "npm run compile:scss && npm run compile:postcss",
-        "compile:postcss": "postcss css/styles-tmp.css -o css/styles.css",
-        "compile:scss": "sass --no-source-map --load-path=node_modules css/scss/styles.scss css/styles-tmp.css"
+        "prod": "NODE_ENV=production npm run build",
+        "build": "run-s scss postcss",
+        "postcss": "postcss -r css/hp_styles.css",
+        "scss": "sass --no-source-map --load-path=node_modules css/scss/styles.scss css/hp_styles.css"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",
+        "npm-run-all2": "^6.0.6",
         "postcss": "^8.4.19",
         "postcss-cli": "^10.1.0",
         "postcss-csso": "^6.0.1",
