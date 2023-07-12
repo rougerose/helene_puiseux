@@ -21,6 +21,6 @@
   <spip compatibilite="[3.2.0;4.2.*]">
     <script type="public" source="js/modernizr-2.8.0-min.js" />
     <script type="public" source="js/public.min.js" />
-    <style type="public" source="css/styles.css" />
+    <style type="public" source="css/hp_styles.css" />
   </spip>
 </paquet>
