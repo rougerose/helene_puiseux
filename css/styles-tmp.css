@@ -3530,6 +3530,10 @@ label,
   line-height: 1.5;
   transition: color 0.2s ease, border 0.3s ease;
 }
+.resumes-rubrique-grid__item:hover .hN {
+  color: #ff5200;
+  border-color: #ff5200;
+}
 
 /* ==========================================================================
    filtres

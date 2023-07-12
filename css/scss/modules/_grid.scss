@@ -2,15 +2,22 @@
    .grid
    ========================================================================== */
 
-   // .resumes-rubrique-grid {}
-   .resumes-rubrique-grid__item {
-        display: block;
-        margin-bottom: 1em;
-        overflow: hidden;
-        .hN {
-            border-bottom: 2px solid transparent;
-            @include font-size(32px);
-            transition: color .2s ease, border .3s ease;
-            // @include transition(color .2s ease,border .3s ease);
-        }
+// .resumes-rubrique-grid {}
+.resumes-rubrique-grid__item {
+  display: block;
+  margin-bottom: 1em;
+  overflow: hidden;
+  & .hN {
+    border-bottom: 2px solid transparent;
+    @include font-size(32px);
+    transition: color 0.2s ease, border 0.3s ease;
+    // @include transition(color .2s ease,border .3s ease);
+  }
+
+  &:hover {
+    & .hN {
+      color: #ff5200;
+      border-color: #ff5200;
     }
+  }
+}
