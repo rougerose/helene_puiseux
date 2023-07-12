@@ -1,28 +1,28 @@
 {
-  "name": "helene_puiseux",
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "https://rougerose@bitbucket.org/rougerose/helene_puiseux.git"
-  },
-  "author": "christophe le drean",
-  "license": "SEE LICENSE IN README.md",
-  "homepage": "https://bitbucket.org/rougerose/helene_puiseux",
-  "browserslist": [
-    "last 4 versions"
-  ],
-  "scripts": {
-    "build": "NODE_ENV=production npm run compile",
-    "compile": "npm run compile:css",
-    "compile:css": "npm run compile:scss && npm run compile:postcss",
-    "compile:postcss": "postcss css/styles-tmp.css -o css/styles.css",
-    "compile:scss": "sass --no-source-map --load-path=node_modules css/scss/styles.scss css/styles-tmp.css"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.19",
-    "postcss-cli": "^10.1.0",
-    "postcss-csso": "^6.0.1",
-    "sass": "^1.32.13"
-  }
+    "name": "helene_puiseux",
+    "version": "1.0.2",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rougerose/helene_puiseux.git"
+    },
+    "author": "christophe le drean",
+    "license": "SEE LICENSE IN README.md",
+    "homepage": "https://github.com/rougerose/helene_puiseux",
+    "browserslist": [
+        "last 4 versions"
+    ],
+    "scripts": {
+        "build": "NODE_ENV=production npm run compile",
+        "compile": "npm run compile:css",
+        "compile:css": "npm run compile:scss && npm run compile:postcss",
+        "compile:postcss": "postcss css/styles-tmp.css -o css/styles.css",
+        "compile:scss": "sass --no-source-map --load-path=node_modules css/scss/styles.scss css/styles-tmp.css"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.19",
+        "postcss-cli": "^10.1.0",
+        "postcss-csso": "^6.0.1",
+        "sass": "^1.32.13"
+    }
 }
