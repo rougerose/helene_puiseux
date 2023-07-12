@@ -1,6 +1,6 @@
 <paquet
   categorie="squelette"
-  compatibilite="[3.0.10;4.1.*]"
+  compatibilite="[3.0.10;4.2.*]"
   etat="stable"
   logo="prive/themes/spip/images/helene_puiseux-128.png"
   prefix="helene_puiseux"
@@ -18,7 +18,7 @@
   <necessite nom="typo_guillemets" />
   <necessite nom="zcore" />
   <utilise nom="medias" />
-  <spip compatibilite="[3.2.0;4.1.*]">
+  <spip compatibilite="[3.2.0;4.2.*]">
     <script type="public" source="js/modernizr-2.8.0-min.js" />
     <script type="public" source="js/public.min.js" />
     <style type="public" source="css/styles.css" />
