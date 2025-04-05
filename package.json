@@ -9,19 +9,22 @@
     "license": "SEE LICENSE IN README.md",
     "homepage": "https://github.com/rougerose/helene_puiseux",
     "browserslist": [
-        "last 4 versions"
+        "defaults"
     ],
     "scripts": {
-        "prod": "NODE_ENV=production npm run build",
+        "publish": "NODE_ENV=production npm run build",
         "build": "run-s clean && run-p build:* && run-s postcss",
         "build:scss": "sass --no-source-map --load-path=node_modules src/scss/index.scss dist/css/helene_puiseux.css",
         "clean": "rimraf -g 'dist/{css/*,js/*}'",
         "postcss": "postcss dist/css/helene_puiseux.css --no-map --replace --config package-scripts/postcss.config.js",
-        "bs": "browser-sync start -c package-scripts/browser-sync.config.js"
+        "bs": "browser-sync start -c package-scripts/browser-sync.config.js",
+        "watch": "run-p build bs watch:*",
+        "watch:css": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss && npm run postcss'"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.21",
         "browser-sync": "^3.0.4",
+        "chokidar-cli": "^3.0.0",
         "npm-run-all2": "^7.0.2",
         "postcss": "^8.5.3",
         "postcss-cli": "^11.0.1",
