@@ -12,34 +12,14 @@
 // inuit
 @import "inuit.css/inuit";
 
-
-
 // css
-@import
-    "base/webfonts",
-    "base/typo",
-    "base/page",
-    "base/form",
-
-// modules
-     "modules/nav",
-     "modules/list",
-     "modules/grid",
-     "modules/filtres",
-     "modules/thumbnail",
-     "modules/media",
-     "modules/self",
-     "modules/resume",
-     "modules/meta",
-     "modules/pager",
-     "modules/pagination",
-     "modules/breadcrumb",
-     "modules/btn",
-     "modules/credits",
-     "modules/icon",
-
-// divers
-    "marges",
-    "spip/spip",
-    "spip/admin",
-    "utilitaires";
+@import "base/webfonts", "base/typo", "base/page", "base/form",
+  // modules
+  "modules/nav",
+  "modules/list", "modules/grid", "modules/filtres", "modules/thumbnail",
+  "modules/media", "modules/self", "modules/resume", "modules/meta",
+  "modules/pager", "modules/pagination", "modules/breadcrumb", "modules/btn",
+  "modules/credits", "modules/icon",
+  // divers
+  "marges",
+  "spip/spip", "spip/admin", "utilitaires", "spip/document";

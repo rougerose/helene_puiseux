@@ -10,16 +10,16 @@
 .body__chapo,
 .body__texte,
 .body__notes {
-    @include marge-basse;
+  @include marge-basse;
 }
 
 // marge basse 3
 .self-rubrique {
-    .self__header,
-    .body__chapo,
-    .body__img {
-        @include marge-basse(3em);
-    }
+  .self__header,
+  .body__chapo,
+  .body__img {
+    @include marge-basse(3em);
+  }
 }
 
 // marge gauche
@@ -31,80 +31,98 @@
 .body__notes,
 .filtres,
 .search__form {
-    @include media-query(desk) {
-        @include pg-desk;
-    }
-    @include media-query(lap) {
-        @include pg-lap;
-    }
+  @include media-query(desk) {
+    @include pg-desk;
+  }
+  @include media-query(lap) {
+    @include pg-lap;
+  }
 }
 .self__header {
-    .hN,
-    .surtitre,
-    .meta {
-        @include media-query(desk) {
-            @include pg-desk;
-        }
-        @include media-query(lap) {
-            @include pg-lap;
-        }
+  .hN,
+  .surtitre,
+  .meta {
+    @include media-query(desk) {
+      @include pg-desk;
     }
+    @include media-query(lap) {
+      @include pg-lap;
+    }
+  }
 }
 .self__body {
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote,
+  .spip_document_file.spip_documents_center,
+  .documents,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include media-query(desk) {
+      @include pg-desk;
+    }
+    @include media-query(lap) {
+      @include pg-lap;
+    }
+  }
+  table {
+    @include media-query(desk) {
+      margin-left: 20%;
+      width: 80%;
+    }
+    @include media-query(lap) {
+      margin-left: 8%;
+      width: 92%;
+    }
+  }
+  hr.spip,
+  .reponse_formulaire {
+    @include media-query(desk) {
+      margin-left: 20%;
+    }
+    @include media-query(lap) {
+      margin-left: 8%;
+    }
+  }
+  // marge gauche annulée
+  &.logo-vertical p,
+  .reponse_formulaire {
+    padding-left: 0;
+  }
+  blockquote {
     p,
-    ul, 
+    ul,
     ol,
     dl,
-    blockquote,
-    .documents,
-    h2, h3, h4, h5, h6 {
-        @include media-query(desk) {
-            @include pg-desk;
-        }
-        @include media-query(lap) {
-            @include pg-lap;
-        }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding-left: 0;
     }
-    table {
-        @include media-query(desk) {
-            margin-left: 20%;
-            width: 80%;
-        }
-        @include media-query(lap) {
-            margin-left: 8%;
-            width: 92%;
-        }
+  }
+  .documents {
+    h2,
+    p {
+      padding-left: 0;
     }
-    hr.spip,
-    .reponse_formulaire {
-        @include media-query(desk) {
-            margin-left: 20%;
-        }
-        @include media-query(lap) {
-            margin-left: 8%;
-        }
+  }
+  .spip_doc_legende {
+    .spip_doc_titre,
+    .spip_doc_descriptif {
+      padding-left: 0;
     }
-    // marge gauche annulée
-    &.logo-vertical p,
-    .reponse_formulaire {padding-left: 0;}
-    blockquote {
-        p,
-        ul,
-        ol,
-        dl,
-        h2,h3,h4,h5,h6 {padding-left: 0;} 
+  }
+  .body__notes {
+    h2,
+    p {
+      padding-left: 0;
     }
-    .documents {
-        dl,
-        h2,
-        p {padding-left: 0;}
-    }
-    .spip_doc_legende {
-        .spip_doc_titre,
-        .spip_doc_descriptif {padding-left:0;}
-    }
-    .body__notes {
-        h2,
-        p {padding-left: 0;}
-    }
+  }
 }

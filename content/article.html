@@ -18,10 +18,10 @@
             <div class="self__body">
                 [<img src="(#LOGO_ARTICLE|extraire_attribut{src})" class="media__img media__img--logo [media__img--(#GET{logo-format})]" alt="#TITRE">]
                 [<section class="#EDIT{chapo} chapo body__chapo surlignable">
-                    (#CHAPO)
+                    (#CHAPO|image_reduire{560,0})
                 </section>]
                 [<section class="#EDIT{texte} texte body__texte surlignable">
-                    (#TEXTE)
+                    (#TEXTE|image_reduire{560,0})
                 </section>]
                 [<section class="#EDIT{ps} ps body__ps surlignable">
                     <h2 class="hN"><:info_ps:></h2>
@@ -44,7 +44,7 @@
                 ]
             </div>
             <INCLURE{fond=nav/pager-article,id_article}/>
-            
+
             <BOUCLE_credits(RUBRIQUES){id_rubrique}{si #ID_RUBRIQUE|=={5}}>
             #INCLURE{fond=inclure/credits_site}
             </BOUCLE_credits>

@@ -10,7 +10,6 @@
  * having to alter the framework itself.
  */
 
-
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -20,31 +19,30 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         true;
-$use-flexbox:       false;
-$use-columns:       false;
-$use-nav:           false;
-$use-options:       false;
-$use-pagination:    false;
-$use-breadcrumb:    false;
-$use-media:         true;
-$use-marginalia:    false;
-$use-island:        false;
-$use-block-list:    false;
-$use-matrix:        false;
-$use-split:         false;
-$use-this-or-this:  false;
-$use-link-complex:  false;
-$use-flyout:        false;
-$use-arrows:        false;
-$use-sprite:        false;
-$use-icon-text:     false;
-$use-beautons:      false;
-$use-lozenges:      false;
-$use-rules:         false;
-$use-stats:         false;
-$use-greybox:       false;
-
+$use-grids: true;
+$use-flexbox: false;
+$use-columns: false;
+$use-nav: false;
+$use-options: false;
+$use-pagination: false;
+$use-breadcrumb: false;
+$use-media: true;
+$use-marginalia: false;
+$use-island: false;
+$use-block-list: false;
+$use-matrix: false;
+$use-split: false;
+$use-this-or-this: false;
+$use-link-complex: false;
+$use-flyout: false;
+$use-arrows: false;
+$use-sprite: false;
+$use-icon-text: false;
+$use-beautons: false;
+$use-lozenges: false;
+$use-rules: false;
+$use-stats: false;
+$use-greybox: false;
 
 /*------------------------------------*\
     $OVERRIDES
@@ -69,11 +67,10 @@ $base-font-family: "droid_serif", "Georgia", "Times", "Times New Roman", serif;
 $lato-font: "lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $base-font: $base-font-family;
 
-
 // à supprimer ?
-$text-color: #444;
+$text-color: #111;
 $gray: #cccac8;
-$gray-dark: darken($gray,20%);
+$gray-dark: darken($gray, 40%);
 //$link-color: #fc0;
 
 $link-color-nav: #ff5200;
@@ -84,5 +81,5 @@ $couleur-degrade-clair: #2989d8;
 $couleur-ok: #c1e732;
 $couleur-erreur: #e75d32;
 
-$couleur-lien: darken($couleur-degrade-clair,30%);
+$couleur-lien: darken($couleur-degrade-clair, 30%);
 $couleur-lien-hover: $couleur-degrade-sombre;

@@ -1,0 +1,18 @@
+[(#REM)
+	Legende pour les documents
+]
+#SET{infos_techniques, ''}
+<BOUCLE_legendaire(DOCUMENTS){id_document=#ENV{id,#ENV{id_document}}}{tout}>
+  [(#EXTENSION|match{png|jpg|gif}|non)
+    [(#SET{infos_techniques, [[(#DESCRIPTIF|oui)<br/>](#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)]})]
+  ]
+  [(#ENV*{titre,#TITRE}|trim|sinon{#ENV*{descriptif,#DESCRIPTIF}|trim}|sinon{#ENV*{credits,#CREDITS}|trim}|oui)
+    <figcaption class='spip_doc_legende'>
+      [<div class='spip_doc_titre [(#ENV{titre}|non)#EDIT{titre}]'><p><strong>(#TITRE)</strong></p></div>]
+      [(#DESCRIPTIF|ou{#GET{infos_techniques}}|oui)
+        <div class='spip_doc_descriptif [(#ENV{descriptif}|non)#EDIT{descriptif}]'>[(#DESCRIPTIF*|concat{#GET{infos_techniques}}|propre)]</div>
+      ][<div class='spip_doc_credits [(#ENV{credits}|non)#EDIT{credits}]'>(#CREDITS)</div>]
+    </figcaption>
+  ]
+</BOUCLE_legendaire>
+#FILTRE{trim}
