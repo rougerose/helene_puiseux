@@ -13,16 +13,20 @@
     ],
     "scripts": {
         "prod": "NODE_ENV=production npm run build",
-        "build": "run-s scss postcss",
-        "postcss": "postcss -r css/hp_styles.css",
-        "scss": "sass --no-source-map --load-path=node_modules css/scss/styles.scss css/hp_styles.css"
+        "build": "run-s clean && run-p build:* && run-s postcss",
+        "build:scss": "sass --no-source-map --load-path=node_modules src/scss/index.scss dist/css/helene_puiseux.css",
+        "clean": "rimraf -g 'dist/{css/*,js/*}'",
+        "postcss": "postcss dist/css/helene_puiseux.css --no-map --replace --config package-scripts/postcss.config.js",
+        "bs": "browser-sync start -c package-scripts/browser-sync.config.js"
     },
     "devDependencies": {
-        "autoprefixer": "^10.4.13",
-        "npm-run-all2": "^6.0.6",
-        "postcss": "^8.4.31",
-        "postcss-cli": "^10.1.0",
+        "autoprefixer": "^10.4.21",
+        "browser-sync": "^3.0.4",
+        "npm-run-all2": "^7.0.2",
+        "postcss": "^8.5.3",
+        "postcss-cli": "^11.0.1",
         "postcss-csso": "^6.0.1",
+        "rimraf": "^6.0.1",
         "sass": "^1.32.13"
     }
 }

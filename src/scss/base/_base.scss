@@ -1,7 +1,12 @@
 /*  ==========================================================================
     base
     ========================================================================== */
-    html {
-        color: $base-color;
-        background-color: #fff;
-    }
+html {
+  color: $base-color;
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
