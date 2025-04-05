@@ -1,10 +1,10 @@
 <paquet
   categorie="squelette"
-  compatibilite="[3.0.10;4.2.*]"
+  compatibilite="[3.0.10;4.4.*]"
   etat="stable"
   logo="prive/themes/spip/images/helene_puiseux-128.png"
   prefix="helene_puiseux"
-  version="1.0.3"
+  version="1.0.4"
 >
   <nom>Helene Puiseux</nom>
   <auteur lien="http://rouge-rose.net">christophe le drean</auteur>
@@ -18,9 +18,4 @@
   <necessite nom="typo_guillemets" />
   <necessite nom="zcore" />
   <utilise nom="medias" />
-  <spip compatibilite="[3.2.0;4.2.*]">
-    <script type="public" source="js/modernizr-2.8.0-min.js" />
-    <script type="public" source="js/public.min.js" />
-    <style type="public" source="css/hp_styles.css" />
-  </spip>
 </paquet>
