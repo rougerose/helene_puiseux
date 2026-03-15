@@ -7,7 +7,7 @@ module.exports = {
   host: url,
   logLevel: "debug",
   logConnections: true,
-  files: ["./**/*.html"],
+  files: ["./**/*.html", "./dist/js/*.js", "./dist/css/*.css"],
   ignore: ["node_modules", "vendor"],
   server: false,
 };

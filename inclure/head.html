@@ -13,7 +13,7 @@
 
 [(#REM) Balise permettant aux plugins d'inserer des fichiers CSS ]
 #INSERT_HEAD_CSS
-[<link rel="stylesheet" href="(#CHEMIN{dist/css/helene_puiseux.css}|timestamp)" />]
+[<link rel="stylesheet" href="(#CHEMIN{dist/css/helene_puiseux.min.css}|timestamp)" />]
 [(#CHEMIN{inc-theme-head.html}|oui)
 #INCLURE{fond=inc-theme-head,env}
 ][(#REM) Balise permettant aux plugins d'inserer des appels javascript ou css ;
@@ -22,4 +22,4 @@
     si l'option est cochee dans Configuration
 ]
 #INSERT_HEAD
-[<script src="(#CHEMIN{js/public.min.js}|timestamp)"></script>]
+[<script src="(#CHEMIN{dist/js/helene_puiseux.min.js}|timestamp)"></script>]
