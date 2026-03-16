@@ -1,16 +1,16 @@
 <?php
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 if (!isset($GLOBALS['z_blocs'])) {
-    $GLOBALS['z_blocs'] = array('content','head','head_js','header','footer','breadcrumb');
+	$GLOBALS['z_blocs'] = ['content', 'head', 'head_js', 'header', 'footer', 'breadcrumb'];
 }
 
 // intertitres
 $GLOBALS['debut_intertitre'] = "\n<h2 class='spip'>";
 $GLOBALS['fin_intertitre'] = "</h2>\n";
-
-
 
 // Poser une limite avec les Bot qui scannent les url avec des mots-clés.
 if (_IS_BOT) {
