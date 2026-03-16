@@ -1,4 +1,5 @@
 # fichiers systemes
 .DS_Store
 node_modules/
+vendor/
 dist/css/helene_puiseux.tmp.css
