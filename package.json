@@ -13,7 +13,7 @@
     "defaults"
   ],
   "scripts": {
-    "bs": "browser-sync start -c package-scripts/browser-sync.config.js",
+    "bs": "browser-sync start -c package-scripts/browsersync.config.cjs",
     "build": "run-s clean && run-p build:* && run-s css:dev",
     "build:js": "rollup -c package-scripts/rollup.config.js",
     "build:scss": "sass --no-source-map --load-path=node_modules src/scss/index.scss dist/css/helene_puiseux.tmp.css",
