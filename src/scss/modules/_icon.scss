@@ -1,8 +1,11 @@
-.icon {}
+.icon {
+  width: var(--icon-size, 1em);
+  height: var(--icon-size, 1em);
+}
 
 .icon-caret-16 {
   width: 16px;
   margin-left: 5px;
   stroke: $link-color-nav;
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
 }

@@ -5,8 +5,16 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 }
 
 $GLOBALS[$GLOBALS['idx_lang']] = [
+	// A
+	'articles_nb_singulier' => '1 article affiché',
+	'articles_nb_pluriel' => '@nb@ articles affichés',
+	'articles_total' => ', sur @nb@ disponibles',
+
 	// D
 	'documents' => 'Documents',
+
+	// F
+	'filtrer_articles_formulaire_btn_submit' => 'Appliquer la sélection',
 
 	// I
 	'info_page' => 'Page',

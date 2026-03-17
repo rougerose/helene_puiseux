@@ -8,10 +8,6 @@ img {
   height: auto;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-  display: block;
-}
-
 audio, canvas, video {
   display: inline-block;
 }
@@ -657,7 +653,7 @@ fieldset {
   margin-bottom: 0;
 }
 
-label, .label {
+.label {
   display: block;
 }
 
@@ -1677,51 +1673,98 @@ label, .label {
 
 @font-face {
   font-family: droid_serif;
-  src: url("../webfonts/droidserif-bold-webfont.woff2") format("woff2"), url("../webfonts/droidserif-bold-webfont.woff") format("woff");
+  src: url("../webfonts/droidserif-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: droid_serif;
+  src: url("../webfonts/droidserif-italic-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: droid_serif;
+  src: url("../webfonts/droidserif-bold-webfont.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: droid_serif;
-  src: url("../webfonts/droidserif-bolditalic-webfont.woff2") format("woff2"), url("../webfonts/droidserif-bolditalic-webfont.woff") format("woff");
+  src: url("../webfonts/droidserif-bolditalic-webfont.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
-}
-
-@font-face {
-  font-family: droid_serif;
-  src: url("../webfonts/droidserif-italic-webfont.woff2") format("woff2"), url("../webfonts/droidserif-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: droid_serif;
-  src: url("../webfonts/droidserif-regular-webfont.woff2") format("woff2"), url("../webfonts/droidserif-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: lato;
-  src: url("../webfonts/lato-light-webfont.woff2") format("woff2"), url("../webfonts/lato-light-webfont.woff") format("woff");
+  src: url("../webfonts/LatoLatin-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: lato;
-  src: url("../webfonts/lato-lightitalic-webfont.woff2") format("woff2"), url("../webfonts/lato-lightitalic-webfont.woff") format("woff");
+  src: url("../webfonts/LatoLatin-LightItalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: lato;
-  src: url("../webfonts/lato-regular-webfont.woff2") format("woff2"), url("../webfonts/lato-regular-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("../webfonts/LatoLatin-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: lato;
+  src: url("../webfonts/LatoLatin-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: lato;
+  src: url("../webfonts/LatoLatin-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: lato;
+  src: url("../webfonts/LatoLatin-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: lato;
+  src: url("../webfonts/LatoLatin-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: lato;
+  src: url("../webfonts/LatoLatin-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }
 
 a {
@@ -1895,7 +1938,44 @@ input.text, textarea {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .09);
 }
 
-label, .search__label {
+input[type="checkbox"] {
+  color: #c4c4c4;
+  appearance: none;
+  font: inherit;
+  border: 1px solid;
+  place-content: center;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  display: grid;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  transform-origin: 0 100%;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  background-color: canvastext;
+  width: .65em;
+  height: .65em;
+  transition: transform .3s ease-in-out;
+  transform: scale(0);
+  box-shadow: inset 1em 1em #ff5200;
+}
+
+input[type="checkbox"]:checked {
+  color: #ff5200;
+}
+
+input[type="checkbox"]:checked:before {
+  transform: scale(1);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.search__label {
   clip: rect(0 0 0 0) !important;
   border: 0 !important;
   width: 1px !important;
@@ -1942,6 +2022,31 @@ label, .search__label {
   color: #e75d32;
   font-style: italic;
   display: block;
+}
+
+.formulaire_filtrer_articles {
+  border: 1px solid #ff5200;
+  border-top: none;
+  padding: 1rem .5rem;
+}
+
+.formulaire_filtrer_articles legend {
+  text-transform: uppercase;
+  color: #2989d8;
+  border-bottom: 1px solid #2989d8;
+  margin-bottom: .5rem;
+  font-family: lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.formulaire_filtrer_articles .editer-groupe {
+  --cluster-gap: .5rem 1rem;
+  padding-left: 1rem;
+}
+
+.formulaire_filtrer_articles .boutons {
+  margin-bottom: 0;
 }
 
 .send-message__fieldset {
@@ -2144,74 +2249,37 @@ label, .search__label {
 }
 
 .filtres {
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
-.filtres nav {
-  clear: both;
-}
-
-.filtres-toggle {
-  border-bottom: 1px solid #ccc;
-  justify-content: flex-end;
-  margin-bottom: 1.5rem;
-  padding: 0 .2em 0 2em;
-  display: flex;
-}
-
-.filtres-toggle.is-active {
-  border-bottom-color: #ff5200;
-}
-
-.filtres-groupe {
-  margin-bottom: 1.5em;
-}
-
-.filtres-categories {
+.filtres summary {
   text-transform: uppercase;
-  color: #2989d8;
-  border-bottom: 1px solid #2989d8;
-  margin-bottom: 0;
+  color: #ff5200;
+  cursor: pointer;
+  border-bottom: 1px solid #ff5200;
+  padding-bottom: .5rem;
   font-family: lato, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
-.filtres-selection .filtre-mot:after {
-  content: "x";
-  color: #fff;
-  margin-left: .25em;
-  font-family: lato, Helvetica Neue, Helvetica, Arial, sans-serif;
-  transition: color .3s ease-out, background-color .3s ease-out;
+.filtres summary::marker {
+  color: #444;
+  font-size: larger;
 }
 
-.filtres-selection .filtre-mot:hover {
-  background: #b33900;
+.filtres_item {
+  --cluster-gap: .25rem;
 }
 
-.filtres-selection .filtre-mot:hover:after {
+.filtres_item input[checked] + label, .filtres_item.is-checked label, .filtres_item:hover label {
   color: #ff5200;
 }
 
-.filtre-mot {
-  border: 0;
-  border-radius: 5px;
-  margin: .5em .5em .5em 0;
-  padding: .15em .35em;
-  display: inline-block;
+.filtres_footer {
+  margin-top: 1.5rem;
 }
 
-.filtre-mot--link {
-  color: #ff5200;
-}
-
-.filtre-mot--link:hover, .filtre-mot--is-selected {
-  color: #fff;
-  background: #ff5200;
-}
-
-.filtre-mot--is-disabled {
-  color: #ccc;
+.filtres_selection {
+  --cluster-gap: .5rem;
 }
 
 .thumbnail {
@@ -2349,7 +2417,7 @@ label, .search__label {
 
 .documents.fichiers .spip_doc_descriptif {
   font-size: .875rem;
-  line-height: 1.71429;
+  line-height: 1.3;
 }
 
 .documents.fichiers.recherche .media {
@@ -2653,14 +2721,23 @@ a:hover .pager-title {
 .btn {
   color: #444;
   background: #fefefe;
-  border: 1px solid #ccc;
+  border: 2px solid #ff5200;
   border-radius: 4px;
-  padding: .5em;
+  align-items: center;
+  padding: .15em .5em;
   line-height: 1.4;
   transition: all .3s ease-in-out;
+  display: inline-flex;
 }
 
-.btn:hover {
+.btn[data-button-variant="pill"] {
+  --icon-size: .6em;
+  align-items: baseline;
+  gap: .5em;
+  padding: .15em .3em .25em;
+}
+
+.btn[data-button-variant="pill"] .icon-cross, .btn:hover {
   color: #ff5200;
 }
 
@@ -2697,11 +2774,25 @@ a:hover .pager-title {
   color: #686460;
 }
 
+.icon {
+  width: var(--icon-size, 1em);
+  height: var(--icon-size, 1em);
+}
+
 .icon-caret-16 {
   stroke: #ff5200;
   width: 16px;
   margin-left: 5px;
   transition: transform .2s ease-out;
+}
+
+.cluster {
+  flex-wrap: var(--cluster-wrap, wrap);
+  flex-direction: var(--cluster-direction, row);
+  gap: var(--cluster-gap, var(--gutter));
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+  align-items: var(--cluster-vertical-alignment, center);
+  display: flex;
 }
 
 .pager__item, .self, .self__header, .self__body, .body__chapo, .body__texte, .body__notes {

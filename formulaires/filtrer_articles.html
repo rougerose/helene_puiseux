@@ -1,0 +1,31 @@
+<B_groupes>
+  <div class="formulaire_spip formulaire_#FORM">
+    [<p class="formulaire_ok">(#ENV*{message_ok})</p>]
+    [<p class="formulaire_erreur">(#ENV*{message_erreur})</p>]
+
+    <form action="#ENV{action}" method="post">
+      #ACTION_FORMULAIRE
+      <BOUCLE_groupes(GROUPES_MOTS){par num titre, titre}>
+        <B_filtres>
+          <fieldset>
+            <legend>#TITRE</legend>
+            <div class="editer-groupe cluster">
+              <BOUCLE_filtres(MOTS mots_liens){id_groupe}{mots_liens.id_objet IN #ENV{articles}}{mots_liens.objet=article}{par titre}>
+                <div class="editer filtres_item choix cluster checkbox [(#ENV{mots}|find{#ID_MOT}|oui)is-checked]">
+                  <input type="checkbox" name="mots\[\]" id="mot#ID_MOT" value="#ID_MOT"[ (#ENV{mots}|find{#ID_MOT}|oui)checked] data-title="[(#TITRE|attribut_html)]">
+                  <label for="mot#ID_MOT">#TITRE</label>
+                </div>
+              </BOUCLE_filtres>
+            </div>
+          </fieldset>
+        </B_filtres>
+      </BOUCLE_groupes>
+      <noscript>
+        <p class="boutons">
+          <button class="btn" name="submit" value="filtrer" type="submit"><:local:filtrer_articles_formulaire_btn_submit:></button>
+        </p>
+      </noscript>
+    </form>
+    [<script src="(#CHEMIN{dist/js/filtres.min.js}|timestamp)" defer></script>]
+  </div>
+</B_groupes>
