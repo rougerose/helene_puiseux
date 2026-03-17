@@ -13,4 +13,16 @@ export default [
       plugins: outputPlugins(),
     },
   },
+  {
+    // jQuery
+    input: "src/js/filtres.js",
+    external: ["jQuery"],
+    // plugins: [resolve()],
+    output: {
+      file: "dist/js/filtres.min.js",
+      format: "iife",
+      globals: { jQuery: "jQuery" },
+      plugins: outputPlugins(),
+    },
+  },
 ];
