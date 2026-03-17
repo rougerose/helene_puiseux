@@ -1,0 +1,35 @@
+#SET{articles, #ARRAY}
+#SET{annee, ''}
+#SET{total_articles, 0}
+<B_articles_tries>
+  <section class="resumes resumes-articles">
+    #ANCRE_PAGINATION
+    [(#REM) Sélectionner les articles ]
+    <BOUCLE_articles_tries(ARTICLES){mots_selon_id? 1 #ENV{mots}}{id_rubrique}{!par date}{pagination #ENV{pagination, 15} _articles}>
+      [(#SET{articles, #GET{articles}|push{#ID_ARTICLE}})]
+    </BOUCLE_articles_tries>
+      [(#SET{total_articles, #TOTAL_BOUCLE})]
+
+    [(#REM) Afficher les articles ]
+    <BOUCLE_a1(ARTICLES){id_article IN #GET{articles}}>
+      [(#REM) Tester si on change d'année, et si oui, fermer la liste précédemment ouverte dans le déroulement de la boucle. ]
+      [(#COMPTEUR_BOUCLE|>{1}|oui)
+        [(#GET{annee}|!=={#DATE|annee}|oui)
+          </ul>
+        ]
+      ]
+      [<h2 class="hN">(#DATE|annee|unique)</h2>
+      <ul class="bare-list">]
+        <li class="resumes-article-list__item">
+          [(#ENV{composition}|=={bibliographie}|?{
+            #INCLURE{fond=resume/article-bibliographie,id_article},
+            #INCLURE{fond=resume/article,id_article}
+          })]
+        </li>
+      [(#SET{annee, #DATE|annee})]
+      [(#COMPTEUR_BOUCLE|=={#GET{total_articles}}|oui)
+      </ul>]
+    </BOUCLE_a1>
+    [<nav class="pagination cf">(#PAGINATION{li})</nav>]
+  </section>
+</B_articles_tries>

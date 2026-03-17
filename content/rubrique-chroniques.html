@@ -16,7 +16,7 @@
                 </div>]
             </div>]
             <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
-                <INCLURE{fond=liste/resumes-articles-time,env,ajax} />
+              <INCLURE{fond=liste/resumes_articles_timeline_selon_filtres, pagination=#ENV{pagination, 15}, ajax, env} />
             </BOUCLE_articles>
         </article>
     </div><!-- /.grid__item -->

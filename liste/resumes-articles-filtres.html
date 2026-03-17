@@ -2,6 +2,7 @@
 #SET{articles, #ARRAY}
 #SET{test_mot, ''}
 #SET{total_articles, 0}
+#SET{variante, #ENV{variante, standard}}
 <BOUCLE_articles_rubrique(ARTICLES){id_rubrique}>
   [(#SET{articles, #GET{articles}|push{#ID_ARTICLE}})]
   <BOUCLE_test_mot(MOTS){id_article}{0,1}{si #GET{test_mot}|non}>#SET{test_mot,' '}</BOUCLE_test_mot>
@@ -14,4 +15,8 @@
   <INCLURE{fond=nav/filtres, articles=#GET{articles}, total_articles=#GET{total_articles}, env}/>
 ]
 [(#REM) Liste des articles avec ou sans filtres]
-<INCLURE{fond=liste/resumes_articles_selon_filtres, id_rubrique, pagination=#ENV{pagination, 15}, ajax, env}/>
+<BOUCLE_variante_standard(CONDITION){si #GET{variante}|=={standard}}>
+  <INCLURE{fond=liste/resumes_articles_selon_filtres, id_rubrique, pagination=#ENV{pagination, 15}, ajax, env}/>
+</BOUCLE_variante_standard>
+  <INCLURE{fond=liste/resumes_articles_timeline_selon_filtres, id_rubrique, pagination=#ENV{pagination, 15}, ajax, env}/>
+<//B_variante_standard>
