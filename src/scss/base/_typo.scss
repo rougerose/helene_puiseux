@@ -1,123 +1,138 @@
+@use "sass:color";
 /* ==========================================================================
    $typo
    ========================================================================== */
-
 
 /*
     liens
     ========================================================================== */
 
 a {
-    color: #000;
-    text-decoration: none;
-    transition: color .3s ease-out, border .3s ease-out;
+  color: #000;
+  text-decoration: none;
+  transition:
+    color 0.3s ease-out,
+    border 0.3s ease-out;
 }
 
 p,
 .resume__titre {
-    a {
-        color:$couleur-lien;
-        border-bottom: 1px solid $couleur-degrade-clair;
-        &:hover {
-            color: $couleur-lien-hover;
-            border-bottom-color: $couleur-lien-hover;
-        }
+  a {
+    color: $couleur-lien;
+    border-bottom: 1px solid $couleur-degrade-clair;
+    &:hover {
+      color: $couleur-lien-hover;
+      border-bottom-color: $couleur-lien-hover;
     }
+  }
 }
 
 .suite {
-    font-style: italic;
+  font-style: italic;
+  em {
+    font-weight: bold;
+    transition: padding 0.3s ease-out;
+  }
+  &:hover {
     em {
-        font-weight: bold;
-        transition: padding .3s ease-out;
+      padding-left: 1em;
     }
-    &:hover {
-        em {
-            padding-left: 1em;
-        }
-    }
+  }
 }
-
-
 
 /*
     intertitres
     ========================================================================== */
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
 .hN,
 .site-logo,
 .site-navigation {
-    font-family: $lato-font;
-    font-weight: 300;
+  font-family: $lato-font;
+  font-weight: 300;
 }
 
-h2.spip, h2.h2 {
-    @include font-size(28px, $line-height: false);
-    line-height: 1.2;
-    color: $couleur-degrade-sombre;
-    p + &,
-    blockquote + &,
-    dl + &,
-    li + & {
-        padding-top: 1em;
-    }
+h2.spip,
+h2.h2 {
+  @include font-size(28px, $line-height: false);
+  line-height: 1.2;
+  color: $couleur-degrade-sombre;
+  p + &,
+  blockquote + &,
+  dl + &,
+  li + & {
+    padding-top: 1em;
+  }
 }
-h3.spip, h3.h3 {
-    @include font-size(25px, $line-height: false);
-    line-height: 1.2;
-    color: darken($couleur-degrade-sombre,8%);
-    p + &,
-    dl + &,
-    blockquote + &,
-    li + & {
-        padding-top: 1em;
-    }
-    h2.spip & {padding-top: 0;}
+h3.spip,
+h3.h3 {
+  @include font-size(25px, $line-height: false);
+  line-height: 1.2;
+  color: color.scale($couleur-degrade-sombre, $lightness: -8%);
+  p + &,
+  dl + &,
+  blockquote + &,
+  li + & {
+    padding-top: 1em;
+  }
+  h2.spip & {
+    padding-top: 0;
+  }
 }
 h4.spip {
-    @include font-size(22px, $line-height: false);
-    line-height: 1.2;
-    color: darken($couleur-degrade-sombre,20%);
-    p + &,
-    blockquote + &,
-    dl + &,
-    li + & {
-        padding-top: 1em;
-    }
-    h3.spip & {padding-top: 0;}
+  @include font-size(22px, $line-height: false);
+  line-height: 1.2;
+  color: color.scale($couleur-degrade-sombre, $lightness: -20%);
+  p + &,
+  blockquote + &,
+  dl + &,
+  li + & {
+    padding-top: 1em;
+  }
+  h3.spip & {
+    padding-top: 0;
+  }
 }
 h5.spip {
-    @include font-size(19px, $line-height: false);
-    line-height: 1.2;
-    color: darken($couleur-degrade-sombre,8%);
-    p + &,
-    blockquote + &,
-    dl + &,
-    li + & {
-        padding-top: 1em;
-    }
-    h4.spip & {padding-top: 0;}
+  @include font-size(19px, $line-height: false);
+  line-height: 1.2;
+  color: color.scale($couleur-degrade-sombre, $lightness: -8%);
+  p + &,
+  blockquote + &,
+  dl + &,
+  li + & {
+    padding-top: 1em;
+  }
+  h4.spip & {
+    padding-top: 0;
+  }
 }
 h6.spip {
-    @include font-size(16px, $line-height: false);
-    line-height: 1.2;
-    font-style:italic;
-    color: $couleur-degrade-sombre;
-    p + &,
-    blockquote + &,
-    dl + &,
-    li + & {
-        padding-top: 1em;
-    }
-    h5.spip & {padding-top: 0;}
+  @include font-size(16px, $line-height: false);
+  line-height: 1.2;
+  font-style: italic;
+  color: $couleur-degrade-sombre;
+  p + &,
+  blockquote + &,
+  dl + &,
+  li + & {
+    padding-top: 1em;
+  }
+  h5.spip & {
+    padding-top: 0;
+  }
 }
 
 blockquote {
-    p {
-        padding-left: 0;
-    }
+  p {
+    padding-left: 0;
+  }
 }

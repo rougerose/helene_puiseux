@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+	<defs>
+		<symbol id="icon-cross" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+			<g fill="currentColor">
+				<path d="M20.074 1.097a2.003 2.003 0 0 1 2.829 0c.78.781.78 2.048 0 2.829l-19 19c-.781.78-2.048.78-2.829 0a2.003 2.003 0 0 1 0-2.829l19-19Z"/>
+				<path d="M1.074 3.926a2.003 2.003 0 0 1 0-2.829 2.003 2.003 0 0 1 2.829 0l19 19c.78.781.78 2.048 0 2.829-.781.78-2.048.78-2.829 0l-19-19Z"/>
+			</g>
+		</symbol>
+    <symbol id="icon-arrow-right" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 24 24">
+      <path fill-rule="nonzero" d="m11.6 20 1.7 1.7L23 12l-9.7-9.7L11.6 4l7 6.8H1v2.4h17.5L11.6 20Z"/>
+    </symbol>
+	</defs>
+</svg>

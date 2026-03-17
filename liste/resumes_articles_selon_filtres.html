@@ -1,0 +1,16 @@
+<B_articles_tries>
+  <section class="resumes resumes-articles">
+    #ANCRE_PAGINATION
+    <ul class="bare-list">
+      <BOUCLE_articles_tries(ARTICLES){mots_selon_id? 1 #ENV{mots}}{id_rubrique}{!par date}{pagination #ENV{pagination, 15} _articles}>
+        <li class="resumes-article-list__item">
+          [(#ENV{composition}|=={bibliographie}|?{
+              #INCLURE{fond=resume/article-bibliographie, id_article},
+              #INCLURE{fond=resume/article, id_article}
+          })]
+        </li>
+      </BOUCLE_articles_tries>
+    </ul>
+    [<nav class="pagination cf">(#PAGINATION{li})</nav>]
+  </section>
+</B_articles_tries>

@@ -13,13 +13,35 @@
 @import "inuit.css/inuit";
 
 // css
-@import "base/webfonts", "base/typo", "base/page", "base/form",
-  // modules
-  "modules/nav",
-  "modules/list", "modules/grid", "modules/filtres", "modules/thumbnail",
-  "modules/media", "modules/self", "modules/resume", "modules/meta",
-  "modules/pager", "modules/pagination", "modules/breadcrumb", "modules/btn",
-  "modules/credits", "modules/icon",
-  // divers
-  "marges",
-  "spip/spip", "spip/admin", "utilitaires", "spip/document";
+@import "base/font-face-droid";
+@import "base/font-face-lato";
+@import "base/typo";
+@import "base/page";
+@import "base/form";
+
+// modules
+@import "modules/nav";
+@import "modules/list";
+@import "modules/grid";
+@import "modules/filtres";
+@import "modules/thumbnail";
+@import "modules/media";
+@import "modules/self";
+@import "modules/resume";
+@import "modules/meta";
+@import "modules/pager";
+@import "modules/pagination";
+@import "modules/breadcrumb";
+@import "modules/btn";
+@import "modules/credits";
+@import "modules/icon";
+
+// compositions
+@import "compositions/cluster";
+
+// divers
+@import "marges";
+@import "spip/spip";
+@import "spip/admin";
+@import "utilitaires";
+@import "spip/document";

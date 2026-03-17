@@ -1,11 +1,17 @@
 [(#REM) La liste des articles + Test présence de mot-clé pour afficher le menu de tri ? ]
-<BOUCLE_articles_rubrique(ARTICLES){id_rubrique}>#SET_PUSH{articles,#ID_ARTICLE}
-<BOUCLE_test_mot(MOTS){id_article}{0,1}>#SET{test_mot,' '}</BOUCLE_test_mot>
+#SET{articles, #ARRAY}
+#SET{test_mot, ''}
+#SET{total_articles, 0}
+<BOUCLE_articles_rubrique(ARTICLES){id_rubrique}>
+  [(#SET{articles, #GET{articles}|push{#ID_ARTICLE}})]
+  <BOUCLE_test_mot(MOTS){id_article}{0,1}{si #GET{test_mot}|non}>#SET{test_mot,' '}</BOUCLE_test_mot>
 </BOUCLE_articles_rubrique>
+  [(#SET{total_articles, #TOTAL_BOUCLE})]
+</B_articles_rubrique>
 
 [(#REM) Menu de filtrage des articles ]
 [(#GET{test_mot}|oui)
-<INCLURE{fond=nav/menu-filtre,articles=#GET{articles},env} />
+<INCLURE{fond=nav/filtres, articles=#GET{articles}, total_articles=#GET{total_articles}, env} />
 ]
 [(#REM) Les articles triés ]
 <B_articles_tries>

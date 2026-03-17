@@ -1,73 +1,121 @@
+@use "sass:color";
 /* ==========================================================================
    filtres
    ========================================================================== */
 
 .filtres {
-    margin-bottom: 1em;
-    nav {clear:both;}
-}
-.filtres-toggle {
-  display: flex;
-  justify-content: flex-end;
-  border-bottom: 1px solid #ccc;
-  padding: 0 .2em 0 2em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3em;
 
-  &.is-active {
-    border-bottom-color: $couleur-degrade-sombre;
+  & summary {
+    border-bottom: 1px solid $link-color-nav;
+    padding-bottom: 0.5rem;
+    font-family: $lato-font;
+    text-transform: uppercase;
+    color: $link-color-nav;
+    cursor: pointer;
+
+    &::marker {
+      color: $base-color;
+      font-size: larger;
+    }
   }
 }
 
-.filtres-groupe {
-    margin-bottom: 1.5em;
-}
-.filtres-categories {
-    margin-bottom: 0;
-    font-family: $lato-font;
-    @include font-size(16px);
-    text-transform: uppercase;
-    border-bottom: 1px solid $couleur-degrade-clair;
-    color: $couleur-degrade-clair;
+// .filtres-toggle {
+//   display: flex;
+//   justify-content: flex-end;
+//   border-bottom: 1px solid #ccc;
+//   padding: 0 0.2em 0 2em;
+//   margin-bottom: 1.5rem;
+
+//   &.is-active {
+//     border-bottom-color: $couleur-degrade-sombre;
+//   }
+// }
+
+// .filtres-groupe {
+//   margin-bottom: 1.5em;
+// }
+
+.filtres_item {
+  --cluster-gap: 0.25rem;
+
+  & input[checked] {
+    & + label {
+      color: $link-color-nav;
+    }
+  }
+
+  &.is-checked {
+    & label {
+      color: $link-color-nav;
+    }
+  }
+
+  &:hover {
+    & label {
+      color: $link-color-nav;
+    }
+  }
 }
 
-.filtres-selection {
-    .filtre-mot {
-        &:after {
-            content:'x';
-            margin-left: .25em;
-            font-family: $lato-font;
-            color: #fff;
-            transition: color .3s ease-out, background-color .3s ease-out;
-            // @include transition(color .3s ease-out,background-color .3s ease-out);
-        }
-        &:hover {
-            background: darken($couleur-degrade-sombre,30%);
-            &:after {
-                color: $couleur-lien-hover;
-            }
-        }
-    }
+.filtres_footer {
+  margin-top: 1.5rem;
 }
 
-.filtre-mot {
-    display: inline-block;
-    padding: .15em .35em;
-    margin: .5em .5em;
-    margin-left: 0;
-    border-radius: 5px;
-    border: 0;
+.filtres_selection {
+  --cluster-gap: 0.5rem;
 }
-    .filtre-mot--link {
-        color: $couleur-degrade-sombre;
-        &:hover {
-            color: #fff;
-            background: $couleur-degrade-sombre;
-        }
-    }
-    .filtre-mot--is-selected {
-        background:$couleur-degrade-sombre;
-        color: #fff;
-    }
-    .filtre-mot--is-disabled {
-        color: #ccc;
-    }
+
+// .filtres-categories {
+//   margin-bottom: 0;
+//   font-family: $lato-font;
+//   @include font-size(16px);
+//   text-transform: uppercase;
+//   border-bottom: 1px solid $couleur-degrade-clair;
+//   color: $couleur-degrade-clair;
+// }
+
+// .filtres-selection {
+//   .filtre-mot {
+//     &:after {
+//       content: "x";
+//       margin-left: 0.25em;
+//       font-family: $lato-font;
+//       color: #fff;
+//       transition:
+//         color 0.3s ease-out,
+//         background-color 0.3s ease-out;
+//       // @include transition(color .3s ease-out,background-color .3s ease-out);
+//     }
+//     &:hover {
+//       background: color.scale($couleur-degrade-sombre, $lightness: -30%);
+//       &:after {
+//         color: $couleur-lien-hover;
+//       }
+//     }
+//   }
+// }
+
+// .filtre-mot {
+//   display: inline-block;
+//   padding: 0.15em 0.35em;
+//   margin: 0.5em 0.5em;
+//   margin-left: 0;
+//   border-radius: 5px;
+//   border: 0;
+// }
+// .filtre-mot--link {
+//   color: $couleur-degrade-sombre;
+//   &:hover {
+//     color: #fff;
+//     background: $couleur-degrade-sombre;
+//   }
+// }
+// .filtre-mot--is-selected {
+//   background: $couleur-degrade-sombre;
+//   color: #fff;
+// }
+// .filtre-mot--is-disabled {
+//   color: #ccc;
+// }

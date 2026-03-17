@@ -1,8 +1,5 @@
 # fichiers systemes
 .DS_Store
-
 node_modules/
-bower_components/
-yarn.*
-yarn-*
-.sass-cache
+vendor/
+dist/css/helene_puiseux.tmp.css

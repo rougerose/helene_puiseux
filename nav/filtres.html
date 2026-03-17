@@ -1,0 +1,26 @@
+[(#SET{total_articles, #ENV{total_articles, 0}})]
+<div class="filtres">
+  <details>
+    <summary>Filtrer les articles par mot-clé</summary>
+    #FORMULAIRE_FILTRER_ARTICLES{#ENV{articles}}
+  </details>
+  <div class="filtres_footer">
+    <B_mots_utilisateur>
+      <p class="filtres_selection cluster">
+        <BOUCLE_mots_utilisateur(DATA){source table, #ENV{mots}}>
+          [<a href="[(#SELF|parametre_url{id_rubrique, ''}|parametre_url{mots, #ENV{mots}|critere_mots_enleve_mot_de_liste{#VALEUR}})]"
+            class="btn ajax" data-button-variant="pill"[ title="Supprimer le filtre &quot;(#INFO_TITRE{mot, #VALEUR}|attribut_html)&quot;"]>
+            (#INFO_TITRE{mot, #VALEUR})
+            [<svg class="icon icon-cross" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+              <use href="(#CHEMIN{img/icon-defs.svg}|ancre_url{icon-cross})"></use>
+            </svg>]
+          </a>]
+        </BOUCLE_mots_utilisateur>
+      </p>
+    </B_mots_utilisateur>
+    <B_compteur_articles>
+      <BOUCLE_compteur_articles(ARTICLES){id_rubrique}{mots_selon_id? 1 #ENV{mots}}> </BOUCLE_compteur_articles>
+      <p class="filters_count">[(#TOTAL_BOUCLE|singulier_ou_pluriel{local:articles_nb_singulier, local:articles_nb_pluriel})]<:local:articles_total{nb=#GET{total_articles}}:></p>
+    </B_compteur_articles>
+  </div>
+</div>

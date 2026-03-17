@@ -1,8 +1,14 @@
+@use "sass:math";
 /*------------------------------------*\
     $MAIN
 \*------------------------------------*/
-html{
-    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
-    overflow-y:scroll;
-    min-height:100%;
+
+html {
+  // font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+  // font: #{$base-fs} / #{$line-height-ratio} $base-font-family;
+  font-family: $base-font-family;
+  font-size: math.div($base-font-size, 16px) * 1em;
+  line-height: $line-height-ratio;
+  overflow-y: scroll;
+  min-height: 100%;
 }

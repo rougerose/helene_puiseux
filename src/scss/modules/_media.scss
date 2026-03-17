@@ -1,3 +1,5 @@
+@use "sass:math";
+@use "sass:color";
 /* ==========================================================================
    .media
    ========================================================================== */
@@ -32,7 +34,8 @@
   & img {
     padding: 5px;
     background: #fff;
-    box-shadow: 0 0 3px rgba(lighten(#000, 30%), 0.2);
+    // box-shadow: 0 0 3px rgba(lighten(#000, 30%), 0.2);
+    box-shadow: 0 0 3px rgba(color.scale(#000, $lightness: 30%), 0.2);
     @include vendor(transition, all 0.35s ease 0.2s);
   }
 }
@@ -106,7 +109,7 @@
     }
     .media__img {
       float: none;
-      margin-right: $base-spacing-unit/2;
+      margin-right: math.div($base-spacing-unit, 2);
     }
   }
   .media__img {
@@ -129,6 +132,7 @@
     }
     .spip_doc_descriptif {
       @include font-size(14px);
+      line-height: 1.3;
     }
   }
 }
