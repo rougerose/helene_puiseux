@@ -8,15 +8,33 @@
 
   & summary {
     border-bottom: 1px solid $link-color-nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: 0.5rem;
     font-family: $lato-font;
     text-transform: uppercase;
     color: $link-color-nav;
     cursor: pointer;
 
-    &::marker {
-      color: $base-color;
-      font-size: larger;
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "+";
+      font-size: 2rem;
+      color: currentColor;
+      transition: transform 200ms ease;
+    }
+  }
+
+  & details[open] {
+    & summary {
+      &::after {
+        transform: rotate(135deg);
+      }
     }
   }
 }
